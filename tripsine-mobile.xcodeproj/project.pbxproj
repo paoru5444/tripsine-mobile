@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC3F82843E00D00AE4504 /* AppDelegate.swift */; };
+		3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC3FA2843E00D00AE4504 /* SceneDelegate.swift */; };
+		3ACFC3FD2843E00D00AE4504 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC3FC2843E00D00AE4504 /* ViewController.swift */; };
+		3ACFC4002843E00D00AE4504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACFC3FE2843E00D00AE4504 /* Main.storyboard */; };
+		3ACFC4022843E01100AE4504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ACFC4012843E01100AE4504 /* Assets.xcassets */; };
+		3ACFC4052843E01100AE4504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACFC4032843E01100AE4504 /* LaunchScreen.storyboard */; };
+		3ACFC4102843E01200AE4504 /* tripsine_mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC40F2843E01200AE4504 /* tripsine_mobileTests.swift */; };
+		3ACFC41A2843E01200AE4504 /* tripsine_mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC4192843E01200AE4504 /* tripsine_mobileUITests.swift */; };
+		3ACFC41C2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC41B2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift */; };
+		3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */; };
+		3ACFC42B2843EDED00AE4504 /* RestaurantsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */; };
+		3ACFC42D2843EE1700AE4504 /* RestaurantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3ACFC40C2843E01200AE4504 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3ACFC3ED2843E00D00AE4504 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3ACFC3F42843E00D00AE4504;
+			remoteInfo = "tripsine-mobile";
+		};
+		3ACFC4162843E01200AE4504 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3ACFC3ED2843E00D00AE4504 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3ACFC3F42843E00D00AE4504;
+			remoteInfo = "tripsine-mobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3ACFC3F52843E00D00AE4504 /* tripsine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tripsine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ACFC3F82843E00D00AE4504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3ACFC3FA2843E00D00AE4504 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3ACFC3FC2843E00D00AE4504 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3ACFC3FF2843E00D00AE4504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3ACFC4012843E01100AE4504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3ACFC4042843E01100AE4504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3ACFC4062843E01100AE4504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ACFC40B2843E01200AE4504 /* tripsine-mobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tripsine-mobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ACFC40F2843E01200AE4504 /* tripsine_mobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsine_mobileTests.swift; sourceTree = "<group>"; };
+		3ACFC4152843E01200AE4504 /* tripsine-mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tripsine-mobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ACFC4192843E01200AE4504 /* tripsine_mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsine_mobileUITests.swift; sourceTree = "<group>"; };
+		3ACFC41B2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsine_mobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
+		3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsService.swift; sourceTree = "<group>"; };
+		3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3ACFC3F22843E00D00AE4504 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ACFC4082843E01200AE4504 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ACFC4122843E01200AE4504 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3ACFC3EC2843E00D00AE4504 = {
+			isa = PBXGroup;
+			children = (
+				3ACFC3F72843E00D00AE4504 /* tripsine-mobile */,
+				3ACFC40E2843E01200AE4504 /* tripsine-mobileTests */,
+				3ACFC4182843E01200AE4504 /* tripsine-mobileUITests */,
+				3ACFC3F62843E00D00AE4504 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3ACFC3F62843E00D00AE4504 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3ACFC3F52843E00D00AE4504 /* tripsine-mobile.app */,
+				3ACFC40B2843E01200AE4504 /* tripsine-mobileTests.xctest */,
+				3ACFC4152843E01200AE4504 /* tripsine-mobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3ACFC3F72843E00D00AE4504 /* tripsine-mobile */ = {
+			isa = PBXGroup;
+			children = (
+				3ACFC3F82843E00D00AE4504 /* AppDelegate.swift */,
+				3ACFC3FA2843E00D00AE4504 /* SceneDelegate.swift */,
+				3ACFC3FC2843E00D00AE4504 /* ViewController.swift */,
+				3ACFC3FE2843E00D00AE4504 /* Main.storyboard */,
+				3ACFC4012843E01100AE4504 /* Assets.xcassets */,
+				3ACFC4032843E01100AE4504 /* LaunchScreen.storyboard */,
+				3ACFC4062843E01100AE4504 /* Info.plist */,
+				3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */,
+				3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */,
+				3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */,
+			);
+			path = "tripsine-mobile";
+			sourceTree = "<group>";
+		};
+		3ACFC40E2843E01200AE4504 /* tripsine-mobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				3ACFC40F2843E01200AE4504 /* tripsine_mobileTests.swift */,
+			);
+			path = "tripsine-mobileTests";
+			sourceTree = "<group>";
+		};
+		3ACFC4182843E01200AE4504 /* tripsine-mobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3ACFC4192843E01200AE4504 /* tripsine_mobileUITests.swift */,
+				3ACFC41B2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift */,
+			);
+			path = "tripsine-mobileUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3ACFC3F42843E00D00AE4504 /* tripsine-mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ACFC41F2843E01200AE4504 /* Build configuration list for PBXNativeTarget "tripsine-mobile" */;
+			buildPhases = (
+				3ACFC3F12843E00D00AE4504 /* Sources */,
+				3ACFC3F22843E00D00AE4504 /* Frameworks */,
+				3ACFC3F32843E00D00AE4504 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tripsine-mobile";
+			productName = "tripsine-mobile";
+			productReference = 3ACFC3F52843E00D00AE4504 /* tripsine-mobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3ACFC40A2843E01200AE4504 /* tripsine-mobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ACFC4222843E01200AE4504 /* Build configuration list for PBXNativeTarget "tripsine-mobileTests" */;
+			buildPhases = (
+				3ACFC4072843E01200AE4504 /* Sources */,
+				3ACFC4082843E01200AE4504 /* Frameworks */,
+				3ACFC4092843E01200AE4504 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3ACFC40D2843E01200AE4504 /* PBXTargetDependency */,
+			);
+			name = "tripsine-mobileTests";
+			productName = "tripsine-mobileTests";
+			productReference = 3ACFC40B2843E01200AE4504 /* tripsine-mobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3ACFC4142843E01200AE4504 /* tripsine-mobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ACFC4252843E01200AE4504 /* Build configuration list for PBXNativeTarget "tripsine-mobileUITests" */;
+			buildPhases = (
+				3ACFC4112843E01200AE4504 /* Sources */,
+				3ACFC4122843E01200AE4504 /* Frameworks */,
+				3ACFC4132843E01200AE4504 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3ACFC4172843E01200AE4504 /* PBXTargetDependency */,
+			);
+			name = "tripsine-mobileUITests";
+			productName = "tripsine-mobileUITests";
+			productReference = 3ACFC4152843E01200AE4504 /* tripsine-mobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3ACFC3ED2843E00D00AE4504 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					3ACFC3F42843E00D00AE4504 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					3ACFC40A2843E01200AE4504 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 3ACFC3F42843E00D00AE4504;
+					};
+					3ACFC4142843E01200AE4504 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 3ACFC3F42843E00D00AE4504;
+					};
+				};
+			};
+			buildConfigurationList = 3ACFC3F02843E00D00AE4504 /* Build configuration list for PBXProject "tripsine-mobile" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3ACFC3EC2843E00D00AE4504;
+			productRefGroup = 3ACFC3F62843E00D00AE4504 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3ACFC3F42843E00D00AE4504 /* tripsine-mobile */,
+				3ACFC40A2843E01200AE4504 /* tripsine-mobileTests */,
+				3ACFC4142843E01200AE4504 /* tripsine-mobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3ACFC3F32843E00D00AE4504 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ACFC4052843E01100AE4504 /* LaunchScreen.storyboard in Resources */,
+				3ACFC4022843E01100AE4504 /* Assets.xcassets in Resources */,
+				3ACFC4002843E00D00AE4504 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ACFC4092843E01200AE4504 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ACFC4132843E01200AE4504 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3ACFC3F12843E00D00AE4504 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ACFC42D2843EE1700AE4504 /* RestaurantsModel.swift in Sources */,
+				3ACFC3FD2843E00D00AE4504 /* ViewController.swift in Sources */,
+				3ACFC42B2843EDED00AE4504 /* RestaurantsService.swift in Sources */,
+				3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */,
+				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
+				3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ACFC4072843E01200AE4504 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ACFC4102843E01200AE4504 /* tripsine_mobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ACFC4112843E01200AE4504 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ACFC41C2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift in Sources */,
+				3ACFC41A2843E01200AE4504 /* tripsine_mobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3ACFC40D2843E01200AE4504 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3ACFC3F42843E00D00AE4504 /* tripsine-mobile */;
+			targetProxy = 3ACFC40C2843E01200AE4504 /* PBXContainerItemProxy */;
+		};
+		3ACFC4172843E01200AE4504 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3ACFC3F42843E00D00AE4504 /* tripsine-mobile */;
+			targetProxy = 3ACFC4162843E01200AE4504 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3ACFC3FE2843E00D00AE4504 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3ACFC3FF2843E00D00AE4504 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3ACFC4032843E01100AE4504 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3ACFC4042843E01100AE4504 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3ACFC41D2843E01200AE4504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3ACFC41E2843E01200AE4504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3ACFC4202843E01200AE4504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 597JYH443Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tripsine-mobile/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tripsine.tripsine-mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3ACFC4212843E01200AE4504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 597JYH443Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tripsine-mobile/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tripsine.tripsine-mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3ACFC4232843E01200AE4504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 597JYH443Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tripsine.tripsine-mobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tripsine-mobile.app/tripsine-mobile";
+			};
+			name = Debug;
+		};
+		3ACFC4242843E01200AE4504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 597JYH443Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tripsine.tripsine-mobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tripsine-mobile.app/tripsine-mobile";
+			};
+			name = Release;
+		};
+		3ACFC4262843E01200AE4504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 597JYH443Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tripsine.tripsine-mobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "tripsine-mobile";
+			};
+			name = Debug;
+		};
+		3ACFC4272843E01200AE4504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 597JYH443Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tripsine.tripsine-mobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "tripsine-mobile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3ACFC3F02843E00D00AE4504 /* Build configuration list for PBXProject "tripsine-mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ACFC41D2843E01200AE4504 /* Debug */,
+				3ACFC41E2843E01200AE4504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ACFC41F2843E01200AE4504 /* Build configuration list for PBXNativeTarget "tripsine-mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ACFC4202843E01200AE4504 /* Debug */,
+				3ACFC4212843E01200AE4504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ACFC4222843E01200AE4504 /* Build configuration list for PBXNativeTarget "tripsine-mobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ACFC4232843E01200AE4504 /* Debug */,
+				3ACFC4242843E01200AE4504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ACFC4252843E01200AE4504 /* Build configuration list for PBXNativeTarget "tripsine-mobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ACFC4262843E01200AE4504 /* Debug */,
+				3ACFC4272843E01200AE4504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3ACFC3ED2843E00D00AE4504 /* Project object */;
+}
