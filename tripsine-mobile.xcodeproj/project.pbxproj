@@ -19,6 +19,8 @@
 		3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */; };
 		3ACFC42B2843EDED00AE4504 /* RestaurantsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */; };
 		3ACFC42D2843EE1700AE4504 /* RestaurantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */; };
+		3AEB27FF284D651400A9FF93 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB27FE284D651400A9FF93 /* MapViewController.swift */; };
+		3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A8E1284D74BD00604E2F /* Artwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
 		3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsService.swift; sourceTree = "<group>"; };
 		3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsModel.swift; sourceTree = "<group>"; };
+		3AEB27FE284D651400A9FF93 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3AF2A8E1284D74BD00604E2F /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */,
 				3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */,
 				3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */,
+				3AEB27FE284D651400A9FF93 /* MapViewController.swift */,
+				3AF2A8E1284D74BD00604E2F /* Artwork.swift */,
 			);
 			path = "tripsine-mobile";
 			sourceTree = "<group>";
@@ -269,10 +275,12 @@
 			files = (
 				3ACFC42D2843EE1700AE4504 /* RestaurantsModel.swift in Sources */,
 				3ACFC3FD2843E00D00AE4504 /* ViewController.swift in Sources */,
+				3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */,
 				3ACFC42B2843EDED00AE4504 /* RestaurantsService.swift in Sources */,
 				3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */,
 				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
 				3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */,
+				3AEB27FF284D651400A9FF93 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +460,9 @@
 				DEVELOPMENT_TEAM = 597JYH443Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tripsine-mobile/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "Permitir o uso da localização atual para buscar restaurantes próximos a você?";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Permitir o uso da localização atual para buscar restaurantes próximos a você?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -481,6 +492,9 @@
 				DEVELOPMENT_TEAM = 597JYH443Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tripsine-mobile/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "Permitir o uso da localização atual para buscar restaurantes próximos a você?";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Permitir o uso da localização atual para buscar restaurantes próximos a você?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

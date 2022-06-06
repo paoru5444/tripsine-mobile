@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pRh-2P-KkB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tripsine_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="104" y="45"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="jxg-Rf-pFE">
+            <objects>
+                <viewController id="pRh-2P-KkB" customClass="MapViewController" customModule="tripsine_mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QDT-TH-Kja">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LeT-pC-zlZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd7-B0-Qkp">
+                                <rect key="frame" x="344" y="144" width="50" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Lce-8J-02g"/>
+                                    <constraint firstAttribute="width" constant="50" id="Wcx-8q-r97"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system">
+                                    <color key="baseBackgroundColor" red="0.76470589639999997" green="0.22745099660000001" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchLocationButton:" destination="pRh-2P-KkB" eventType="touchUpInside" id="PJ1-bh-TVH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buscar localização" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UIt-La-SWx">
+                                <rect key="frame" x="20" y="144" width="304" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="QzW-fP-ReS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0JD-ao-saz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0JD-ao-saz" firstAttribute="trailing" secondItem="LeT-pC-zlZ" secondAttribute="trailing" id="ASi-Pw-xws"/>
+                            <constraint firstItem="LeT-pC-zlZ" firstAttribute="leading" secondItem="0JD-ao-saz" secondAttribute="leading" id="Mcr-2L-uZM"/>
+                            <constraint firstItem="UIt-La-SWx" firstAttribute="top" secondItem="0JD-ao-saz" secondAttribute="top" constant="100" id="MoY-88-tKh"/>
+                            <constraint firstItem="hd7-B0-Qkp" firstAttribute="top" secondItem="0JD-ao-saz" secondAttribute="top" constant="100" id="XdT-c0-8VJ"/>
+                            <constraint firstItem="LeT-pC-zlZ" firstAttribute="top" secondItem="0JD-ao-saz" secondAttribute="top" id="fRr-Zw-CyI"/>
+                            <constraint firstItem="0JD-ao-saz" firstAttribute="bottom" secondItem="LeT-pC-zlZ" secondAttribute="bottom" id="gT0-f5-wHB"/>
+                            <constraint firstItem="UIt-La-SWx" firstAttribute="leading" secondItem="0JD-ao-saz" secondAttribute="leading" constant="20" id="pZm-sR-WzT"/>
+                            <constraint firstItem="0JD-ao-saz" firstAttribute="trailing" secondItem="hd7-B0-Qkp" secondAttribute="trailing" constant="20" id="twP-L8-cAZ"/>
+                            <constraint firstItem="hd7-B0-Qkp" firstAttribute="leading" secondItem="UIt-La-SWx" secondAttribute="trailing" constant="20" id="yzi-ca-nWw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="UIMapKit" destination="LeT-pC-zlZ" id="5Hw-yu-XEm"/>
+                        <outlet property="searchLocationTextField" destination="UIt-La-SWx" id="laL-8c-hbk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j00-fY-foc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-891.304347826087" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
