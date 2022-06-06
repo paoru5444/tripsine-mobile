@@ -23,19 +23,23 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCornerRadius()
+        setupView()
     }
 
     @IBAction func didReservedButton(_ sender: Any) {
         print("move to web view")
     }
     
-    private func setupCornerRadius() {
-        priceLabel.layer.borderWidth = 2
+    private func setupView() {
+        priceLabel.layer.borderWidth = 1
+        priceLabel.layer.cornerRadius = 10
+        priceLabel.layer.borderColor = UIColor.red.cgColor
+        
         reservButton.layer.cornerRadius = 10
+        
         statusLabel.layer.cornerRadius = 10
-        statusLabel.layer.borderWidth = 2
-        statusLabel.layer.borderColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5).cgColor
+        statusLabel.layer.borderWidth = 1
+        statusLabel.layer.borderColor = UIColor.systemGreen.cgColor
     }
 }
 
