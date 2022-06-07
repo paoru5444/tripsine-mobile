@@ -31,15 +31,16 @@ class DetailsViewController: UIViewController {
     }
     
     private func setupView() {
-        priceLabel.layer.borderWidth = 1
-        priceLabel.layer.cornerRadius = 10
-        priceLabel.layer.borderColor = UIColor.red.cgColor
+        priceLabel.layer.masksToBounds = true
+        priceLabel.layer.cornerRadius = 8
         
         reservButton.layer.cornerRadius = 10
         
-        statusLabel.layer.cornerRadius = 10
+        statusLabel.layer.cornerRadius = 8
         statusLabel.layer.borderWidth = 1
         statusLabel.layer.borderColor = UIColor.systemGreen.cgColor
+        
+        
     }
 }
 
