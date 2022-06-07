@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="en6-4Y-TRa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -105,9 +105,8 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="b2N-dD-bMB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="b2N-dD-bMB">
                                 <rect key="frame" x="26" y="675" width="33" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdm-KO-3oo">
                                 <rect key="frame" x="20" y="723" width="374" height="40"/>
@@ -117,19 +116,20 @@
                                     <color key="titleColor" red="0.94654375310000005" green="0.93401211500000003" blue="0.93374103310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="zVy-BV-KTj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="zVy-BV-KTj">
                                 <rect key="frame" x="26" y="728" width="33" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cAG-Xb-JAo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="v3s-uk-FE5" firstAttribute="leading" secondItem="NtP-qM-hWd" secondAttribute="leading" id="0gN-Jw-kCq"/>
+                            <constraint firstItem="b2N-dD-bMB" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="26" id="87E-Vr-3k4"/>
                             <constraint firstItem="pw2-fL-z5t" firstAttribute="leading" secondItem="XUV-Ua-vuc" secondAttribute="leading" id="BBW-ev-RCN"/>
                             <constraint firstAttribute="trailing" secondItem="v3s-uk-FE5" secondAttribute="trailing" id="FXu-th-RRs"/>
                             <constraint firstItem="cSo-Mp-1G6" firstAttribute="top" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="18" id="Gdm-wc-Y0e"/>
                             <constraint firstItem="i7j-fQ-s9T" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="HB9-UC-IMI"/>
+                            <constraint firstItem="cdm-KO-3oo" firstAttribute="top" secondItem="b2N-dD-bMB" secondAttribute="bottom" constant="17" id="KFv-Wa-9HJ"/>
                             <constraint firstItem="KJ6-qb-ojp" firstAttribute="top" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="18" id="M0x-AT-aYC"/>
                             <constraint firstItem="XUV-Ua-vuc" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="MLz-GX-W3y"/>
                             <constraint firstItem="eAd-83-7y5" firstAttribute="top" secondItem="DPr-HC-kmD" secondAttribute="bottom" constant="18" id="Wd8-iy-Hoh"/>
@@ -137,7 +137,9 @@
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="eAd-83-7y5" secondAttribute="trailing" constant="20" id="bFo-6r-3oS"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="KJ6-qb-ojp" secondAttribute="trailing" constant="60" id="bRm-XS-ESH"/>
                             <constraint firstItem="pw2-fL-z5t" firstAttribute="top" secondItem="XUV-Ua-vuc" secondAttribute="bottom" constant="8" id="dcD-Pf-d7p"/>
+                            <constraint firstItem="zVy-BV-KTj" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="26" id="eVR-YZ-MpG"/>
                             <constraint firstItem="cdm-KO-3oo" firstAttribute="top" secondItem="881-Ie-Rwg" secondAttribute="bottom" constant="20" id="i74-3p-Ign"/>
+                            <constraint firstItem="zVy-BV-KTj" firstAttribute="top" secondItem="881-Ie-Rwg" secondAttribute="bottom" constant="18" id="iZC-TH-03b"/>
                             <constraint firstItem="DPr-HC-kmD" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="lQF-ex-XvU"/>
                             <constraint firstItem="eAd-83-7y5" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="lWI-Cj-UCU"/>
                             <constraint firstAttribute="bottom" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="282" id="mJU-7b-hJG"/>
