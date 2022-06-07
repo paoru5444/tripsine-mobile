@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="110.49107142857143"/>
         </scene>
-        <!--View Controller-->
+        <!--Cadastro View Controller-->
         <scene sceneID="HQC-Rp-5zL">
             <objects>
-                <viewController id="uCW-Xx-QG5" sceneMemberID="viewController">
+                <viewController id="uCW-Xx-QG5" customClass="CadastroViewController" customModule="tripsine_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MaI-f3-nsh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,12 +60,6 @@
                                     <constraint firstAttribute="height" constant="134" id="QnM-5b-CAS"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar uma foto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i4-PW-A79">
-                                <rect key="frame" x="135" y="264" width="144" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uo9-4M-EV0">
                                 <rect key="frame" x="20" y="330" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -99,6 +93,13 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zur-Lv-LdQ">
+                                <rect key="frame" x="142" y="264" width="130" height="30"/>
+                                <state key="normal" title="Adicionar uma foto"/>
+                                <connections>
+                                    <action selector="AddFotoButton:" destination="uCW-Xx-QG5" eventType="touchUpInside" id="GEc-2P-a3P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dXK-eL-Gjx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -110,11 +111,10 @@
                             <constraint firstItem="dXK-eL-Gjx" firstAttribute="bottom" secondItem="Baz-EN-D3z" secondAttribute="bottom" constant="647" id="3HU-Tb-wMy"/>
                             <constraint firstItem="dXK-eL-Gjx" firstAttribute="trailing" secondItem="LX5-Av-YrZ" secondAttribute="trailing" constant="20" id="45K-bB-ylw"/>
                             <constraint firstItem="fS7-me-Kao" firstAttribute="leading" secondItem="dXK-eL-Gjx" secondAttribute="leading" constant="96" id="4s2-gr-wky"/>
-                            <constraint firstItem="2i4-PW-A79" firstAttribute="leading" secondItem="dXK-eL-Gjx" secondAttribute="leading" constant="135" id="8Yw-9U-8bH"/>
                             <constraint firstItem="LpL-t6-LQp" firstAttribute="leading" secondItem="dXK-eL-Gjx" secondAttribute="leading" constant="20" id="CpN-AA-SBj"/>
+                            <constraint firstItem="dXK-eL-Gjx" firstAttribute="trailing" secondItem="Zur-Lv-LdQ" secondAttribute="trailing" constant="142" id="GW6-p4-qIK"/>
                             <constraint firstItem="dXK-eL-Gjx" firstAttribute="trailing" secondItem="Baz-EN-D3z" secondAttribute="trailing" constant="20" id="HBb-MU-hcw"/>
                             <constraint firstItem="8fw-EV-rKY" firstAttribute="leading" secondItem="dXK-eL-Gjx" secondAttribute="leading" constant="20" id="LGd-h9-btQ"/>
-                            <constraint firstItem="2i4-PW-A79" firstAttribute="top" secondItem="Za9-b8-gtQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Oaa-TS-4ji"/>
                             <constraint firstItem="Baz-EN-D3z" firstAttribute="top" secondItem="dXK-eL-Gjx" secondAttribute="top" constant="50" id="PM4-mD-c8b"/>
                             <constraint firstItem="dXK-eL-Gjx" firstAttribute="trailing" secondItem="8fw-EV-rKY" secondAttribute="trailing" constant="20" id="Qu8-MK-kcF"/>
                             <constraint firstItem="fS7-me-Kao" firstAttribute="top" secondItem="Za9-b8-gtQ" secondAttribute="bottom" constant="8" symbolic="YES" id="R2A-rw-4UT"/>
@@ -125,19 +125,21 @@
                             <constraint firstItem="Za9-b8-gtQ" firstAttribute="leading" secondItem="dXK-eL-Gjx" secondAttribute="leading" constant="82" id="Xr1-8N-zVm"/>
                             <constraint firstItem="LX5-Av-YrZ" firstAttribute="leading" secondItem="dXK-eL-Gjx" secondAttribute="leading" constant="20" id="cT4-ag-Mbs"/>
                             <constraint firstItem="Xmo-wq-jyI" firstAttribute="leading" secondItem="dXK-eL-Gjx" secondAttribute="leading" constant="20" id="lOl-lu-1Kv"/>
-                            <constraint firstItem="2i4-PW-A79" firstAttribute="top" secondItem="Za9-b8-gtQ" secondAttribute="bottom" constant="8" symbolic="YES" id="m3D-Ql-U86"/>
                             <constraint firstItem="8fw-EV-rKY" firstAttribute="top" secondItem="ttT-rP-uCT" secondAttribute="bottom" constant="32" id="m4j-xh-NBA"/>
                             <constraint firstItem="Uo9-4M-EV0" firstAttribute="top" secondItem="fS7-me-Kao" secondAttribute="bottom" constant="32" id="mBD-0S-KgH"/>
                             <constraint firstItem="LX5-Av-YrZ" firstAttribute="top" secondItem="LpL-t6-LQp" secondAttribute="bottom" constant="16" id="nvM-DC-TN3"/>
-                            <constraint firstItem="dXK-eL-Gjx" firstAttribute="trailing" secondItem="2i4-PW-A79" secondAttribute="trailing" constant="135" id="pdM-dc-1T3"/>
                             <constraint firstItem="ttT-rP-uCT" firstAttribute="top" secondItem="Xmo-wq-jyI" secondAttribute="bottom" constant="16" id="q2V-PA-aN9"/>
                             <constraint firstItem="Baz-EN-D3z" firstAttribute="leading" secondItem="dXK-eL-Gjx" secondAttribute="leading" constant="20" id="qGS-6F-aTf"/>
+                            <constraint firstItem="Zur-Lv-LdQ" firstAttribute="top" secondItem="Za9-b8-gtQ" secondAttribute="bottom" constant="8" symbolic="YES" id="stN-Up-kqL"/>
                             <constraint firstItem="dXK-eL-Gjx" firstAttribute="trailing" secondItem="ttT-rP-uCT" secondAttribute="trailing" constant="20" id="tsP-mF-r3Y"/>
                             <constraint firstItem="dXK-eL-Gjx" firstAttribute="trailing" secondItem="Xmo-wq-jyI" secondAttribute="trailing" constant="20" id="ugy-Uc-4Qd"/>
-                            <constraint firstItem="Za9-b8-gtQ" firstAttribute="centerX" secondItem="2i4-PW-A79" secondAttribute="centerX" id="xBm-oW-ofG"/>
+                            <constraint firstItem="Zur-Lv-LdQ" firstAttribute="leading" secondItem="dXK-eL-Gjx" secondAttribute="leading" constant="142" id="vjg-eg-ygY"/>
                             <constraint firstItem="Xmo-wq-jyI" firstAttribute="top" secondItem="LX5-Av-YrZ" secondAttribute="bottom" constant="16" id="zRc-do-vfn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fotoPerfilImage" destination="Za9-b8-gtQ" id="vVc-dv-3gk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnu-ok-cVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
