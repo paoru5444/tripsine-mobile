@@ -37,4 +37,31 @@ class RestaurantsModel {
         let website: String?
         let email: String?
     }
+    
+    struct Filter: Codable {
+        let filter_sections: [FilterSections]?
+    }
+    
+    struct FilterSections: Codable {
+        let label: String?
+        let section_id: String?
+        let filter_groups: [FilterGoups]?
+    }
+    
+    struct FilterGoups: Codable {
+        let type: String?
+        let key: String?
+        let tracking_key: String?
+        let label: String?
+        let options: [FilterGoupsOptions]?
+    }
+    
+    struct FilterGoupsOptions: Codable {
+        let label: String?
+        let value: String?
+        let selected: Bool?
+        let count: String?
+        let `default`: Bool?
+        let single_select: Bool?
+    }
  }

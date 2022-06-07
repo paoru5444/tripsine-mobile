@@ -10,6 +10,7 @@ import Foundation
 class RestaurantsService {
     struct Restaurants: Codable {
         let data: [RestaurantsModel.Restaurant]
+        let filters_v2: RestaurantsModel.Filter
     }
     
     func getRestaurants() -> Restaurants? {
