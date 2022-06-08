@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nQ5-Ok-gUB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nQ5-Ok-gUB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,14 +27,14 @@
                                 <rect key="frame" x="0.0" y="98" width="414" height="764"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="churras" translatesAutoresizingMaskIntoConstraints="NO" id="3nK-Ds-KF1">
-                                        <rect key="frame" x="62" y="0.0" width="496" height="282"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="262"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="282" id="iZE-QU-xv0"/>
                                         </constraints>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G1A-2Q-VE7">
-                                        <rect key="frame" x="121" y="298" width="382" height="48"/>
+                                        <rect key="frame" x="16" y="298" width="382" height="48"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Club A Steakhouse" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2I-rC-nN6">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="33.5"/>
@@ -58,20 +58,20 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-Jv-koS">
-                                        <rect key="frame" x="121" y="393" width="382" height="90"/>
+                                        <rect key="frame" x="16" y="393" width="382" height="90"/>
                                         <string key="text">Home of the famous and award winning Nona Maria Pie, Bleecker Street Pizza serves consistently delicious pizza with the best dough, sauce, and ingredients in Old West Village! Feel free to create your ideal pizza and add as many toppings as you'd like.</string>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abre as: 12h - Fecha as: 00h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw4-mW-v3t">
-                                        <rect key="frame" x="159" y="362" width="217" height="15"/>
+                                        <rect key="frame" x="54" y="362" width="217" height="15"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="OPEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7F3-hf-1Rs">
-                                        <rect key="frame" x="121" y="362" width="28" height="15"/>
+                                        <rect key="frame" x="16" y="362" width="28" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="28" id="Y54-7V-C17"/>
                                             <constraint firstAttribute="height" constant="15" id="jCd-Uk-6oY"/>
@@ -87,7 +87,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opz-sL-Csy">
-                                        <rect key="frame" x="121" y="663" width="382" height="45"/>
+                                        <rect key="frame" x="16" y="663" width="382" height="45"/>
                                         <color key="backgroundColor" red="0.74901962280000001" green="0.1764705926" blue="0.13333332540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="deU-S2-jaS"/>
@@ -107,7 +107,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lc-pr-Rd7" userLabel="urlStackView">
-                                        <rect key="frame" x="121" y="599" width="382" height="32"/>
+                                        <rect key="frame" x="16" y="599" width="382" height="32"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D0B-2a-jd4">
                                                 <rect key="frame" x="0.0" y="0.5" width="32" height="31"/>
@@ -127,7 +127,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbv-oT-syh" userLabel="emailStackView">
-                                        <rect key="frame" x="121" y="551" width="382" height="32"/>
+                                        <rect key="frame" x="16" y="551" width="382" height="32"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.badge" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6ea-of-kO9">
                                                 <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
@@ -146,7 +146,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkn-sV-4dp" userLabel="ratingAndPriceStackView">
-                                        <rect key="frame" x="121" y="499" width="382" height="36"/>
+                                        <rect key="frame" x="16" y="499" width="382" height="36"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUk-2w-VXV">
                                                 <rect key="frame" x="0.0" y="0.0" width="282" height="36"/>
