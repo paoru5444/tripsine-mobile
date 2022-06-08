@@ -19,6 +19,7 @@
 		3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */; };
 		3ACFC42B2843EDED00AE4504 /* RestaurantsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */; };
 		3ACFC42D2843EE1700AE4504 /* RestaurantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */; };
+		55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EB228514E7C0069370F /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
 		3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsService.swift; sourceTree = "<group>"; };
 		3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsModel.swift; sourceTree = "<group>"; };
+		55D44EB228514E7C0069370F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */,
 				3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */,
 				3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */,
+				55D44EB228514E7C0069370F /* AboutViewController.swift */,
 			);
 			path = "tripsine-mobile";
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				3ACFC42D2843EE1700AE4504 /* RestaurantsModel.swift in Sources */,
 				3ACFC3FD2843E00D00AE4504 /* ViewController.swift in Sources */,
 				3ACFC42B2843EDED00AE4504 /* RestaurantsService.swift in Sources */,
+				55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */,
 				3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */,
 				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
 				3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */,
