@@ -16,8 +16,11 @@ class MapViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
+    var locationSelected: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.requestAlwaysAuthorization()
@@ -31,6 +34,11 @@ class MapViewController: UIViewController {
     }
     
     
+    @IBAction func confirmLocationButton(_ sender: Any) {
+        print("Endereço selecionado \(searchLocationTextField.text ?? "")")
+        print("Localização selecionada \(locationSelected)")
+    }
+    
     @IBAction func searchLocationButton(_ sender: Any) {
         guard let address = searchLocationTextField.text else { return }
         let geoCoder = CLGeocoder()
@@ -43,6 +51,8 @@ class MapViewController: UIViewController {
                 return
             }
             
+            self.locationSelected = location
+          
             let initialLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
             self.UIMapKit.centerToLocation(initialLocation)
             self.showArtwork(lat: location.latitude, lng: location.longitude)
