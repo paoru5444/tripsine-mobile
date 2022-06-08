@@ -28,9 +28,6 @@ class FavoritsTableViewController: UITableViewController {
 
         if let cell = tableView.dequeueReusableCell(withIdentifier: "favorit-cell", for: indexPath) as? FavoritsTableViewCell {
             cell.setupCustomCell()
-            cell.backgroundColor = UIColor.white
-            cell.layer.cornerRadius = 8
-            cell.clipsToBounds = true
 
             return cell
         }
