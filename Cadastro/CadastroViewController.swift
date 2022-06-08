@@ -18,7 +18,7 @@ class CadastroViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func AddFotoButton(_ sender: Any) {
+    @IBAction func AddPhotoButton(_ sender: Any) {
         pickerController.allowsEditing = true
         pickerController.sourceType = .photoLibrary
         
