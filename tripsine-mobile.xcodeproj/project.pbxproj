@@ -19,6 +19,8 @@
 		3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */; };
 		3ACFC42B2843EDED00AE4504 /* RestaurantsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */; };
 		3ACFC42D2843EE1700AE4504 /* RestaurantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */; };
+		3AF2A924284FD22A00604E2F /* FavoritsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */; };
+		3AF2A926284FD4CC00604E2F /* FavoritsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
 		3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsService.swift; sourceTree = "<group>"; };
 		3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsModel.swift; sourceTree = "<group>"; };
+		3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsTableViewController.swift; sourceTree = "<group>"; };
+		3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */,
 				3ACFC42A2843EDED00AE4504 /* RestaurantsService.swift */,
 				3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */,
+				3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */,
+				3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */,
 			);
 			path = "tripsine-mobile";
 			sourceTree = "<group>";
@@ -267,12 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF2A924284FD22A00604E2F /* FavoritsTableViewController.swift in Sources */,
 				3ACFC42D2843EE1700AE4504 /* RestaurantsModel.swift in Sources */,
 				3ACFC3FD2843E00D00AE4504 /* ViewController.swift in Sources */,
 				3ACFC42B2843EDED00AE4504 /* RestaurantsService.swift in Sources */,
 				3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */,
 				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
 				3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */,
+				3AF2A926284FD4CC00604E2F /* FavoritsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
