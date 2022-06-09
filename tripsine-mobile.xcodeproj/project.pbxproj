@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A99706B285262F0000965E9 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3A99706A285262F0000965E9 /* fonts */; };
 		3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC3F82843E00D00AE4504 /* AppDelegate.swift */; };
 		3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC3FA2843E00D00AE4504 /* SceneDelegate.swift */; };
 		3ACFC3FD2843E00D00AE4504 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC3FC2843E00D00AE4504 /* ViewController.swift */; };
@@ -21,6 +22,9 @@
 		3ACFC42D2843EE1700AE4504 /* RestaurantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */; };
 		3AF2A924284FD22A00604E2F /* FavoritsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */; };
 		3AF2A926284FD4CC00604E2F /* FavoritsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */; };
+		3AEB27FD284D3D6500A9FF93 /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB27FC284D3D6500A9FF93 /* restaurants.json */; };
+		3AEB27FF284D651400A9FF93 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB27FE284D651400A9FF93 /* MapViewController.swift */; };
+		3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A8E1284D74BD00604E2F /* Artwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A99706A285262F0000965E9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		3ACFC3F52843E00D00AE4504 /* tripsine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tripsine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACFC3F82843E00D00AE4504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ACFC3FA2843E00D00AE4504 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +64,9 @@
 		3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsModel.swift; sourceTree = "<group>"; };
 		3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsTableViewController.swift; sourceTree = "<group>"; };
 		3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsTableViewCell.swift; sourceTree = "<group>"; };
+		3AEB27FC284D3D6500A9FF93 /* restaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
+		3AEB27FE284D651400A9FF93 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3AF2A8E1284D74BD00604E2F /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,8 @@
 		3ACFC3F72843E00D00AE4504 /* tripsine-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				3A99706A285262F0000965E9 /* fonts */,
+				3ACFC472284D01EC00AE4504 /* models */,
 				3ACFC3F82843E00D00AE4504 /* AppDelegate.swift */,
 				3ACFC3FA2843E00D00AE4504 /* SceneDelegate.swift */,
 				3ACFC3FC2843E00D00AE4504 /* ViewController.swift */,
@@ -121,6 +131,8 @@
 				3ACFC42C2843EE1700AE4504 /* RestaurantsModel.swift */,
 				3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */,
 				3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */,
+				3AEB27FE284D651400A9FF93 /* MapViewController.swift */,
+				3AF2A8E1284D74BD00604E2F /* Artwork.swift */,
 			);
 			path = "tripsine-mobile";
 			sourceTree = "<group>";
@@ -140,6 +152,14 @@
 				3ACFC41B2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift */,
 			);
 			path = "tripsine-mobileUITests";
+			sourceTree = "<group>";
+		};
+		3ACFC472284D01EC00AE4504 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				3AEB27FC284D3D6500A9FF93 /* restaurants.json */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +266,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A99706B285262F0000965E9 /* fonts in Resources */,
+				3AEB27FD284D3D6500A9FF93 /* restaurants.json in Resources */,
 				3ACFC4052843E01100AE4504 /* LaunchScreen.storyboard in Resources */,
 				3ACFC4022843E01100AE4504 /* Assets.xcassets in Resources */,
 				3ACFC4002843E00D00AE4504 /* Main.storyboard in Resources */,
@@ -276,11 +298,12 @@
 				3AF2A924284FD22A00604E2F /* FavoritsTableViewController.swift in Sources */,
 				3ACFC42D2843EE1700AE4504 /* RestaurantsModel.swift in Sources */,
 				3ACFC3FD2843E00D00AE4504 /* ViewController.swift in Sources */,
-				3ACFC42B2843EDED00AE4504 /* RestaurantsService.swift in Sources */,
+				3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */,
 				3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */,
 				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
 				3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */,
 				3AF2A926284FD4CC00604E2F /* FavoritsTableViewCell.swift in Sources */,
+				3AEB27FF284D651400A9FF93 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,9 +483,14 @@
 				DEVELOPMENT_TEAM = 597JYH443Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tripsine-mobile/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "Permitir o uso da localização atual para buscar restaurantes próximos a você?";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Permitir o uso da localização atual para buscar restaurantes próximos a você?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -489,9 +517,14 @@
 				DEVELOPMENT_TEAM = 597JYH443Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tripsine-mobile/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "Permitir o uso da localização atual para buscar restaurantes próximos a você?";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Permitir o uso da localização atual para buscar restaurantes próximos a você?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
