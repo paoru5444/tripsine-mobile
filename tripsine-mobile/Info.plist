@@ -11,6 +11,12 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
+					<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+					<string>Deseja usar localização atual para buscar restaurantes próximos a você?</string>
+					<key>NSLocationAlwaysUsageDescription</key>
+					<string>Deseja usar localização atual para buscar restaurantes próximos a você?</string>
+					<key>NSLocationWhenInUseUsageDescription</key>
+					<string>Deseja usar localização atual para buscar restaurantes próximos a você?</string>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
