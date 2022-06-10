@@ -23,6 +23,7 @@
 		3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A8E1284D74BD00604E2F /* Artwork.swift */; };
 		3AF2A924284FD22A00604E2F /* FavoritsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */; };
 		3AF2A926284FD4CC00604E2F /* FavoritsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */; };
+		3AF68BF42853CCD100AB6945 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF68BF32853CCD100AB6945 /* RegisterViewController.swift */; };
 		55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EB228514E7C0069370F /* AboutViewController.swift */; };
 		55D44EBB285150590069370F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EBA285150590069370F /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		3AF2A8E1284D74BD00604E2F /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsTableViewController.swift; sourceTree = "<group>"; };
 		3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsTableViewCell.swift; sourceTree = "<group>"; };
+		3AF68BF32853CCD100AB6945 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		55D44EB228514E7C0069370F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		55D44EBA285150590069370F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */,
 				3AEB27FE284D651400A9FF93 /* MapViewController.swift */,
 				3AF2A8E1284D74BD00604E2F /* Artwork.swift */,
+				3AF68BF32853CCD100AB6945 /* RegisterViewController.swift */,
 			);
 			path = "tripsine-mobile";
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF2A924284FD22A00604E2F /* FavoritsTableViewController.swift in Sources */,
+				3AF68BF42853CCD100AB6945 /* RegisterViewController.swift in Sources */,
 				3ACFC3FD2843E00D00AE4504 /* ViewController.swift in Sources */,
 				55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */,
 				3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */,
