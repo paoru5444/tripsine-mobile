@@ -19,12 +19,10 @@
 		3ACFC4102843E01200AE4504 /* tripsine_mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC40F2843E01200AE4504 /* tripsine_mobileTests.swift */; };
 		3ACFC41A2843E01200AE4504 /* tripsine_mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC4192843E01200AE4504 /* tripsine_mobileUITests.swift */; };
 		3ACFC41C2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC41B2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift */; };
-		3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */; };
 		3AEB27FD284D3D6500A9FF93 /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB27FC284D3D6500A9FF93 /* restaurants.json */; };
-		3AEB27FF284D651400A9FF93 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB27FE284D651400A9FF93 /* MapViewController.swift */; };
 		3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A8E1284D74BD00604E2F /* Artwork.swift */; };
-		3AF2A924284FD22A00604E2F /* FavoritsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */; };
-		3AF2A926284FD4CC00604E2F /* FavoritsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */; };
+		55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EB228514E7C0069370F /* AboutViewController.swift */; };
+		55D44EBB285150590069370F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EBA285150590069370F /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +59,10 @@
 		3ACFC4152843E01200AE4504 /* tripsine-mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tripsine-mobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACFC4192843E01200AE4504 /* tripsine_mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsine_mobileUITests.swift; sourceTree = "<group>"; };
 		3ACFC41B2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsine_mobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
 		3AEB27FC284D3D6500A9FF93 /* restaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
-		3AEB27FE284D651400A9FF93 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3AF2A8E1284D74BD00604E2F /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
-		3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsTableViewController.swift; sourceTree = "<group>"; };
-		3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsTableViewCell.swift; sourceTree = "<group>"; };
+		55D44EB228514E7C0069370F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		55D44EBA285150590069370F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +109,6 @@
 		000B04C52852CAEB001A35ED /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3ACFC4282843EDD700AE4504 /* RestaurantsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -122,8 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				3ACFC3FC2843E00D00AE4504 /* ViewController.swift */,
-				3AF2A923284FD22A00604E2F /* FavoritsTableViewController.swift */,
-				3AEB27FE284D651400A9FF93 /* MapViewController.swift */,
 				000B04C82852CC8D001A35ED /* HomeViewController.swift */,
 			);
 			path = Controller;
@@ -132,7 +125,6 @@
 		000B04C72852CC72001A35ED /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				3AF2A925284FD4CC00604E2F /* FavoritsTableViewCell.swift */,
 				000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */,
 			);
 			path = Cell;
@@ -172,6 +164,8 @@
 				3ACFC4012843E01100AE4504 /* Assets.xcassets */,
 				3ACFC4032843E01100AE4504 /* LaunchScreen.storyboard */,
 				3ACFC4062843E01100AE4504 /* Info.plist */,
+				55D44EBA285150590069370F /* ProfileViewController.swift */,
+				55D44EB228514E7C0069370F /* AboutViewController.swift */,
 				3AF2A8E1284D74BD00604E2F /* Artwork.swift */,
 			);
 			path = "tripsine-mobile";
@@ -335,16 +329,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AF2A924284FD22A00604E2F /* FavoritsTableViewController.swift in Sources */,
 				3ACFC3FD2843E00D00AE4504 /* ViewController.swift in Sources */,
+				55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */,
 				3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */,
-				3ACFC4292843EDD700AE4504 /* RestaurantsViewModel.swift in Sources */,
+				55D44EBB285150590069370F /* ProfileViewController.swift in Sources */,
 				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
 				000B04C92852CC8D001A35ED /* HomeViewController.swift in Sources */,
 				000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */,
 				3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */,
-				3AF2A926284FD4CC00604E2F /* FavoritsTableViewCell.swift in Sources */,
-				3AEB27FF284D651400A9FF93 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
