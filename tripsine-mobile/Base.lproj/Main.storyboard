@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pRh-2P-KkB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="en6-4Y-TRa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -35,7 +35,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3s-uk-FE5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="343"/>
-                                <color key="backgroundColor" red="0.81919586659999999" green="0.18891859050000001" blue="0.17045646910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.75058543680000001" green="0.18978682159999999" blue="0.1489738226" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="343" id="S8p-dN-ulf"/>
                                 </constraints>
@@ -106,9 +106,6 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="b2N-dD-bMB">
-                                <rect key="frame" x="26" y="675" width="33" height="31"/>
-                            </imageView>
                             <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdm-KO-3oo">
                                 <rect key="frame" x="20" y="723" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.23048788310000001" green="0.34835773710000001" blue="0.59665119649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -117,30 +114,34 @@
                                     <color key="titleColor" red="0.94654375310000005" green="0.93401211500000003" blue="0.93374103310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="zVy-BV-KTj">
-                                <rect key="frame" x="26" y="728" width="33" height="31"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VXW-pF-GPS">
+                                <rect key="frame" x="87" y="44" width="233" height="253"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="253" id="zP6-Bd-wka"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cAG-Xb-JAo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="v3s-uk-FE5" firstAttribute="leading" secondItem="NtP-qM-hWd" secondAttribute="leading" id="0gN-Jw-kCq"/>
-                            <constraint firstItem="b2N-dD-bMB" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="26" id="87E-Vr-3k4"/>
+                            <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="VXW-pF-GPS" secondAttribute="trailing" constant="94" id="4iA-ZJ-EGq"/>
+                            <constraint firstItem="VXW-pF-GPS" firstAttribute="top" secondItem="cAG-Xb-JAo" secondAttribute="top" id="6sF-lW-9JF"/>
                             <constraint firstItem="pw2-fL-z5t" firstAttribute="leading" secondItem="XUV-Ua-vuc" secondAttribute="leading" id="BBW-ev-RCN"/>
                             <constraint firstAttribute="trailing" secondItem="v3s-uk-FE5" secondAttribute="trailing" id="FXu-th-RRs"/>
                             <constraint firstItem="cSo-Mp-1G6" firstAttribute="top" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="18" id="Gdm-wc-Y0e"/>
                             <constraint firstItem="i7j-fQ-s9T" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="HB9-UC-IMI"/>
-                            <constraint firstItem="cdm-KO-3oo" firstAttribute="top" secondItem="b2N-dD-bMB" secondAttribute="bottom" constant="17" id="KFv-Wa-9HJ"/>
+                            <constraint firstItem="VXW-pF-GPS" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="87" id="Hen-7b-Gef"/>
+                            <constraint firstItem="VXW-pF-GPS" firstAttribute="top" secondItem="cAG-Xb-JAo" secondAttribute="top" id="Ln4-Hm-qdE"/>
                             <constraint firstItem="KJ6-qb-ojp" firstAttribute="top" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="18" id="M0x-AT-aYC"/>
                             <constraint firstItem="XUV-Ua-vuc" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="MLz-GX-W3y"/>
+                            <constraint firstItem="VXW-pF-GPS" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="87" id="WUX-lU-3TD"/>
                             <constraint firstItem="eAd-83-7y5" firstAttribute="top" secondItem="DPr-HC-kmD" secondAttribute="bottom" constant="18" id="Wd8-iy-Hoh"/>
                             <constraint firstItem="cSo-Mp-1G6" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="60" id="aSv-E0-Z1V"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="eAd-83-7y5" secondAttribute="trailing" constant="20" id="bFo-6r-3oS"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="KJ6-qb-ojp" secondAttribute="trailing" constant="60" id="bRm-XS-ESH"/>
                             <constraint firstItem="pw2-fL-z5t" firstAttribute="top" secondItem="XUV-Ua-vuc" secondAttribute="bottom" constant="8" id="dcD-Pf-d7p"/>
-                            <constraint firstItem="zVy-BV-KTj" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="26" id="eVR-YZ-MpG"/>
                             <constraint firstItem="cdm-KO-3oo" firstAttribute="top" secondItem="881-Ie-Rwg" secondAttribute="bottom" constant="20" id="i74-3p-Ign"/>
-                            <constraint firstItem="zVy-BV-KTj" firstAttribute="top" secondItem="881-Ie-Rwg" secondAttribute="bottom" constant="18" id="iZC-TH-03b"/>
                             <constraint firstItem="DPr-HC-kmD" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="lQF-ex-XvU"/>
                             <constraint firstItem="eAd-83-7y5" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="lWI-Cj-UCU"/>
                             <constraint firstAttribute="bottom" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="282" id="mJU-7b-hJG"/>
@@ -163,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiY-87-7X2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="907"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="906.69642857142856"/>
         </scene>
         <!--Cadastro View Controller-->
         <scene sceneID="HQC-Rp-5zL">
@@ -513,9 +514,8 @@
     </scenes>
     <resources>
         <image name="empty-avatar" width="225" height="225"/>
-        <image name="facebook" width="360" height="360"/>
-        <image name="google" width="225" height="225"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="logo" width="534" height="534"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="restaurant-image" width="186" height="134"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
