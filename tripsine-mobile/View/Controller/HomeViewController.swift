@@ -14,10 +14,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var restaurantsCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        restaurantsCollectionView.dataSource = self
         renderView()
     }
     
@@ -40,20 +42,28 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.restaurantsCollectionView {
+            return 4
+        }
+        
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryIdentifier", for: indexPath) as? CategoryCollectionViewCell
-        else { return UICollectionViewCell() }
-       
-        if indexPath.row == 0 {
-            setupLayerCell(cell: cell)
-            cell.backgroundColor = .red
+        if collectionView == self.collectionView {
+            let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryIdentifier", for: indexPath) as! CategoryCollectionViewCell
+            if indexPath.row == 0 {
+                setupLayerCell(cell: categoryCell)
+                categoryCell.backgroundColor = .red
+            } else {
+                setupLayerCell(cell: categoryCell)
+            }
+            return categoryCell
         } else {
-            setupLayerCell(cell: cell)
+            let restaurantCell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantsCollectionViewCell
+            restaurantCell.setupCell()
+            return restaurantCell
         }
-        return cell
     }
     
     private func setupLayerCell(cell: UICollectionViewCell) {
