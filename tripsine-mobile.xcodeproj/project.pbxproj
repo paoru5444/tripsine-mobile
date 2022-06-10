@@ -19,6 +19,7 @@
 		3ACFC4102843E01200AE4504 /* tripsine_mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC40F2843E01200AE4504 /* tripsine_mobileTests.swift */; };
 		3ACFC41A2843E01200AE4504 /* tripsine_mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC4192843E01200AE4504 /* tripsine_mobileUITests.swift */; };
 		3ACFC41C2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC41B2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift */; };
+		3AD047492853EC28000A79A7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD047482853EC28000A79A7 /* DetailsViewController.swift */; };
 		3AEB27FD284D3D6500A9FF93 /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB27FC284D3D6500A9FF93 /* restaurants.json */; };
 		3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A8E1284D74BD00604E2F /* Artwork.swift */; };
 		3AF68BED2853A5E200AB6945 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF68BEB2853A5E200AB6945 /* MapViewController.swift */; };
@@ -64,6 +65,7 @@
 		3ACFC4152843E01200AE4504 /* tripsine-mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tripsine-mobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACFC4192843E01200AE4504 /* tripsine_mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsine_mobileUITests.swift; sourceTree = "<group>"; };
 		3ACFC41B2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsine_mobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3AD047482853EC28000A79A7 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3AEB27FC284D3D6500A9FF93 /* restaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
 		3AF2A8E1284D74BD00604E2F /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		3AF68BEB2853A5E200AB6945 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		000B04C62852CC5F001A35ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3AD047482853EC28000A79A7 /* DetailsViewController.swift */,
 				3AF68BEC2853A5E200AB6945 /* FavoritsTableViewController.swift */,
 				3AF68BEB2853A5E200AB6945 /* MapViewController.swift */,
 				3ACFC3FC2843E00D00AE4504 /* ViewController.swift */,
@@ -355,6 +358,7 @@
 				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
 				000B04C92852CC8D001A35ED /* HomeViewController.swift in Sources */,
 				000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */,
+				3AD047492853EC28000A79A7 /* DetailsViewController.swift in Sources */,
 				3AF68BF02853A5ED00AB6945 /* FavoritsTableViewCell.swift in Sources */,
 				3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */,
 			);
