@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.restaurantsCollectionView {
-            return 4
+            return 8
         }
         
         return 3
