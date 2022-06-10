@@ -7,6 +7,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -85,13 +86,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJ6-qb-ojp">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJ6-qb-ojp">
                                 <rect key="frame" x="60" y="632" width="294" height="30"/>
                                 <state key="normal" title="Não possui conta? Cadastre-se aqui.">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="881-Ie-Rwg">
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="881-Ie-Rwg">
                                 <rect key="frame" x="20" y="670" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.99990254639999998" green="1" blue="0.99988251920000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
@@ -120,21 +121,57 @@
                                     <constraint firstAttribute="height" constant="253" id="zP6-Bd-wka"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn8-a1-ceV">
+                                <rect key="frame" x="29" y="677" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="BRR-aS-pXM"/>
+                                    <constraint firstAttribute="width" constant="26" id="YRy-GI-uxF"/>
+                                </constraints>
+                                <menu key="menu" id="rCQ-ju-LI7">
+                                    <children>
+                                        <command title="Item 1" id="e5v-gr-8gu"/>
+                                        <command title="Item 2" id="zNP-Og-A92"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" image="google"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-7l-u0S">
+                                <rect key="frame" x="29" y="727" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="26" id="6Mk-z5-v3a"/>
+                                    <constraint firstAttribute="height" constant="26" id="8An-ZE-Ahl"/>
+                                    <constraint firstAttribute="width" constant="26" id="Uvf-8q-lLX"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="26" id="obs-Ls-GUM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="vCZ-yT-jdO"/>
+                                </constraints>
+                                <menu key="menu" id="nIM-oZ-Sbq">
+                                    <children>
+                                        <command title="Item 1" id="Yx6-Vy-BUd"/>
+                                        <command title="Item 2" id="BQ5-5c-h7h"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" image="facebook"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cAG-Xb-JAo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="v3s-uk-FE5" firstAttribute="leading" secondItem="NtP-qM-hWd" secondAttribute="leading" id="0gN-Jw-kCq"/>
+                            <constraint firstItem="Wn8-a1-ceV" firstAttribute="top" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="63" id="2ph-zP-yAC"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="VXW-pF-GPS" secondAttribute="trailing" constant="94" id="4iA-ZJ-EGq"/>
+                            <constraint firstItem="9h7-7l-u0S" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="29" id="6a6-vE-sQu"/>
                             <constraint firstItem="VXW-pF-GPS" firstAttribute="top" secondItem="cAG-Xb-JAo" secondAttribute="top" id="6sF-lW-9JF"/>
                             <constraint firstItem="pw2-fL-z5t" firstAttribute="leading" secondItem="XUV-Ua-vuc" secondAttribute="leading" id="BBW-ev-RCN"/>
                             <constraint firstAttribute="trailing" secondItem="v3s-uk-FE5" secondAttribute="trailing" id="FXu-th-RRs"/>
                             <constraint firstItem="cSo-Mp-1G6" firstAttribute="top" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="18" id="Gdm-wc-Y0e"/>
                             <constraint firstItem="i7j-fQ-s9T" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="HB9-UC-IMI"/>
                             <constraint firstItem="VXW-pF-GPS" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="87" id="Hen-7b-Gef"/>
+                            <constraint firstItem="cAG-Xb-JAo" firstAttribute="bottom" secondItem="9h7-7l-u0S" secondAttribute="bottom" constant="109" id="IPf-4g-Zpq"/>
+                            <constraint firstItem="Wn8-a1-ceV" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="29" id="LcC-8j-uQp"/>
                             <constraint firstItem="VXW-pF-GPS" firstAttribute="top" secondItem="cAG-Xb-JAo" secondAttribute="top" id="Ln4-Hm-qdE"/>
                             <constraint firstItem="KJ6-qb-ojp" firstAttribute="top" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="18" id="M0x-AT-aYC"/>
                             <constraint firstItem="XUV-Ua-vuc" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="MLz-GX-W3y"/>
+                            <constraint firstItem="cdm-KO-3oo" firstAttribute="top" secondItem="Wn8-a1-ceV" secondAttribute="bottom" constant="20" id="NDe-zP-ZKi"/>
                             <constraint firstItem="VXW-pF-GPS" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="87" id="WUX-lU-3TD"/>
                             <constraint firstItem="eAd-83-7y5" firstAttribute="top" secondItem="DPr-HC-kmD" secondAttribute="bottom" constant="18" id="Wd8-iy-Hoh"/>
                             <constraint firstItem="cSo-Mp-1G6" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="60" id="aSv-E0-Z1V"/>
@@ -514,6 +551,8 @@
     </scenes>
     <resources>
         <image name="empty-avatar" width="225" height="225"/>
+        <image name="facebook" width="360" height="360"/>
+        <image name="google" width="225" height="225"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="logo" width="534" height="534"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
