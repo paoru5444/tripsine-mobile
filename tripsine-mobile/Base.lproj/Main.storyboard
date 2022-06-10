@@ -105,8 +105,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.76470589639999997" green="0.22745099660000001" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="120" height="104"/>
+                                        <connections>
+                                            <outlet property="containerInsetView" destination="jXo-Nl-LXN" id="g10-hG-MXN"/>
+                                            <outlet property="iconCategorieImage" destination="sHn-TB-D17" id="0JY-4x-Dxo"/>
+                                            <outlet property="itemCategoryLabel" destination="4sD-8W-ab8" id="BTb-5g-0Mo"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

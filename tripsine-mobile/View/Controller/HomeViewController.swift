@@ -62,12 +62,15 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionView {
             let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryIdentifier", for: indexPath) as! CategoryCollectionViewCell
+            
             if indexPath.row == 0 {
                 setupLayerCell(cell: categoryCell)
-                categoryCell.backgroundColor = .red
+                categoryCell.backgroundColor = .purple
+                categoryCell.setupCell(index: indexPath.row)
             } else {
                 setupLayerCell(cell: categoryCell)
                 categoryCell.backgroundColor = .white
+                categoryCell.setupCell(index: indexPath.row)
             }
             
             return categoryCell
