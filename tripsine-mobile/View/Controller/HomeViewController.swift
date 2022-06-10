@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var addressButton: UIButton!
     @IBOutlet weak var searchRestaurantTextField: UITextField!
     @IBOutlet weak var filterButton: UIButton!
@@ -16,11 +16,21 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         restaurantsCollectionView.dataSource = self
         renderView()
+        
+        searchRestaurantTextField.layer.cornerRadius = 8
+        
+        searchRestaurantTextField.backgroundColor = .white
+        searchRestaurantTextField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+        searchRestaurantTextField.layer.shadowOpacity = 1
+        searchRestaurantTextField.layer.shadowRadius = 4
+        searchRestaurantTextField.layer.shadowOffset = CGSize(width: 0, height: 4)
     }
     
     private func renderView() {
@@ -30,7 +40,7 @@ class HomeViewController: UIViewController {
     
     private func renderImageTextField() {
         searchRestaurantTextField.leftViewMode = UITextField.ViewMode.always
-        let imageView = UIImageView(frame: CGRect(x: 0,
+        let imageView = UIImageView(frame: CGRect(x: 10,
                                                   y: 10,
                                                   width: 20,
                                                   height: 20))
@@ -46,7 +56,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return 4
         }
         
-        return 5
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,7 +67,9 @@ extension HomeViewController: UICollectionViewDataSource {
                 categoryCell.backgroundColor = .red
             } else {
                 setupLayerCell(cell: categoryCell)
+                categoryCell.backgroundColor = .white
             }
+            
             return categoryCell
         } else {
             let restaurantCell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantsCollectionViewCell
