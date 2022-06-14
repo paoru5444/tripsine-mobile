@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Bold.ttf</string>
+		<string>Poppins-Light.ttf</string>
+		<string>Poppins-Black.ttf</string>
+		<string>Poppins-ExtraBold.ttf</string>
+		<string>Poppins-Thin.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -11,6 +22,12 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
+					<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+					<string>Deseja usar localização atual para buscar restaurantes próximos a você?</string>
+					<key>NSLocationAlwaysUsageDescription</key>
+					<string>Deseja usar localização atual para buscar restaurantes próximos a você?</string>
+					<key>NSLocationWhenInUseUsageDescription</key>
+					<string>Deseja usar localização atual para buscar restaurantes próximos a você?</string>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
@@ -21,5 +38,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
 </dict>
 </plist>
