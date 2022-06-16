@@ -18,9 +18,12 @@ class MapViewController: UIViewController {
     
     var locationSelected: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
     
+    let mapsViewModel: MapsViewModel = .init()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mapsViewModel.delegate = self
         
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.requestAlwaysAuthorization()
@@ -35,29 +38,17 @@ class MapViewController: UIViewController {
     
     
     @IBAction func confirmLocationButton(_ sender: Any) {
-        print("Endereço selecionado \(searchLocationTextField.text ?? "")")
-        print("Localização selecionada \(locationSelected)")
+        guard let address = searchLocationTextField.text else { return }
+
+        mapsViewModel.fetchLocationIdBy(address: address) {
+            print("something")
+        }
     }
     
     @IBAction func searchLocationButton(_ sender: Any) {
         guard let address = searchLocationTextField.text else { return }
-        let geoCoder = CLGeocoder()
-        
-        geoCoder.geocodeAddressString(address) { (placemarks, error) in
-            guard
-                let placemarks = placemarks,
-                let location = placemarks.first?.location?.coordinate
-            else {
-                return
-            }
             
-            self.locationSelected = location
-          
-            let initialLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
-            self.UIMapKit.centerToLocation(initialLocation)
-            self.showArtwork(lat: location.latitude, lng: location.longitude)
-        }
-        
+        mapsViewModel.convertAddressToCoordinate(address: address)
     }
     
     func showArtwork(lat: Double, lng: Double) {
@@ -93,3 +84,13 @@ extension MKMapView {
         setRegion(coordinateRegion, animated: true)
     }
 }
+
+extension MapViewController: MapsViewModelDelegate {
+    func covertionSuccessUpdateLocation(initialLocation: CLLocation, location: CLLocationCoordinate2D) {
+        locationSelected = location
+        self.UIMapKit.centerToLocation(initialLocation)
+        self.showArtwork(lat: location.latitude, lng: location.longitude)
+    }
+}
+
+
