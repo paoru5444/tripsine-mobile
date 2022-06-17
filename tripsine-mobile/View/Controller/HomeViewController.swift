@@ -13,29 +13,23 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var searchRestaurantTextField: UITextField!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
     
+    let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         restaurantsCollectionView.dataSource = self
         renderView()
-        
-        searchRestaurantTextField.layer.cornerRadius = 8
-        
-        searchRestaurantTextField.backgroundColor = .white
-        searchRestaurantTextField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
-        searchRestaurantTextField.layer.shadowOpacity = 1
-        searchRestaurantTextField.layer.shadowRadius = 4
-        searchRestaurantTextField.layer.shadowOffset = CGSize(width: 0, height: 4)
+        renderSearchTextField()
     }
     
     private func renderView() {
         filterButton.layer.cornerRadius = 10
         renderImageTextField()
+        categoryViewModel.makeRequest()
     }
     
     private func renderImageTextField() {
@@ -47,6 +41,15 @@ class HomeViewController: UIViewController {
         let image = UIImage(named: "search icon" )
         imageView.image = image
         searchRestaurantTextField.leftView = imageView
+    }
+    
+    private func renderSearchTextField() {
+        searchRestaurantTextField.layer.cornerRadius = 8
+        searchRestaurantTextField.backgroundColor = .white
+        searchRestaurantTextField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+        searchRestaurantTextField.layer.shadowOpacity = 1
+        searchRestaurantTextField.layer.shadowRadius = 4
+        searchRestaurantTextField.layer.shadowOffset = CGSize(width: 0, height: 4)
     }
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0003E693285BE69D0050E1E2 /* HomeCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E692285BE69D0050E1E2 /* HomeCategoryService.swift */; };
+		0003E695285BE7C90050E1E2 /* HomeCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E694285BE7C90050E1E2 /* HomeCategoryViewModel.swift */; };
+		0003E697285BF4200050E1E2 /* HomeCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E696285BF4200050E1E2 /* HomeCategoryModel.swift */; };
 		000B04C92852CC8D001A35ED /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B04C82852CC8D001A35ED /* HomeViewController.swift */; };
 		000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */; };
 		3A99706B285262F0000965E9 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3A99706A285262F0000965E9 /* fonts */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0003E692285BE69D0050E1E2 /* HomeCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryService.swift; sourceTree = "<group>"; };
+		0003E694285BE7C90050E1E2 /* HomeCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryViewModel.swift; sourceTree = "<group>"; };
+		0003E696285BF4200050E1E2 /* HomeCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryModel.swift; sourceTree = "<group>"; };
 		000B04C82852CC8D001A35ED /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A99706A285262F0000965E9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
@@ -100,9 +106,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0003E691285BE63C0050E1E2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0003E692285BE69D0050E1E2 /* HomeCategoryService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		000B04C32852CADE001A35ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0003E696285BF4200050E1E2 /* HomeCategoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +125,10 @@
 		000B04C42852CAE5001A35ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3ACFC3FE2843E00D00AE4504 /* Main.storyboard */,
+				3ACFC4032843E01100AE4504 /* LaunchScreen.storyboard */,
+				3ACFC3F82843E00D00AE4504 /* AppDelegate.swift */,
+				3ACFC3FA2843E00D00AE4504 /* SceneDelegate.swift */,
 				000B04C72852CC72001A35ED /* Cell */,
 				000B04C62852CC5F001A35ED /* Controller */,
 			);
@@ -119,6 +138,7 @@
 		000B04C52852CAEB001A35ED /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0003E694285BE7C90050E1E2 /* HomeCategoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -126,6 +146,9 @@
 		000B04C62852CC5F001A35ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3AF68BF32853CCD100AB6945 /* RegisterViewController.swift */,
+				55D44EB228514E7C0069370F /* AboutViewController.swift */,
+				55D44EBA285150590069370F /* ProfileViewController.swift */,
 				3AF68BEC2853A5E200AB6945 /* FavoritsTableViewController.swift */,
 				3AF68BEB2853A5E200AB6945 /* MapViewController.swift */,
 				3ACFC3FC2843E00D00AE4504 /* LoginViewController.swift */,
@@ -167,21 +190,15 @@
 		3ACFC3F72843E00D00AE4504 /* tripsine-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				3ACFC4012843E01100AE4504 /* Assets.xcassets */,
+				3ACFC4062843E01100AE4504 /* Info.plist */,
+				0003E691285BE63C0050E1E2 /* Service */,
 				000B04C52852CAEB001A35ED /* ViewModel */,
 				000B04C42852CAE5001A35ED /* View */,
 				000B04C32852CADE001A35ED /* Model */,
 				3A99706A285262F0000965E9 /* fonts */,
 				3ACFC472284D01EC00AE4504 /* models */,
-				3ACFC3F82843E00D00AE4504 /* AppDelegate.swift */,
-				3ACFC3FA2843E00D00AE4504 /* SceneDelegate.swift */,
-				3ACFC3FE2843E00D00AE4504 /* Main.storyboard */,
-				3ACFC4012843E01100AE4504 /* Assets.xcassets */,
-				3ACFC4032843E01100AE4504 /* LaunchScreen.storyboard */,
-				3ACFC4062843E01100AE4504 /* Info.plist */,
-				55D44EBA285150590069370F /* ProfileViewController.swift */,
-				55D44EB228514E7C0069370F /* AboutViewController.swift */,
 				3AF2A8E1284D74BD00604E2F /* Artwork.swift */,
-				3AF68BF32853CCD100AB6945 /* RegisterViewController.swift */,
 			);
 			path = "tripsine-mobile";
 			sourceTree = "<group>";
@@ -347,11 +364,14 @@
 				3AF68BF42853CCD100AB6945 /* RegisterViewController.swift in Sources */,
 				3ACFC3FD2843E00D00AE4504 /* LoginViewController.swift in Sources */,
 				3AF68BF22853AC0A00AB6945 /* RestaurantsCollectionViewCell.swift in Sources */,
+				0003E695285BE7C90050E1E2 /* HomeCategoryViewModel.swift in Sources */,
 				55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */,
+				0003E693285BE69D0050E1E2 /* HomeCategoryService.swift in Sources */,
 				3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */,
 				55D44EBB285150590069370F /* ProfileViewController.swift in Sources */,
 				3AF68BED2853A5E200AB6945 /* MapViewController.swift in Sources */,
 				3AF68BEE2853A5E200AB6945 /* FavoritsTableViewController.swift in Sources */,
+				0003E697285BF4200050E1E2 /* HomeCategoryModel.swift in Sources */,
 				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
 				000B04C92852CC8D001A35ED /* HomeViewController.swift in Sources */,
 				000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */,
