@@ -39,10 +39,28 @@ class MapViewController: UIViewController {
     
     @IBAction func confirmLocationButton(_ sender: Any) {
         guard let address = searchLocationTextField.text else { return }
-
-        mapsViewModel.fetchLocationIdBy(address: address) {
-            print("something")
+        
+        let getAddressAlert = UIAlertController(
+            title: "Você está procurando por: \(address)",
+            message: "Tem certeza que deseja buscar o endereço selecionado?",
+            preferredStyle: .alert
+        )
+        
+        let actionDefault = UIAlertAction(title: "Claro!!", style: .default) { _ in
+            self.mapsViewModel.fetchLocationIdBy(address: address) {
+                print("something")
+            }
         }
+        
+        let actionCancel = UIAlertAction(title: "Tenho não", style: .destructive) { _ in
+            self.searchLocationTextField.text = ""
+            self.searchLocationTextField.updateFocusIfNeeded()
+        }
+        
+        getAddressAlert.addAction(actionDefault)
+        getAddressAlert.addAction(actionCancel)
+        
+        present(getAddressAlert, animated: true)
     }
     
     @IBAction func searchLocationButton(_ sender: Any) {
