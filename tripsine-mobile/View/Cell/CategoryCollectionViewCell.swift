@@ -10,11 +10,7 @@ import UIKit
 class CategoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var containerInsetView: UIView!
-    
-    
     @IBOutlet weak var iconCategorieImage: UIImageView!
-    
-    
     @IBOutlet weak var itemCategoryLabel: UILabel!
     
     func setupCell(index: Int) {
@@ -43,5 +39,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
             iconCategorieImage.image = UIImage(named: "coffe-icon")
             itemCategoryLabel.text = "Coffee & Tea"
         }
+    }
+    
+    func setupData(model: HomeCategoryModel) {
+        itemCategoryLabel.text = model.filters.filterSection.label
     }
 }

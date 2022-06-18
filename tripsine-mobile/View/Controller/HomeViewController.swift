@@ -16,8 +16,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
     
     let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
+    let model: HomeCategoryModel?
     
-
+    init(model: HomeCategoryModel) {
+        self.model = model
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -65,7 +74,8 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionView {
             let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryIdentifier", for: indexPath) as! CategoryCollectionViewCell
-            
+            guard let model = model else { return }
+            categoryCell.setupData(model: model)
             if indexPath.row == 0 {
                 setupLayerCell(cell: categoryCell)
                 categoryCell.backgroundColor = .purple
