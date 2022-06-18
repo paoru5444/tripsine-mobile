@@ -14,10 +14,12 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var searchLocationTextField: UITextField!
     
+    @IBOutlet weak var confirmLocationButton: UIButton!
+    
     let locationManager = CLLocationManager()
     
-    var locationSelected: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
-    
+    var selectedLocation: LocationResultData?
+
     let mapsViewModel: MapsViewModel = .init()
     
     override func viewDidLoad() {
@@ -34,6 +36,8 @@ class MapViewController: UIViewController {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
+        
+        selectedLocation = LocationResultData(location_id: "", location_string: "")
     }
     
     
@@ -48,13 +52,16 @@ class MapViewController: UIViewController {
         
         let actionDefault = UIAlertAction(title: "Claro!!", style: .default) { _ in
             self.mapsViewModel.fetchLocationIdBy(address: address) {
-                print("something")
+                DispatchQueue.main.async {
+                    guard let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeViewController else { return }
+                        secondViewController.modalPresentationStyle = .fullScreen
+                        self.present(secondViewController, animated: true)
+                }
             }
         }
         
         let actionCancel = UIAlertAction(title: "Tenho não", style: .destructive) { _ in
-            self.searchLocationTextField.text = ""
-            self.searchLocationTextField.updateFocusIfNeeded()
+            self.setTextInputFocus()
         }
         
         getAddressAlert.addAction(actionDefault)
@@ -77,6 +84,23 @@ class MapViewController: UIViewController {
           coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng))
         
         UIMapKit.addAnnotation(artwork)
+    }
+    
+    func errorAlert(message: String) {
+        let alert = UIAlertController(title: "Ops", message: message, preferredStyle: .alert)
+        
+        let actionDefault = UIAlertAction(title: "Buscar outro endereço", style: .default) { _ in
+            self.setTextInputFocus()
+        }
+        
+        alert.addAction(actionDefault)
+        
+        present(alert, animated: true)
+    }
+    
+    func setTextInputFocus() {
+        self.searchLocationTextField.text = ""
+        self.searchLocationTextField.updateFocusIfNeeded()
     }
 }
 
@@ -105,9 +129,23 @@ extension MKMapView {
 
 extension MapViewController: MapsViewModelDelegate {
     func covertionSuccessUpdateLocation(initialLocation: CLLocation, location: CLLocationCoordinate2D) {
-        locationSelected = location
         self.UIMapKit.centerToLocation(initialLocation)
         self.showArtwork(lat: location.latitude, lng: location.longitude)
+    }
+    
+    func fetchLocationSuccess(location: LocationResultData) {
+        selectedLocation = location
+    }
+    
+    func fetchLocationFailure(error: Error) {
+        errorAlert(message: error.localizedDescription)
+        print(error.localizedDescription)
+    }
+    
+    func alertMessageOnFailure(message: String) {
+        DispatchQueue.main.async {
+            self.errorAlert(message: message)
+        }
     }
 }
 

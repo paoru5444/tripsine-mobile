@@ -13,6 +13,9 @@ protocol MapsViewModelDelegate {
         initialLocation: CLLocation,
         location: CLLocationCoordinate2D
     )
+    func fetchLocationFailure(error: Error)
+    func fetchLocationSuccess(location: LocationResultData)
+    func alertMessageOnFailure(message: String)
 }
 
 class MapsViewModel {
@@ -44,12 +47,23 @@ class MapsViewModel {
         
         request.allHTTPHeaderFields = headers
         
-        let dataTask = session.dataTask(with: request) { data, _, _ in
-            guard let data = data else { return }
+        let dataTask = session.dataTask(with: request) { data, _, error in
+            if let error = error {
+                self.delegate?.fetchLocationFailure(error: error)
+                return
+            }
             
-            let decoder = JSONDecoder()
-            let location = try? decoder.decode(LocationModel.self, from: data)
-            print(location?.data.first?.result_object)
+            if let data = data {
+                let decoder = JSONDecoder()
+                let location = try? decoder.decode(LocationModel.self, from: data)
+                if let resultData: LocationResultData = location?.data.first?.result_object {
+                    self.delegate?.fetchLocationSuccess(location: resultData)
+                    completion()
+                } else {
+                    self.delegate?.alertMessageOnFailure(message: "Erro ao buscar o endereço, tente novamente")
+                }
+                return
+            }
         }
         
         dataTask.resume()
@@ -63,6 +77,7 @@ class MapsViewModel {
                 let placemarks = placemarks,
                 let location = placemarks.first?.location?.coordinate
             else {
+                self.delegate?.alertMessageOnFailure(message: "Não conseguimos encontrar \(address), tente um novo endereço.")
                 return
             }
           

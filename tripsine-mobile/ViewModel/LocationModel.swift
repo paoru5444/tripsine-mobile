@@ -10,6 +10,11 @@ import Foundation
 struct LocationResultData: Codable {
     let location_id: String
     let location_string: String
+    
+    init (location_id: String, location_string: String) {
+        self.location_id = location_id
+        self.location_string = location_string
+    }
 }
 
 struct LocationData: Codable {
