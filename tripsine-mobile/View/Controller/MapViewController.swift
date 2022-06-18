@@ -16,6 +16,8 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var confirmLocationButton: UIButton!
     
+    @IBOutlet weak var searchLocationButton: UIButton!
+    
     let locationManager = CLLocationManager()
     
     var selectedLocation: LocationResultData?
@@ -26,6 +28,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         mapsViewModel.delegate = self
+        searchLocationTextField.delegate = self
         
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.requestAlwaysAuthorization()
@@ -38,6 +41,9 @@ class MapViewController: UIViewController {
         }
         
         selectedLocation = LocationResultData(location_id: "", location_string: "")
+        
+        confirmLocationButton.isEnabled = false
+        searchLocationButton.isEnabled = false
     }
     
     
@@ -99,8 +105,10 @@ class MapViewController: UIViewController {
     }
     
     func setTextInputFocus() {
-        self.searchLocationTextField.text = ""
-        self.searchLocationTextField.updateFocusIfNeeded()
+        searchLocationTextField.text = ""
+        searchLocationTextField.updateFocusIfNeeded()
+        confirmLocationButton.isEnabled = false
+        searchLocationButton.isEnabled = false
     }
 }
 
@@ -131,6 +139,7 @@ extension MapViewController: MapsViewModelDelegate {
     func covertionSuccessUpdateLocation(initialLocation: CLLocation, location: CLLocationCoordinate2D) {
         self.UIMapKit.centerToLocation(initialLocation)
         self.showArtwork(lat: location.latitude, lng: location.longitude)
+        confirmLocationButton.isEnabled = true
     }
     
     func fetchLocationSuccess(location: LocationResultData) {
@@ -149,4 +158,17 @@ extension MapViewController: MapsViewModelDelegate {
     }
 }
 
+extension MapViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let numberOfChars = range.lowerBound
+        if numberOfChars <= 0 {
+            confirmLocationButton.isEnabled = false
+            searchLocationButton.isEnabled = false
+            
+        } else {
+            searchLocationButton.isEnabled = true
+        }
+        return true
+    }
+}
 

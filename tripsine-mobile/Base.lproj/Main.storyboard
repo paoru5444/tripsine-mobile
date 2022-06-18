@@ -1440,6 +1440,7 @@
                     <connections>
                         <outlet property="UIMapKit" destination="LeT-pC-zlZ" id="5Hw-yu-XEm"/>
                         <outlet property="confirmLocationButton" destination="m4q-Oh-Z3X" id="I6p-F1-Ff5"/>
+                        <outlet property="searchLocationButton" destination="hd7-B0-Qkp" id="8ac-dp-GYT"/>
                         <outlet property="searchLocationTextField" destination="UIt-La-SWx" id="laL-8c-hbk"/>
                     </connections>
                 </viewController>
