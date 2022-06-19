@@ -14,13 +14,21 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var searchLocationTextField: UITextField!
     
+    @IBOutlet weak var confirmLocationButton: UIButton!
+    
+    @IBOutlet weak var searchLocationButton: UIButton!
+    
     let locationManager = CLLocationManager()
     
-    var locationSelected: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+    var selectedLocation: LocationResultData?
+
+    let mapsViewModel: MapsViewModel = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mapsViewModel.delegate = self
+        searchLocationTextField.delegate = self
         
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.requestAlwaysAuthorization()
@@ -31,33 +39,47 @@ class MapViewController: UIViewController {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
+        
+        selectedLocation = LocationResultData(location_id: "", location_string: "")
+        
+        confirmLocationButton.isEnabled = false
+        searchLocationButton.isEnabled = false
     }
     
     
     @IBAction func confirmLocationButton(_ sender: Any) {
-        print("Endereço selecionado \(searchLocationTextField.text ?? "")")
-        print("Localização selecionada \(locationSelected)")
+        guard let address = searchLocationTextField.text else { return }
+        
+        let getAddressAlert = UIAlertController(
+            title: "Você está procurando por: \(address)",
+            message: "Tem certeza que deseja buscar o endereço selecionado?",
+            preferredStyle: .alert
+        )
+        
+        let actionDefault = UIAlertAction(title: "Claro!!", style: .default) { _ in
+            self.mapsViewModel.fetchLocationIdBy(address: address) {
+                DispatchQueue.main.async {
+                    guard let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeViewController else { return }
+                        secondViewController.modalPresentationStyle = .fullScreen
+                        self.present(secondViewController, animated: true)
+                }
+            }
+        }
+        
+        let actionCancel = UIAlertAction(title: "Tenho não", style: .destructive) { _ in
+            self.setTextInputFocus()
+        }
+        
+        getAddressAlert.addAction(actionDefault)
+        getAddressAlert.addAction(actionCancel)
+        
+        present(getAddressAlert, animated: true)
     }
     
     @IBAction func searchLocationButton(_ sender: Any) {
         guard let address = searchLocationTextField.text else { return }
-        let geoCoder = CLGeocoder()
-        
-        geoCoder.geocodeAddressString(address) { (placemarks, error) in
-            guard
-                let placemarks = placemarks,
-                let location = placemarks.first?.location?.coordinate
-            else {
-                return
-            }
             
-            self.locationSelected = location
-          
-            let initialLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
-            self.UIMapKit.centerToLocation(initialLocation)
-            self.showArtwork(lat: location.latitude, lng: location.longitude)
-        }
-        
+        mapsViewModel.convertAddressToCoordinate(address: address)
     }
     
     func showArtwork(lat: Double, lng: Double) {
@@ -68,6 +90,25 @@ class MapViewController: UIViewController {
           coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng))
         
         UIMapKit.addAnnotation(artwork)
+    }
+    
+    func errorAlert(message: String) {
+        let alert = UIAlertController(title: "Ops", message: message, preferredStyle: .alert)
+        
+        let actionDefault = UIAlertAction(title: "Buscar outro endereço", style: .default) { _ in
+            self.setTextInputFocus()
+        }
+        
+        alert.addAction(actionDefault)
+        
+        present(alert, animated: true)
+    }
+    
+    func setTextInputFocus() {
+        searchLocationTextField.text = ""
+        searchLocationTextField.updateFocusIfNeeded()
+        confirmLocationButton.isEnabled = false
+        searchLocationButton.isEnabled = false
     }
 }
 
@@ -93,3 +134,41 @@ extension MKMapView {
         setRegion(coordinateRegion, animated: true)
     }
 }
+
+extension MapViewController: MapsViewModelDelegate {
+    func covertionSuccessUpdateLocation(initialLocation: CLLocation, location: CLLocationCoordinate2D) {
+        self.UIMapKit.centerToLocation(initialLocation)
+        self.showArtwork(lat: location.latitude, lng: location.longitude)
+        confirmLocationButton.isEnabled = true
+    }
+    
+    func fetchLocationSuccess(location: LocationResultData) {
+        selectedLocation = location
+    }
+    
+    func fetchLocationFailure(error: Error) {
+        errorAlert(message: error.localizedDescription)
+        print(error.localizedDescription)
+    }
+    
+    func alertMessageOnFailure(message: String) {
+        DispatchQueue.main.async {
+            self.errorAlert(message: message)
+        }
+    }
+}
+
+extension MapViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let numberOfChars = range.lowerBound
+        if numberOfChars <= 0 {
+            confirmLocationButton.isEnabled = false
+            searchLocationButton.isEnabled = false
+            
+        } else {
+            searchLocationButton.isEnabled = true
+        }
+        return true
+    }
+}
+
