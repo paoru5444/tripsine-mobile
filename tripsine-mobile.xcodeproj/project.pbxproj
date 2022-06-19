@@ -12,6 +12,7 @@
 		0003E697285BF4200050E1E2 /* HomeCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003E696285BF4200050E1E2 /* HomeCategoryModel.swift */; };
 		000B04C92852CC8D001A35ED /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B04C82852CC8D001A35ED /* HomeViewController.swift */; };
 		000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */; };
+		00978085285E75B700A09A21 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00978084285E75B600A09A21 /* CommonService.swift */; };
 		3A99706B285262F0000965E9 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3A99706A285262F0000965E9 /* fonts */; };
 		3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC3F82843E00D00AE4504 /* AppDelegate.swift */; };
 		3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC3FA2843E00D00AE4504 /* SceneDelegate.swift */; };
@@ -56,6 +57,7 @@
 		0003E696285BF4200050E1E2 /* HomeCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryModel.swift; sourceTree = "<group>"; };
 		000B04C82852CC8D001A35ED /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		00978084285E75B600A09A21 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
 		3A99706A285262F0000965E9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		3ACFC3F52843E00D00AE4504 /* tripsine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tripsine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACFC3F82843E00D00AE4504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				0003E692285BE69D0050E1E2 /* HomeCategoryService.swift */,
+				00978084285E75B600A09A21 /* CommonService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				0003E697285BF4200050E1E2 /* HomeCategoryModel.swift in Sources */,
 				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
 				000B04C92852CC8D001A35ED /* HomeViewController.swift in Sources */,
+				00978085285E75B700A09A21 /* CommonService.swift in Sources */,
 				000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */,
 				3AF68BF02853A5ED00AB6945 /* FavoritsTableViewCell.swift in Sources */,
 				3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */,

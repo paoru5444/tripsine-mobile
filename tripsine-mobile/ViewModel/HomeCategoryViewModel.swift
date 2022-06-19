@@ -7,16 +7,30 @@
 
 import Foundation
 
+protocol HomeCategoryViewModelDelegate {
+    func updateCategory()
+}
+
 class HomeCategoryViewModel {
     
-    private let service: HomeCategoryService
+    private var service: HomeCategoryService
+    
+    private var model: HomeCategoryModel?
+    var delegate: HomeCategoryViewModelDelegate?
     
     init(service: HomeCategoryService = .init()) {
-            self.service = service
+        self.service = service
     }
     
-    func makeRequest() {
-        service.requestCategoryService()
+    private func makeRequest() {
+        service.requestCategoryService { categoryModel in
+            self.model = categoryModel
+//            self.updateCategoryText(categoryModel.filters.filterSection)
+        }
     }
+
+//    func updateCategoryText(_ model: [FilterSection]) -> [FilterSection] {
+//        return [model]
+//    }
     
 }

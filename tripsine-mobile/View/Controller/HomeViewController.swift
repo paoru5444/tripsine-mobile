@@ -16,29 +16,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
     
     let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
-    let model: HomeCategoryModel?
-    
-    init(model: HomeCategoryModel) {
-        self.model = model
-        super.init()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         restaurantsCollectionView.dataSource = self
         renderView()
         renderSearchTextField()
+        categoryViewModel.delegate = self
     }
     
     private func renderView() {
         filterButton.layer.cornerRadius = 10
         renderImageTextField()
-        categoryViewModel.makeRequest()
     }
     
     private func renderImageTextField() {
@@ -60,6 +50,7 @@ class HomeViewController: UIViewController {
         searchRestaurantTextField.layer.shadowRadius = 4
         searchRestaurantTextField.layer.shadowOffset = CGSize(width: 0, height: 4)
     }
+    
 }
 
 extension HomeViewController: UICollectionViewDataSource {
@@ -67,15 +58,13 @@ extension HomeViewController: UICollectionViewDataSource {
         if collectionView == self.restaurantsCollectionView {
             return 8
         }
-        
         return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionView {
             let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryIdentifier", for: indexPath) as! CategoryCollectionViewCell
-            guard let model = model else { return }
-            categoryCell.setupData(model: model)
+
             if indexPath.row == 0 {
                 setupLayerCell(cell: categoryCell)
                 categoryCell.backgroundColor = .purple
@@ -98,5 +87,11 @@ extension HomeViewController: UICollectionViewDataSource {
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 10
         cell.layer.borderColor = UIColor.red.cgColor
+    }
+}
+
+extension HomeViewController: HomeCategoryViewModelDelegate {
+    func updateCategory() {
+        
     }
 }
