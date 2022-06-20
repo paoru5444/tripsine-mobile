@@ -21,8 +21,6 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        logoutButton.semanticContentAttribute = .forceRightToLeft
-        
         logoutSquareIconImage.layer.shadowColor = UIColor.black.cgColor
         logoutSquareIconImage.layer.shadowOffset = CGSize(width: 5, height: 5)
         logoutSquareIconImage.layer.shadowRadius = 5
@@ -33,7 +31,6 @@ class ProfileViewController: UIViewController {
         aboutSquareIconImage.layer.shadowRadius = 5
         aboutSquareIconImage.layer.shadowOpacity = 0.1
         
-//        aboutButton.semanticContentAttribute = .forceRightToLeft
         
         editProfileButton.layer.shadowColor = UIColor.black.cgColor
         editProfileButton.layer.shadowOffset = CGSize(width: 5, height: 5)
@@ -41,7 +38,7 @@ class ProfileViewController: UIViewController {
         editProfileButton.layer.shadowOpacity = 0.1
         editProfileButton.layer.cornerRadius = 8
         
-        // mark: External red cirle
+        // mark: Profile image
         setupProfileImage()
     }
     
@@ -50,13 +47,13 @@ class ProfileViewController: UIViewController {
         
         let imageRadius: CGFloat = profilePicImage.bounds.size.width / 2.0
 
-        profileRedCircleView.clipsToBounds = true
+//        profileRedCircleView.clipsToBounds = true
         profileRedCircleView.layer.masksToBounds = true
         profileRedCircleView.layer.cornerRadius = viewRadius
         profileRedCircleView.layer.borderWidth = 2
         profileRedCircleView.layer.borderColor = UIColor(red: 0.816, green: 0.067, blue: 0.063, alpha: 1).cgColor
         
-        profilePicImage.clipsToBounds = true
+//        profilePicImage.clipsToBounds = true
         profilePicImage.layer.masksToBounds = true
         profilePicImage.layer.cornerRadius = imageRadius
         
