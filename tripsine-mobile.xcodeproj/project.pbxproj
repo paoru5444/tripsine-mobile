@@ -10,7 +10,7 @@
 		000B04C92852CC8D001A35ED /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B04C82852CC8D001A35ED /* HomeViewController.swift */; };
 		000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */; };
 		0095C776285953E8006DE580 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0095C775285953E8006DE580 /* DetailsViewController.swift */; };
-		3A99706B285262F0000965E9 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3A99706A285262F0000965E9 /* fonts */; };
+		3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EEC90286013C70066FA13 /* LoginViewController.swift */; };
 		3AC4128C285B784E00EA4A5D /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC4128B285B784E00EA4A5D /* MapsViewModel.swift */; };
 		3AC4128E285BA24300EA4A5D /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC4128D285BA24300EA4A5D /* LocationModel.swift */; };
 		3AC41292285E919B00EA4A5D /* CustomUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC41291285E919B00EA4A5D /* CustomUITabBarController.swift */; };
@@ -73,6 +73,7 @@
 		000B04C82852CC8D001A35ED /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		0095C775285953E8006DE580 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		3A0EEC90286013C70066FA13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3A99706A285262F0000965E9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		3AC4128B285B784E00EA4A5D /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
 		3AC4128D285BA24300EA4A5D /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 				3AF68BEB2853A5E200AB6945 /* MapViewController.swift */,
 				000B04C82852CC8D001A35ED /* HomeViewController.swift */,
 				3AC41291285E919B00EA4A5D /* CustomUITabBarController.swift */,
+				3A0EEC90286013C70066FA13 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -439,6 +441,7 @@
 				000B04C92852CC8D001A35ED /* HomeViewController.swift in Sources */,
 				000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */,
 				3AF68BF02853A5ED00AB6945 /* FavoritsTableViewCell.swift in Sources */,
+				3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */,
 				0095C776285953E8006DE580 /* DetailsViewController.swift in Sources */,
 				3AC4128E285BA24300EA4A5D /* LocationModel.swift in Sources */,
 				3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */,
