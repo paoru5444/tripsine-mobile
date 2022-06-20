@@ -16,10 +16,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var logoutSquareIconImage: UIImageView!
     
+    @IBOutlet weak var profileRedCircleView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        logoutButton.semanticContentAttribute = .forceRightToLeft
         
         logoutSquareIconImage.layer.shadowColor = UIColor.black.cgColor
         logoutSquareIconImage.layer.shadowOffset = CGSize(width: 5, height: 5)
@@ -31,17 +31,32 @@ class ProfileViewController: UIViewController {
         aboutSquareIconImage.layer.shadowRadius = 5
         aboutSquareIconImage.layer.shadowOpacity = 0.1
         
-        aboutButton.semanticContentAttribute = .forceRightToLeft
         
         editProfileButton.layer.shadowColor = UIColor.black.cgColor
         editProfileButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         editProfileButton.layer.shadowRadius = 5
         editProfileButton.layer.shadowOpacity = 0.1
-        editProfileButton.layer.cornerRadius = 10
+        editProfileButton.layer.cornerRadius = 8
         
-        profilePicImage.layer.masksToBounds = true
-        profilePicImage.layer.cornerRadius = profilePicImage.bounds.width / 2
+        // mark: Profile image
+        setupProfileImage()
+    }
+    
+    func setupProfileImage() {
+        let viewRadius: CGFloat = profileRedCircleView.bounds.size.width / 2.0
+        
+        let imageRadius: CGFloat = profilePicImage.bounds.size.width / 2.0
 
+//        profileRedCircleView.clipsToBounds = true
+        profileRedCircleView.layer.masksToBounds = true
+        profileRedCircleView.layer.cornerRadius = viewRadius
+        profileRedCircleView.layer.borderWidth = 2
+        profileRedCircleView.layer.borderColor = UIColor(red: 0.816, green: 0.067, blue: 0.063, alpha: 1).cgColor
+        
+//        profilePicImage.clipsToBounds = true
+        profilePicImage.layer.masksToBounds = true
+        profilePicImage.layer.cornerRadius = imageRadius
+        
     }
     
 
