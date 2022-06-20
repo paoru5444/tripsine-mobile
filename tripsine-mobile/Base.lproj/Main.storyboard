@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KKu-79-LxO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -407,7 +408,23 @@
                             <constraint firstItem="xTm-YI-GOJ" firstAttribute="centerY" secondItem="nOJ-Y1-4Ca" secondAttribute="centerY" id="y1w-tA-O5v"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="pcw-7W-xfc"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="pcw-7W-xfc">
+                        <imageReference key="image" image="person" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color red="0.40392160420000001" green="0.6784313917" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <connections>
                         <outlet property="aboutButton" destination="nOJ-Y1-4Ca" id="JsD-5Y-sZT"/>
                         <outlet property="aboutSquareIconImage" destination="xTm-YI-GOJ" id="OMa-Oi-rf9"/>
@@ -646,7 +663,6 @@
                                             <outlet property="containerView" destination="kjk-dk-lpq" id="uXH-1I-kAN"/>
                                             <outlet property="image" destination="N0c-ad-HOw" id="hq9-QN-X4Q"/>
                                             <outlet property="openLabel" destination="ilF-3Q-ZkM" id="E9U-dB-ZQu"/>
-                                            <segue destination="owR-8Z-fQL" kind="modal" modalPresentationStyle="fullScreen" id="oJO-dJ-i2I"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -677,7 +693,23 @@
                             <constraint firstItem="yUj-dt-AoW" firstAttribute="top" secondItem="Rgi-Iu-opB" secondAttribute="bottom" constant="50" id="zmM-nZ-T2E"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="uzJ-aB-wIZ"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="uzJ-aB-wIZ">
+                        <imageReference key="image" image="house" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="selectedImage" image="house.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <connections>
                         <outlet property="addressButton" destination="kU3-Kr-mgJ" id="ART-4e-kcY"/>
                         <outlet property="collectionView" destination="Rgi-Iu-opB" id="dDr-FY-Ncn"/>
@@ -690,21 +722,30 @@
             </objects>
             <point key="canvasLocation" x="457.97101449275368" y="-74.330357142857139"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--CustomUI Tab Bar Controller-->
         <scene sceneID="Dga-zR-xxJ">
             <objects>
-                <tabBarController id="CdG-NC-JBt" sceneMemberID="viewController">
+                <tabBarController id="CdG-NC-JBt" customClass="CustomUITabBarController" customModule="tripsine_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xAy-Ie-Naq"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cMt-DA-kl2">
+                    <value key="contentSizeForViewInPopover" type="size" width="0.0" height="55"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="cMt-DA-kl2" customClass="CustomUITabBar" customModule="tripsine_mobile">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.76470589639999997" green="0.22745099660000001" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.76470589639999997" green="0.22745099660000001" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="okS-uN-Gs6" kind="relationship" relationship="viewControllers" id="tlo-f0-Z9P"/>
-                        <segue destination="TvI-zW-dSf" kind="relationship" relationship="viewControllers" id="ysY-cK-I2S"/>
+                        <outlet property="itemsTabBar" destination="cMt-DA-kl2" id="kep-34-uE2"/>
+                        <segue destination="okS-uN-Gs6" kind="relationship" relationship="viewControllers" id="LIF-BW-I5b"/>
+                        <segue destination="TvI-zW-dSf" kind="relationship" relationship="viewControllers" id="219-YG-ump"/>
+                        <segue destination="owR-8Z-fQL" kind="relationship" relationship="viewControllers" id="qnM-Qa-8qu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvW-7d-koN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1213,7 +1254,7 @@
             </objects>
             <point key="canvasLocation" x="1247.8260869565217" y="636.83035714285711"/>
         </scene>
-        <!--Favorits Table View Controller-->
+        <!--Favoritos-->
         <scene sceneID="o1Z-6g-sgZ">
             <objects>
                 <tableViewController id="owR-8Z-fQL" customClass="FavoritsTableViewController" customModule="tripsine_mobile" customModuleProvider="target" sceneMemberID="viewController">
@@ -1356,11 +1397,28 @@
                             <outlet property="delegate" destination="owR-8Z-fQL" id="TlW-pC-PdP"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Favoritos" id="kck-LW-32V">
+                        <imageReference key="image" image="heart" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="selectedImage" image="heart.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="8bc-Eh-70F"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqA-qZ-ly0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="-56"/>
+            <point key="canvasLocation" x="-313" y="1043"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="jxg-Rf-pFE">
@@ -1481,8 +1539,10 @@
         <image name="facebook" width="360" height="360"/>
         <image name="filter icon" width="24" height="24"/>
         <image name="google" width="225" height="225"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="launch-icon" width="237" height="134"/>
         <image name="location" width="16" height="16"/>
@@ -1491,6 +1551,8 @@
         <image name="network" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="power" catalog="system" width="128" height="124"/>
         <image name="restaurant-cover" width="520" height="388"/>
         <image name="restaurant-image" width="186" height="134"/>
@@ -1498,8 +1560,14 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
