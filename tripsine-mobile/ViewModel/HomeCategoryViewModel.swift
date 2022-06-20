@@ -8,29 +8,29 @@
 import Foundation
 
 protocol HomeCategoryViewModelDelegate {
-    func updateCategory()
+    func updateCategory(_ filter: [FilterSection])
 }
 
 class HomeCategoryViewModel {
     
     private var service: HomeCategoryService
-    
-    private var model: HomeCategoryModel?
+    private var categoryModel = [FilterSection]()
     var delegate: HomeCategoryViewModelDelegate?
     
     init(service: HomeCategoryService = .init()) {
         self.service = service
     }
     
-    private func makeRequest() {
-        service.requestCategoryService { categoryModel in
-            self.model = categoryModel
-//            self.updateCategoryText(categoryModel.filters.filterSection)
+    func makeRequest() {
+        service.requestCategoryService { filterSection in
+            self.categoryModel = filterSection
+            self.updateCategorySection(filterSection)
         }
     }
-
-//    func updateCategoryText(_ model: [FilterSection]) -> [FilterSection] {
-//        return [model]
-//    }
+    
+    func updateCategorySection(_ filter: [FilterSection]) {
+        categoryModel = filter        
+        delegate?.updateCategory(categoryModel)
+    }
     
 }

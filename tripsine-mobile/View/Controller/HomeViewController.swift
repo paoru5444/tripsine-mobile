@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var addressButton: UIButton!
     @IBOutlet weak var searchRestaurantTextField: UITextField!
@@ -16,30 +16,32 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
     
     let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
+    var filterSection = [FilterSection]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         restaurantsCollectionView.dataSource = self
         renderView()
-        renderSearchTextField()
+        makeRequestForHome()
         categoryViewModel.delegate = self
     }
     
     private func renderView() {
         filterButton.layer.cornerRadius = 10
         renderImageTextField()
+        renderSearchTextField()
     }
     
     private func renderImageTextField() {
-        searchRestaurantTextField.leftViewMode = UITextField.ViewMode.always
-        let imageView = UIImageView(frame: CGRect(x: 10,
-                                                  y: 10,
+        let imageView = UIImageView(frame: CGRect(x: 20,
+                                                  y: 30,
                                                   width: 20,
                                                   height: 20))
-        let image = UIImage(named: "search icon" )
+        let image = UIImage(named: "search icon")
         imageView.image = image
         searchRestaurantTextField.leftView = imageView
+        searchRestaurantTextField.leftViewMode = .always
     }
     
     private func renderSearchTextField() {
@@ -51,6 +53,9 @@ class HomeViewController: UIViewController {
         searchRestaurantTextField.layer.shadowOffset = CGSize(width: 0, height: 4)
     }
     
+    private func makeRequestForHome() {
+        categoryViewModel.makeRequest()
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
@@ -58,23 +63,13 @@ extension HomeViewController: UICollectionViewDataSource {
         if collectionView == self.restaurantsCollectionView {
             return 8
         }
-        return 3
+        return filterSection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionView {
             let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryIdentifier", for: indexPath) as! CategoryCollectionViewCell
-
-            if indexPath.row == 0 {
-                setupLayerCell(cell: categoryCell)
-                categoryCell.backgroundColor = .purple
-                categoryCell.setupCell(index: indexPath.row)
-            } else {
-                setupLayerCell(cell: categoryCell)
-                categoryCell.backgroundColor = .white
-                categoryCell.setupCell(index: indexPath.row)
-            }
-            
+            categoryCell.setupCell(index: indexPath.row, filterSection: filterSection)
             return categoryCell
         } else {
             let restaurantCell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantsCollectionViewCell
@@ -82,16 +77,13 @@ extension HomeViewController: UICollectionViewDataSource {
             return restaurantCell
         }
     }
-    
-    private func setupLayerCell(cell: UICollectionViewCell) {
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 10
-        cell.layer.borderColor = UIColor.red.cgColor
-    }
 }
 
 extension HomeViewController: HomeCategoryViewModelDelegate {
-    func updateCategory() {
-        
+    func updateCategory(_ filter: [FilterSection]) {
+        DispatchQueue.main.async {
+            self.filterSection = filter
+            self.collectionView.reloadData()
+        }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 class HomeCategoryService {
     
-    func requestCategoryService(completion: @escaping (HomeCategoryModel) -> Void) {
+    func requestCategoryService(completion: @escaping ([FilterSection]) -> ()) {
         let headers = [
             "X-RapidAPI-Key": "9fd4fcfd26msh60b602655b093dap11fcc5jsnee05ddd96216",
             "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
@@ -39,7 +39,7 @@ class HomeCategoryService {
             
             let resume = try? JSONDecoder().decode(HomeCategoryModel.self, from: data)
             guard let resume = resume else { return }
-            completion(resume)
+            completion(resume.filters.filterSection)
         }
         dataTask.resume()
     }
