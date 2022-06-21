@@ -296,8 +296,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aW1-1H-pj6">
+                            <navigationBar userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aW1-1H-pj6">
                                 <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                                <color key="backgroundColor" red="0.92156863209999995" green="0.92156863209999995" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.97254908080000002" green="0.97254908080000002" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Perfil" id="8Aw-lZ-Fjc"/>
                                 </items>
@@ -359,7 +369,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.97254908080000002" green="0.97254908080000002" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="BKk-Wg-uCL"/>
                                 </constraints>
@@ -385,7 +395,7 @@
                                         <color key="tintColor" red="0.74901960779999999" green="0.1764705882" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.97254908080000002" green="0.97254908080000002" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="vr8-zk-5kt"/>
                                 </constraints>
@@ -418,7 +428,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eZF-s0-Kjb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254908080000002" green="0.97254908080000002" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="eZF-s0-Kjb" firstAttribute="trailing" secondItem="P4p-Qg-Jpt" secondAttribute="trailing" constant="36" id="0Gh-1b-HZc"/>
                             <constraint firstItem="aG9-B7-URE" firstAttribute="top" secondItem="CA0-63-gzv" secondAttribute="bottom" constant="32" id="1lD-ub-cHw"/>
@@ -489,7 +499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KO-I6-ciT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457.97101449275368" y="636.83035714285711"/>
+            <point key="canvasLocation" x="1368.1159420289855" y="636.83035714285711"/>
         </scene>
         <!--Home-->
         <scene sceneID="Fia-WU-2Yw">
@@ -798,7 +808,7 @@
                         <outlet property="itemsTabBar" destination="cMt-DA-kl2" id="kep-34-uE2"/>
                         <segue destination="okS-uN-Gs6" kind="relationship" relationship="viewControllers" id="LIF-BW-I5b"/>
                         <segue destination="TvI-zW-dSf" kind="relationship" relationship="viewControllers" id="219-YG-ump"/>
-                        <segue destination="owR-8Z-fQL" kind="relationship" relationship="viewControllers" id="qnM-Qa-8qu"/>
+                        <segue destination="umJ-RV-cJr" kind="relationship" relationship="viewControllers" id="qnM-Qa-8qu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvW-7d-koN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1314,7 +1324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qkz-8S-JEF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247.8260869565217" y="636.83035714285711"/>
+            <point key="canvasLocation" x="2156.521739130435" y="636.83035714285711"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="o1Z-6g-sgZ">
@@ -1459,28 +1469,12 @@
                             <outlet property="delegate" destination="owR-8Z-fQL" id="TlW-pC-PdP"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favoritos" id="kck-LW-32V">
-                        <imageReference key="image" image="heart" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <imageReference key="selectedImage" image="heart.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" id="8bc-Eh-70F"/>
+                    <navigationItem key="navigationItem" title="Favoritos" id="8bc-Eh-70F"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqA-qZ-ly0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313" y="1043"/>
+            <point key="canvasLocation" x="597.10144927536237" y="1042.6339285714284"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="jxg-Rf-pFE">
@@ -1585,6 +1579,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGT-8e-ezP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2423.1884057971015" y="53.571428571428569"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="oPQ-S6-5y5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="umJ-RV-cJr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoritos" id="kck-LW-32V">
+                        <imageReference key="image" image="heart" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="selectedImage" image="heart.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" userInteractionEnabled="NO" contentMode="scaleToFill" id="UBU-aL-05m">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="owR-8Z-fQL" kind="relationship" relationship="rootViewController" id="f9b-ao-vch"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MzH-sZ-gR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313.04347826086956" y="1042.6339285714284"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
