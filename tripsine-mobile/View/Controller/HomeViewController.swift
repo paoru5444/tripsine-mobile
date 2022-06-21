@@ -18,7 +18,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var currentAddressLabel: UIButton!
     
     let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
+    let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
     var filterSection = [FilterSection]()
+    var restaurantSection = [RestaurantData]()
 
     func updateHomeFromMaps(_ address: LocationResultData) {
         currentAddressLabel.setTitle(address.location_string, for: .normal)
@@ -31,8 +33,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         renderView()
         makeRequestForHome()
         categoryViewModel.delegate = self
+        restaurantViewModel.delegate = self
     }
-    
+
     private func renderView() {
         filterButton.layer.cornerRadius = 10
         renderImageTextField()
@@ -61,13 +64,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     private func makeRequestForHome() {
         categoryViewModel.makeRequest()
+        restaurantViewModel.makeRequest()
     }
+
 }
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.restaurantsCollectionView {
-            return 8
+            return restaurantSection.count
         }
         return filterSection.count
     }
@@ -79,7 +84,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return categoryCell
         } else {
             let restaurantCell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantsCollectionViewCell
-            restaurantCell.setupCell()
+            restaurantCell.setupCell(index: indexPath.row, restaurantData: restaurantSection)
             return restaurantCell
         }
     }
@@ -92,4 +97,14 @@ extension HomeViewController: HomeCategoryViewModelDelegate {
             self.collectionView.reloadData()
         }
     }
+}
+
+extension HomeViewController: HomeRestaurantViewModelDelegate {
+    func updateRestaurant(_ filter: [RestaurantData]) {
+        DispatchQueue.main.async {
+            self.restaurantSection = filter
+            self.collectionView.reloadData()
+        }
+    }
+    
 }

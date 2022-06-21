@@ -32,6 +32,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
             itemCategoryLabel.text = filterSection[index].description
             iconCategorieImage.tintColor = .red
             itemCategoryLabel.numberOfLines = 0
+            itemCategoryLabel.textColor = .black
             self.backgroundColor = .white
         } else {
             containerInsetView.backgroundColor = UIColor(red: 0.816, green: 0.067, blue: 0.063, alpha: 1)
