@@ -13,9 +13,8 @@
 		000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */; };
 		0095C776285953E8006DE580 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0095C775285953E8006DE580 /* DetailsViewController.swift */; };
 		00978085285E75B700A09A21 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00978084285E75B600A09A21 /* CommonService.swift */; };
-		3A79C51A285FD86300AB69F9 /* HomeCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */; };
-		3A99706B285262F0000965E9 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3A99706A285262F0000965E9 /* fonts */; };
 		3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EEC90286013C70066FA13 /* LoginViewController.swift */; };
+		3A79C51A285FD86300AB69F9 /* HomeCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */; };
 		3AC4128C285B784E00EA4A5D /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC4128B285B784E00EA4A5D /* MapsViewModel.swift */; };
 		3AC4128E285BA24300EA4A5D /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC4128D285BA24300EA4A5D /* LocationModel.swift */; };
 		3AC41292285E919B00EA4A5D /* CustomUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC41291285E919B00EA4A5D /* CustomUITabBarController.swift */; };
@@ -81,8 +80,8 @@
 		000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		0095C775285953E8006DE580 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		00978084285E75B600A09A21 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
-		3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryModel.swift; sourceTree = "<group>"; };
 		3A0EEC90286013C70066FA13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryModel.swift; sourceTree = "<group>"; };
 		3A99706A285262F0000965E9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		3AC4128B285B784E00EA4A5D /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
 		3AC4128D285BA24300EA4A5D /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
@@ -275,9 +274,9 @@
 		3ACFC3F72843E00D00AE4504 /* tripsine-mobile */ = {
 			isa = PBXGroup;
 			children = (
-				3A79C518285FD83F00AB69F9 /* Model */,
 				3ACFC4012843E01100AE4504 /* Assets.xcassets */,
 				3ACFC4062843E01100AE4504 /* Info.plist */,
+				3A79C518285FD83F00AB69F9 /* Model */,
 				0003E691285BE63C0050E1E2 /* Service */,
 				3AC412BB285F568A00EA4A5D /* Resources */,
 				000B04C52852CAEB001A35ED /* ViewModel */,
