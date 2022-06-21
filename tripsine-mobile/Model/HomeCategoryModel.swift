@@ -8,9 +8,11 @@
 import Foundation
 
 struct HomeCategoryModel: Codable {
+    let data: [RestaurantData]
     let filters: SearchFilters
     
     enum CodingKeys: String, CodingKey {
+        case data
         case filters = "filters_v2"
     }
 }
@@ -31,4 +33,30 @@ struct FilterSection: Codable {
         case description = "label"
         case section = "section_id"
     }
+}
+
+struct RestaurantData: Codable {
+    let name: String?
+    let address: String?
+    let photo: PhotoData?
+    let isOpen: Bool = true
+    let price: String?
+
+    enum CodingKeys: String, CodingKey {
+        case name, photo, price
+        case address = "location_string"
+        case isOpen = "is_closed"
+    }
+}
+
+struct PhotoData: Codable {
+    let image: Images?
+    
+    enum CodingKeys: String, CodingKey {
+        case image = "images"
+    }
+}
+
+struct Images: Codable {
+    let url: String?
 }
