@@ -15,9 +15,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
     
+    @IBOutlet weak var currentAddressLabel: UIButton!
+    
     let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
     var filterSection = [FilterSection]()
 
+    func updateHomeFromMaps(_ address: LocationResultData) {
+        currentAddressLabel.setTitle(address.location_string, for: .normal)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self

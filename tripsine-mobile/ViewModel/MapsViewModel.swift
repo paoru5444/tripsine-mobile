@@ -22,7 +22,7 @@ class MapsViewModel {
     
     var delegate: MapsViewModelDelegate?
     
-    func fetchLocationIdBy(address: String, completion: @escaping () -> Void) {
+    func fetchLocationIdBy(address: String, completion: @escaping (LocationResultData) -> Void) {
         let headers = [
             "X-RapidAPI-Key": "406777944cmsh0dfe74177bed80ep150bf0jsn61afacef75fc",
             "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
@@ -58,7 +58,7 @@ class MapsViewModel {
                 let location = try? decoder.decode(LocationModel.self, from: data)
                 if let resultData: LocationResultData = location?.data.first?.result_object {
                     self.delegate?.fetchLocationSuccess(location: resultData)
-                    completion()
+                    completion(resultData)
                 } else {
                     self.delegate?.alertMessageOnFailure(message: "Erro ao buscar o endereço, tente novamente")
                 }

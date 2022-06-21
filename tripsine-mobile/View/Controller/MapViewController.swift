@@ -57,11 +57,14 @@ class MapViewController: UIViewController {
         )
         
         let actionDefault = UIAlertAction(title: "Claro!!", style: .default) { _ in
-            self.mapsViewModel.fetchLocationIdBy(address: address) {
+            self.mapsViewModel.fetchLocationIdBy(address: address) { address in
                 DispatchQueue.main.async {
                     guard let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeViewController else { return }
+                        
                         secondViewController.modalPresentationStyle = .fullScreen
-                        self.present(secondViewController, animated: true)
+                    self.present(secondViewController, animated: true) {
+                        secondViewController.updateHomeFromMaps(address)
+                    }
                 }
             }
         }
