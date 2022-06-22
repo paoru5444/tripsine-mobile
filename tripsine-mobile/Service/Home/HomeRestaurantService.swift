@@ -9,8 +9,11 @@ import Foundation
 
 class HomeRestaurantService: CommonService {
     
-    func requestRestaurantService(completion: @escaping ([RestaurantData]) -> ()) {
-
+    func requestRestaurantService(_ locationId: String?, completion: @escaping ([RestaurantData]) -> Void) {
+        queryItems.append(URLQueryItem(name: "location_id", value: locationId ?? ""))
+        
+        component?.queryItems = queryItems
+        
         guard let url = component?.url else { return }
         var request = URLRequest(url: url)
 
@@ -19,14 +22,11 @@ class HomeRestaurantService: CommonService {
         let dataTask = session.dataTask(with: request) { data, _, _ in
             guard let data = data else { return }
             
-            do {
-                let resume = try? JSONDecoder().decode(HomeCategoryModel.self, from: data)
-//                guard let resume = resume else { return }
-                print(resume)
-            } catch {
-                print(error)
+            let response = try? JSONDecoder().decode(HomeCategoryModel.self, from: data)
+            if let response = response {
+                
+                completion(response.data)
             }
-//            completion(resume.data)
         }
         dataTask.resume()
     }

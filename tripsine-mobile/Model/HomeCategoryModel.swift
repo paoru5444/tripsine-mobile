@@ -58,5 +58,12 @@ struct PhotoData: Codable {
 }
 
 struct Images: Codable {
+    let original: ImagesValues?
+}
+
+struct ImagesValues: Codable {
+    let width: String?
+    let height: String?
     let url: String?
 }
+

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeRestaurantViewModelDelegate {
-    func updateRestaurant(_ filter: [RestaurantData])
+    func updateRestaurant(_ restaurants: [RestaurantData])
 }
 
 class HomeRestaurantViewModel {
@@ -21,10 +21,21 @@ class HomeRestaurantViewModel {
         self.service = service
     }
     
-    func makeRequest() {
-        service.requestRestaurantService { data in
-            self.restaurantModel = data
+    func makeRequest(_ locationId: String?) {
+        if locationId != "" {
+            service.requestRestaurantService(locationId) { data in
+                self.delegate?.updateRestaurant(data)
+            }
+        } else {
+            let mapsViewModel = MapsViewModel()
+            mapsViewModel.fetchLocationIdBy(address: "São Paulo") { address in
+                self.service.requestRestaurantService(address.location_id) { data in
+                    self.delegate?.updateRestaurant(data)
+                    print("estou na completion")
+                }
+            }
         }
+        
     }
     
     func updateRestautantView(_ data: [RestaurantData]) {

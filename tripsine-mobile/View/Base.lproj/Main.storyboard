@@ -739,8 +739,12 @@
                                         <size key="customSize" width="165" height="204"/>
                                         <connections>
                                             <outlet property="containerView" destination="kjk-dk-lpq" id="uXH-1I-kAN"/>
+                                            <outlet property="descriptionLabel" destination="9V5-1H-5LS" id="4AZ-Vc-OFq"/>
                                             <outlet property="image" destination="N0c-ad-HOw" id="hq9-QN-X4Q"/>
                                             <outlet property="openLabel" destination="ilF-3Q-ZkM" id="E9U-dB-ZQu"/>
+                                            <outlet property="priceLabel" destination="guh-D9-WhY" id="K1L-WZ-H7N"/>
+                                            <outlet property="rateLabel" destination="7Ky-kc-HNz" id="Fr3-AY-S3s"/>
+                                            <outlet property="restaurantTittleLabel" destination="eFb-xV-AxS" id="xfV-lD-bXF"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

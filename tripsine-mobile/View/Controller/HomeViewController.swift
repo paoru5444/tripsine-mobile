@@ -20,10 +20,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
     let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
     var filterSection = [FilterSection]()
-    var restaurantSection = [RestaurantData]()
+    var restaurantSection: [RestaurantData] = []
 
     func updateHomeFromMaps(_ address: LocationResultData) {
         currentAddressLabel.setTitle(address.location_string, for: .normal)
+        restaurantViewModel.makeRequest(address.location_id)
+        
     }
     
     override func viewDidLoad() {
@@ -64,7 +66,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     private func makeRequestForHome() {
         categoryViewModel.makeRequest()
-        restaurantViewModel.makeRequest()
+        restaurantViewModel.makeRequest("")
     }
 
 }
@@ -84,7 +86,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return categoryCell
         } else {
             let restaurantCell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantsCollectionViewCell
-            restaurantCell.setupCell(index: indexPath.row, restaurantData: restaurantSection)
+            restaurantCell.setupCell(index: indexPath.row, restaurantData: restaurantSection[indexPath.row])
             return restaurantCell
         }
     }
@@ -100,11 +102,13 @@ extension HomeViewController: HomeCategoryViewModelDelegate {
 }
 
 extension HomeViewController: HomeRestaurantViewModelDelegate {
-    func updateRestaurant(_ filter: [RestaurantData]) {
+    func updateRestaurant(_ restaurants: [RestaurantData]) {
         DispatchQueue.main.async {
-            self.restaurantSection = filter
-            self.collectionView.reloadData()
+            self.restaurantSection = restaurants
+            self.restaurantsCollectionView.reloadData()
         }
+        print(restaurantSection)
+        
     }
     
 }

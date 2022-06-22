@@ -13,15 +13,37 @@ class RestaurantsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var openLabel: UILabel!
     
-    func setupCell(index: Int, restaurantData: [RestaurantData]) {
-        renderView()
+    @IBOutlet weak var restaurantTittleLabel: UILabel!
+    @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    func setupCell(index: Int, restaurantData: RestaurantData) {
+        renderView(restaurantData)
         
     }
     
-    private func renderView() {
+    private func renderView(_ restaurantData: RestaurantData) {
         image.clipsToBounds = true
         image.layer.masksToBounds = true
         image.layer.cornerRadius = 8
+        
+        if let url = URL(string: restaurantData.photo?.image?.original?.url ?? "") {
+            if let imageData = try? Data(contentsOf: url) {
+                image.image = UIImage(data: imageData)
+            }
+        }
+        
+        restaurantTittleLabel.text = restaurantData.name
+        descriptionLabel.text = restaurantData.address
+        priceLabel.text = restaurantData.price
+        
+        let isOpen = restaurantData.isOpen
+        if (isOpen) {
+            openLabel.text = "OPEN"
+        } else {
+            openLabel.text = "CLOSED"
+        }
         
         openLabel.layer.cornerRadius = 8
         openLabel.layer.borderWidth = 1

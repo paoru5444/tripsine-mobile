@@ -18,7 +18,6 @@ class CommonService {
     let session = URLSession.shared
     
     var queryItems = [
-        URLQueryItem(name: "location_id", value: "293919"),
         URLQueryItem(name: "restaurant_tagcategory", value: "10591"),
         URLQueryItem(name: "restaurant_tagcategory_standalone", value: "10591"),
         URLQueryItem(name: "currency", value: "BRL"),
