@@ -9,13 +9,13 @@ import Foundation
 
 class HomeCategoryService: CommonService {
     
-    func requestCategoryService(_ locationId: String?, completion: @escaping ([FilterSection]) -> ()) {
+    func requestCategoryService(_ locationId: String?, completion: @escaping ([FilterSection]) -> Void) {
         queryItems.append(URLQueryItem(name: "location_id", value: locationId ?? ""))
+        component?.queryItems = queryItems
         
         guard let url = component?.url else { return }
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = headers
-        component?.queryItems = queryItems
         
         let dataTask = session.dataTask(with: request) { data, _, _ in
             guard let data = data else { return }

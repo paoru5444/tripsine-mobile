@@ -35,7 +35,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     func updateHomeFromMaps(_ address: LocationResultData) {
         currentAddressLabel.setTitle(address.location_string, for: .normal)
         restaurantViewModel.makeRequest(address.location_id)
-        
     }
     
     private func renderView() {
@@ -65,7 +64,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     }
     
     private func makeRequestForHome() {
-        categoryViewModel.makeRequest(location: searchRestaurantTextField.text ?? String())
+        categoryViewModel.makeRequest(searchRestaurantTextField.text)
         restaurantViewModel.makeRequest(searchRestaurantTextField.text)
     }
 

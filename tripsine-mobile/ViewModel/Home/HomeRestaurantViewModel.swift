@@ -31,7 +31,6 @@ class HomeRestaurantViewModel {
             mapsViewModel.fetchLocationIdBy(address: "São Paulo") { address in
                 self.service.requestRestaurantService(address.location_id) { data in
                     self.delegate?.updateRestaurant(data)
-                    print("estou na completion")
                 }
             }
         }

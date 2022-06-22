@@ -21,7 +21,7 @@ class HomeCategoryViewModel {
         self.service = service
     }
     
-    func makeRequest(location: String) {
+    func makeRequest(_ location: String?) {
         if location != "" {
             service.requestCategoryService(location) { filterSection in
                 self.categoryModel = filterSection
@@ -29,8 +29,8 @@ class HomeCategoryViewModel {
             }
         } else {
             let mapsViewModel = MapsViewModel()
-            mapsViewModel.fetchLocationIdBy(address: location) { address in
-                self.service.requestCategoryService(location) { filterSection in
+            mapsViewModel.fetchLocationIdBy(address: "São Paulo") { address in
+                self.service.requestCategoryService(address.location_id) { filterSection in
                     self.delegate?.updateCategory(filterSection)
                 }
             }
