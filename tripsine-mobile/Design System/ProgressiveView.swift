@@ -10,30 +10,45 @@ import UIKit
 class ProgressView: UIView {
     
     // MARK: - Animations
-    func animateStroke() {
-        let startAnimation = StrokeAnimation(
-            type: .start,
-            beginTime: 0.05,
-            fromValue: 0.0,
-            toValue: 1.0,
-            duration: 0.5
-        )
+       func animateStroke() {
+           
+           let startAnimation = StrokeAnimation(
+               type: .start,
+               beginTime: 0.25,
+               fromValue: 0.0,
+               toValue: 1.0,
+               duration: 0.75
+           )
+           
+           let endAnimation = StrokeAnimation(
+               type: .end,
+               fromValue: 0.0,
+               toValue: 1.0,
+               duration: 0.75
+           )
+           
+           let strokeAnimationGroup = CAAnimationGroup()
+           strokeAnimationGroup.duration = 1
+           strokeAnimationGroup.repeatDuration = .infinity
+           strokeAnimationGroup.animations = [startAnimation, endAnimation]
+           
+           shapeLayer.add(strokeAnimationGroup, forKey: nil)
+           
+           /// UPDATED
+           let colorAnimation = StrokeColorAnimation(
+               colors: colors.map { $0.cgColor },
+               duration: strokeAnimationGroup.duration * Double(colors.count)
+           )
 
-        let endAnimation = StrokeAnimation(
-            type: .end,
-            fromValue: 0.0,
-            toValue: 1.0,
-            duration: 0.5
-        )
-        
-        let strokeAnimationGroup = CAAnimationGroup()
-        strokeAnimationGroup.duration = 1
-        strokeAnimationGroup.repeatDuration = .infinity
-        strokeAnimationGroup.animations = [startAnimation, endAnimation]
-
-        shapeLayer.add(strokeAnimationGroup, forKey: nil)
-        self.layer.addSublayer(shapeLayer)
-    }
+           shapeLayer.add(colorAnimation, forKey: nil)
+           ///
+           
+           self.layer.addSublayer(shapeLayer)
+       }
+       
+       func animateRotation() {
+           
+       }
     
     init(frame: CGRect,
          colors: [UIColor],
@@ -69,6 +84,19 @@ class ProgressView: UIView {
     
     let colors: [UIColor]
     let lineWidth: CGFloat
+    
+    
+       var isAnimating: Bool = false {
+           didSet {
+               if isAnimating {
+                   self.animateStroke()
+                   self.animateRotation()
+               } else {
+                   self.shapeLayer.removeFromSuperlayer()
+                   self.layer.removeAllAnimations()
+               }
+           }
+       }
     
     private lazy var shapeLayer: ProgressShapeLayer = {
         return ProgressShapeLayer(strokeColor: colors.first!, lineWidth: lineWidth)

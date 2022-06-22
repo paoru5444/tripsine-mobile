@@ -16,6 +16,7 @@
 		0026BB07286370C900346E99 /* ProgressiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026BB06286370C900346E99 /* ProgressiveView.swift */; };
 		0026BB092863710300346E99 /* ProgresseShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026BB082863710300346E99 /* ProgresseShapeLayer.swift */; };
 		0026BB0B2863714700346E99 /* StrokeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026BB0A2863714700346E99 /* StrokeAnimation.swift */; };
+		0026BB0D28637CF500346E99 /* StrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026BB0C28637CF500346E99 /* StrokeColorAnimation.swift */; };
 		0095C776285953E8006DE580 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0095C775285953E8006DE580 /* DetailsViewController.swift */; };
 		00978085285E75B700A09A21 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00978084285E75B600A09A21 /* CommonService.swift */; };
 		3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EEC90286013C70066FA13 /* LoginViewController.swift */; };
@@ -88,6 +89,7 @@
 		0026BB06286370C900346E99 /* ProgressiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressiveView.swift; sourceTree = "<group>"; };
 		0026BB082863710300346E99 /* ProgresseShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgresseShapeLayer.swift; sourceTree = "<group>"; };
 		0026BB0A2863714700346E99 /* StrokeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeAnimation.swift; sourceTree = "<group>"; };
+		0026BB0C28637CF500346E99 /* StrokeColorAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeColorAnimation.swift; sourceTree = "<group>"; };
 		0095C775285953E8006DE580 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		00978084285E75B600A09A21 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
 		3A0EEC90286013C70066FA13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				0026BB06286370C900346E99 /* ProgressiveView.swift */,
 				0026BB082863710300346E99 /* ProgresseShapeLayer.swift */,
 				0026BB0A2863714700346E99 /* StrokeAnimation.swift */,
+				0026BB0C28637CF500346E99 /* StrokeColorAnimation.swift */,
 			);
 			path = "Design System";
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				00978085285E75B700A09A21 /* CommonService.swift in Sources */,
 				000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */,
 				3AF68BF02853A5ED00AB6945 /* FavoritsTableViewCell.swift in Sources */,
+				0026BB0D28637CF500346E99 /* StrokeColorAnimation.swift in Sources */,
 				3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */,
 				0095C776285953E8006DE580 /* DetailsViewController.swift in Sources */,
 				3AC4128E285BA24300EA4A5D /* LocationModel.swift in Sources */,

@@ -33,27 +33,20 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         categoryViewModel.delegate = self
         restaurantViewModel.delegate = self
         mapViewController.delegate = self
-        overrideUserInterfaceStyle = .light
+        self.setupUI()
         
-        self.view.backgroundColor = .white
-        
-        self.view.addSubview(loadingIndicator)
-        
-        NSLayoutConstraint.activate([
-            loadingIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            loadingIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            loadingIndicator.widthAnchor.constraint(equalToConstant: 50),
-            loadingIndicator.heightAnchor.constraint(equalTo: self.loadingIndicator.widthAnchor)
-        ])
-        loadingIndicator.animateStroke()
+        loadingIndicator.isAnimating = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
+            self.loadingIndicator.isAnimating = false
+        }
     }
-    
+
     let loadingIndicator: ProgressView = {
         let progress = ProgressView(colors: [.red, .systemGreen, .systemBlue], lineWidth: 5)
         progress.translatesAutoresizingMaskIntoConstraints = false
         return progress
     }()
-
+    
     func updateHomeFromMaps(_ address: LocationResultData) {
         currentAddressLabel.setTitle(address.location_string, for: .normal)
         restaurantViewModel.makeRequestWith(locationId: address.location_id)
@@ -88,6 +81,27 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     private func makeRequestForHome() {
         categoryViewModel.makeRequest()
         mapViewController.getAddressByCoordenates()
+    }
+    
+    // MARK: - UI Setup
+    private func setupUI() {
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        }
+        
+        self.view.backgroundColor = .white
+        self.view.addSubview(loadingIndicator)
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor
+                .constraint(equalTo: self.view.centerXAnchor),
+            loadingIndicator.centerYAnchor
+                .constraint(equalTo: self.view.centerYAnchor),
+            loadingIndicator.widthAnchor
+                .constraint(equalToConstant: 50),
+            loadingIndicator.heightAnchor
+                .constraint(equalTo: self.loadingIndicator.widthAnchor)
+        ])
     }
 }
 
