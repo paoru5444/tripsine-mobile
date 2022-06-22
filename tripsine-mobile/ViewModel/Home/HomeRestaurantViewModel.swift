@@ -21,18 +21,17 @@ class HomeRestaurantViewModel {
         self.service = service
     }
     
-    func makeRequest(_ locationId: String?) {
-        if locationId != "" {
-            service.requestRestaurantService(locationId) { data in
+    func makeRequestWith(locationId: String) {
+        service.requestRestaurantService(locationId) { data in
+            self.delegate?.updateRestaurant(data)
+        }
+    }
+    
+    func makeRequest() {
+        let mapsViewModel = MapsViewModel()
+        mapsViewModel.fetchLocationIdBy(address: "São Paulo") { address in
+            self.service.requestRestaurantService(address.location_id) { data in
                 self.delegate?.updateRestaurant(data)
-            }
-        } else {
-            let mapsViewModel = MapsViewModel()
-            mapsViewModel.fetchLocationIdBy(address: "São Paulo") { address in
-                self.service.requestRestaurantService(address.location_id) { data in
-                    self.delegate?.updateRestaurant(data)
-                    print("estou na completion")
-                }
             }
         }
     }
