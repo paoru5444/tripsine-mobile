@@ -23,20 +23,61 @@ class DetailsViewController: UIViewController {
     
     let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
     var restaurantSection: [RestaurantData] = []
+    let mapViewController = MapViewController()
+    let mapsViewModel = MapsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        requestData()
+        makeRequestForMapView()
+        restaurantViewModel.delegate = self
+        mapViewController.delegate = self
+        self.setupUI()
+        
+        loadingIndicator.isAnimating = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
+            self.loadingIndicator.isAnimating = false
+        }
     }
 
+    let loadingIndicator: ProgressView = {
+        let progress = ProgressView(colors: [.red, .systemGreen, .systemBlue], lineWidth: 5)
+        progress.translatesAutoresizingMaskIntoConstraints = false
+        return progress
+    }()
+
     @IBAction func didReservedButton(_ sender: Any) {
-        print("move to web view")
+        guard let number = URL(string: "+1 415-775-8500") else { return }
+        UIApplication.shared.open(number, options: [:], completionHandler: nil)
     }
     
-    private func requestData() {
-        restaurantViewModel.makeRequest()
-        restaurantViewModel.makeRequestWith(locationId: "São Paulo")
+    func updateHomeFromMaps(_ address: LocationResultData) {
+        restaurantViewModel.makeRequestWith(locationId: address.location_id)
+    }
+    
+    // MARK: - UI Setup
+    private func setupUI() {
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        }
+        
+        self.view.backgroundColor = .white
+        self.view.addSubview(loadingIndicator)
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor
+                .constraint(equalTo: self.view.centerXAnchor),
+            loadingIndicator.centerYAnchor
+                .constraint(equalTo: self.view.centerYAnchor),
+            loadingIndicator.widthAnchor
+                .constraint(equalToConstant: 50),
+            loadingIndicator.heightAnchor
+                .constraint(equalTo: self.loadingIndicator.widthAnchor)
+        ])
+    }
+    
+    private func makeRequestForMapView() {
+        mapViewController.getAddressByCoordenates()
     }
     
     private func setupView() {
@@ -50,16 +91,24 @@ class DetailsViewController: UIViewController {
         statusLabel.layer.borderColor = UIColor.systemGreen.cgColor
     }
     
-    private func setupData(_ data: RestaurantData) {
-        titleLabel.text = data.name
-        addressLabel.text = data.address
-        statusLabel.text = "\(shouldUpdateStatus(data: data))"
-//        funcionalityStatusLabel: UILabel!
-        descriptionLabel.text = data.description
-        ratingLabel.text = data.rating
-        priceLabel.text = data.price
-        emailLabel.text = data.email
-        urlLabel.text = data.website
+    private func setupData(_ data: [RestaurantData]) {
+        guard let rating = data.first?.rating else { return }
+        
+        titleLabel.text = data.first?.name
+        addressLabel.text = data.first?.address
+//        statusLabel.text = "\(shouldUpdateStatus(data: data))"
+////        funcionalityStatusLabel: UILabel!
+        descriptionLabel.text = data.first?.description
+        ratingLabel.text = "/ \(rating)"
+        priceLabel.text = data.first?.price
+        emailLabel.text = data.first?.email
+        urlLabel.text = data.first?.website
+        
+        if let url = URL(string: data.first?.photo?.image?.original?.url ?? "") {
+            if let imageData = try? Data(contentsOf: url) {
+                imageView.image = UIImage(data: imageData)
+            }
+        }
     }
     
     private func shouldUpdateStatus(data: RestaurantData) -> String {
@@ -76,9 +125,15 @@ extension DetailsViewController: HomeRestaurantViewModelDelegate {
     func updateRestaurant(_ restaurants: [RestaurantData]) {
         DispatchQueue.main.async {
             self.restaurantSection = restaurants
-            self.setupData(self.restaurantSection[0])
-            self.view.layoutIfNeeded()
+            self.setupData(self.restaurantSection)
         }
     }
 }
 
+extension DetailsViewController: MapViewControllerDataSource {
+    func getInitialLocation(address: String) {
+        mapsViewModel.fetchLocationIdBy(address: address) { resultData in
+            self.restaurantViewModel.makeRequestWith(locationId: resultData.location_id)
+        }
+    }
+}
