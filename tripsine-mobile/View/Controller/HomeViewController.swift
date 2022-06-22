@@ -19,14 +19,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
     let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
+    let mapViewController = MapViewController()
+    let mapsViewModel = MapsViewModel()
+    
     var filterSection = [FilterSection]()
     var restaurantSection: [RestaurantData] = []
 
     func updateHomeFromMaps(_ address: LocationResultData) {
         currentAddressLabel.setTitle(address.location_string, for: .normal)
-        restaurantViewModel.makeRequest(address.location_id)
-        
-    }
+        restaurantViewModel.makeRequestWith(locationId: address.location_id)
+    }   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         makeRequestForHome()
         categoryViewModel.delegate = self
         restaurantViewModel.delegate = self
+        mapViewController.delegate = self
     }
 
     private func renderView() {
@@ -66,9 +69,17 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     private func makeRequestForHome() {
         categoryViewModel.makeRequest()
-        restaurantViewModel.makeRequest("")
+        mapViewController.getAddressByCoordenates()
     }
+}
 
+extension HomeViewController: MapViewControllerDataSource {
+    func getInitialLocation(address: String) {
+        currentAddressLabel.setTitle(address, for: .normal)
+        mapsViewModel.fetchLocationIdBy(address: address) { resultData in
+            self.restaurantViewModel.makeRequestWith(locationId: resultData.location_id)
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
