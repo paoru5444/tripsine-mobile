@@ -22,7 +22,7 @@ class CommonService {
         URLQueryItem(name: "restaurant_tagcategory_standalone", value: "10591"),
         URLQueryItem(name: "currency", value: "BRL"),
         URLQueryItem(name: "lunit", value: "km"),
-        URLQueryItem(name: "limit", value: "30"),
+        URLQueryItem(name: "limit", value: "10"),
         URLQueryItem(name: "open_now", value: "false"),
         URLQueryItem(name: "lang", value: "pt_BR")
     ]
