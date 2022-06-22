@@ -10,11 +10,8 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginUIButton: UIButton!
-    
     @IBOutlet weak var registerUIButton: UIButton!
-    
     @IBOutlet weak var googleUIButton: UIView!
-    
     @IBOutlet weak var facebookUIButton: UIView!
     
     override func viewDidLoad() {
