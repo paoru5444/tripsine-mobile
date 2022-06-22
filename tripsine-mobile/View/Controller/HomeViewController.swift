@@ -133,6 +133,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return restaurantCell
         }
     }
+    
 }
 
 extension HomeViewController: HomeCategoryViewModelDelegate {
