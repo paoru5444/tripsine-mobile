@@ -60,7 +60,7 @@ class ProfileViewController: UIViewController {
       showSimpleAlert()
     }
     
-    func showSimpleAlert() {
+    private func showSimpleAlert() {
         let alert = UIAlertController(title: "Sign out?",
                                       message: "Tem certeza que deseja sair do app?",
                                       preferredStyle: .alert)

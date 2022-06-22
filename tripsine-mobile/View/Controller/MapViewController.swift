@@ -15,22 +15,15 @@ protocol MapViewControllerDataSource {
 class MapViewController: UIViewController {
 
     @IBOutlet weak var UIMapKit: MKMapView!
-    
     @IBOutlet weak var searchLocationTextField: UITextField!
-    
     @IBOutlet weak var confirmLocationButton: UIButton!
-    
     @IBOutlet weak var searchLocationButton: UIButton!
     
+    let mapsViewModel: MapsViewModel = .init()
     var delegate: MapViewControllerDataSource?
-    
     let locationManager = CLLocationManager()
-    
     var selectedLocation: LocationResultData?
 
-    let mapsViewModel: MapsViewModel = .init()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

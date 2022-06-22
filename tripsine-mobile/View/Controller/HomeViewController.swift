@@ -14,7 +14,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
-    
     @IBOutlet weak var currentAddressLabel: UIButton!
     
     let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
@@ -24,11 +23,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     var filterSection = [FilterSection]()
     var restaurantSection: [RestaurantData] = []
-
-    func updateHomeFromMaps(_ address: LocationResultData) {
-        currentAddressLabel.setTitle(address.location_string, for: .normal)
-        restaurantViewModel.makeRequestWith(locationId: address.location_id)
-    }   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +33,30 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         categoryViewModel.delegate = self
         restaurantViewModel.delegate = self
         mapViewController.delegate = self
+        overrideUserInterfaceStyle = .light
+        
+        self.view.backgroundColor = .white
+        
+        self.view.addSubview(loadingIndicator)
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            loadingIndicator.widthAnchor.constraint(equalToConstant: 50),
+            loadingIndicator.heightAnchor.constraint(equalTo: self.loadingIndicator.widthAnchor)
+        ])
+        loadingIndicator.animateStroke()
+    }
+    
+    let loadingIndicator: ProgressView = {
+        let progress = ProgressView(colors: [.red, .systemGreen, .systemBlue], lineWidth: 5)
+        progress.translatesAutoresizingMaskIntoConstraints = false
+        return progress
+    }()
+
+    func updateHomeFromMaps(_ address: LocationResultData) {
+        currentAddressLabel.setTitle(address.location_string, for: .normal)
+        restaurantViewModel.makeRequestWith(locationId: address.location_id)
     }
     
     private func renderView() {

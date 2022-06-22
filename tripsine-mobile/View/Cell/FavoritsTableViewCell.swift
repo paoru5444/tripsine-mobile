@@ -10,16 +10,26 @@ import UIKit
 class FavoritsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellView: UIView!
-    
     @IBOutlet weak var containerView: UIView!
-    
     @IBOutlet weak var priceLabel: UILabel!
-    
     @IBOutlet weak var restaurantImage: UIImageView!
+    @IBOutlet weak var nameRestaurantLabel: UILabel!
+    @IBOutlet weak var nameLocalLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        renderView()
+    }
+    
+    func setupCustomCell() {
+//        priceLabel.text = data
+//        nameRestaurantLabel.text = data.name
+//        nameLocalLabel.text = data.address
+//        ratingLabel.text = data.rating
+    }
+    
+    private func renderView() {
         priceLabel.layer.masksToBounds = true
         priceLabel.layer.cornerRadius = 8
         
@@ -34,17 +44,6 @@ class FavoritsTableViewCell: UITableViewCell {
         containerView.layer.shadowOpacity = 1
         containerView.layer.shadowRadius = 4
         containerView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        
     }
-    
-    func setupCustomCell() {
-        
-    }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
 
 }

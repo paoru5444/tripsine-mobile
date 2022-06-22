@@ -42,9 +42,15 @@ struct RestaurantData: Codable {
     let isOpen: Bool = true
     let price: String?
     let rating: String?
+    let description: String?
+    let website: String?
+    let phone: String?
+    let email: String?
 
     enum CodingKeys: String, CodingKey {
-        case name, photo, price, rating
+        case name, photo, price,
+             rating, description,
+             website, phone, email
         case address = "location_string"
         case isOpen = "is_closed"
     }

@@ -13,6 +13,9 @@
 		000B04CB2852DBC3001A35ED /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */; };
 		002261F1286150A900F4F430 /* HomeRestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002261F0286150A900F4F430 /* HomeRestaurantService.swift */; };
 		002261F42861511300F4F430 /* HomeRestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002261F32861511300F4F430 /* HomeRestaurantViewModel.swift */; };
+		0026BB07286370C900346E99 /* ProgressiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026BB06286370C900346E99 /* ProgressiveView.swift */; };
+		0026BB092863710300346E99 /* ProgresseShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026BB082863710300346E99 /* ProgresseShapeLayer.swift */; };
+		0026BB0B2863714700346E99 /* StrokeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026BB0A2863714700346E99 /* StrokeAnimation.swift */; };
 		0095C776285953E8006DE580 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0095C775285953E8006DE580 /* DetailsViewController.swift */; };
 		00978085285E75B700A09A21 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00978084285E75B600A09A21 /* CommonService.swift */; };
 		3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EEC90286013C70066FA13 /* LoginViewController.swift */; };
@@ -82,6 +85,9 @@
 		000B04CA2852DBC3001A35ED /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		002261F0286150A900F4F430 /* HomeRestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRestaurantService.swift; sourceTree = "<group>"; };
 		002261F32861511300F4F430 /* HomeRestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRestaurantViewModel.swift; sourceTree = "<group>"; };
+		0026BB06286370C900346E99 /* ProgressiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressiveView.swift; sourceTree = "<group>"; };
+		0026BB082863710300346E99 /* ProgresseShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgresseShapeLayer.swift; sourceTree = "<group>"; };
+		0026BB0A2863714700346E99 /* StrokeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeAnimation.swift; sourceTree = "<group>"; };
 		0095C775285953E8006DE580 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		00978084285E75B600A09A21 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
 		3A0EEC90286013C70066FA13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +246,16 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		0026BB052863709C00346E99 /* Design System */ = {
+			isa = PBXGroup;
+			children = (
+				0026BB06286370C900346E99 /* ProgressiveView.swift */,
+				0026BB082863710300346E99 /* ProgresseShapeLayer.swift */,
+				0026BB0A2863714700346E99 /* StrokeAnimation.swift */,
+			);
+			path = "Design System";
+			sourceTree = "<group>";
+		};
 		3A79C517285FD6F500AB69F9 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +320,7 @@
 		3ACFC3F72843E00D00AE4504 /* tripsine-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				0026BB052863709C00346E99 /* Design System */,
 				3ACFC4012843E01100AE4504 /* Assets.xcassets */,
 				3ACFC4062843E01100AE4504 /* Info.plist */,
 				3A79C518285FD83F00AB69F9 /* Model */,
@@ -498,6 +515,8 @@
 				3AC4128C285B784E00EA4A5D /* MapsViewModel.swift in Sources */,
 				002261F42861511300F4F430 /* HomeRestaurantViewModel.swift in Sources */,
 				3AF68BF22853AC0A00AB6945 /* RestaurantsCollectionViewCell.swift in Sources */,
+				0026BB07286370C900346E99 /* ProgressiveView.swift in Sources */,
+				0026BB092863710300346E99 /* ProgresseShapeLayer.swift in Sources */,
 				002261F1286150A900F4F430 /* HomeRestaurantService.swift in Sources */,
 				0003E695285BE7C90050E1E2 /* HomeCategoryViewModel.swift in Sources */,
 				3AC41292285E919B00EA4A5D /* CustomUITabBarController.swift in Sources */,
@@ -516,6 +535,7 @@
 				0095C776285953E8006DE580 /* DetailsViewController.swift in Sources */,
 				3AC4128E285BA24300EA4A5D /* LocationModel.swift in Sources */,
 				3A79C51A285FD86300AB69F9 /* HomeCategoryModel.swift in Sources */,
+				0026BB0B2863714700346E99 /* StrokeAnimation.swift in Sources */,
 				3ACFC3FB2843E00D00AE4504 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

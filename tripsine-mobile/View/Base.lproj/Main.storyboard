@@ -286,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6Z-mk-dHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246" y="1335"/>
+            <point key="canvasLocation" x="2436" y="-31"/>
         </scene>
         <!--Profile-->
         <scene sceneID="pVM-gg-Zfl">
@@ -541,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KO-I6-ciT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1366.6666666666667" y="636.83035714285711"/>
+            <point key="canvasLocation" x="458" y="623"/>
         </scene>
         <!--Home-->
         <scene sceneID="Fia-WU-2Yw">
@@ -1070,7 +1070,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiY-87-7X2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1513.0434782608697" y="53.571428571428569"/>
+            <point key="canvasLocation" x="-1483" y="271"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="HQC-Rp-5zL">
@@ -1187,7 +1187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnu-ok-cVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1513" y="781"/>
+            <point key="canvasLocation" x="-1513" y="1355"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="Fga-kw-pvp">
@@ -1380,7 +1380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qkz-8S-JEF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2156.521739130435" y="636.83035714285711"/>
+            <point key="canvasLocation" x="1533" y="768"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="o1Z-6g-sgZ">
@@ -1394,7 +1394,7 @@
                         <inset key="separatorInset" minX="6" minY="0.0" maxX="6" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" red="0.97254908080000002" green="0.97254908080000002" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="favorit-cell" rowHeight="113" id="aYd-eG-KX2" customClass="FavoritsTableViewCell" customModule="tripsine_mobile">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="113" id="aYd-eG-KX2" customClass="FavoritsTableViewCell" customModule="tripsine_mobile">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="113"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aYd-eG-KX2" id="kDG-Ov-Ci0">
@@ -1514,7 +1514,10 @@
                                 <connections>
                                     <outlet property="cellView" destination="kDG-Ov-Ci0" id="OQF-HV-scq"/>
                                     <outlet property="containerView" destination="DVP-4C-EN1" id="AzP-s8-81q"/>
+                                    <outlet property="nameLocalLabel" destination="Qgk-PE-uo7" id="xQ5-G1-pwh"/>
+                                    <outlet property="nameRestaurantLabel" destination="9nj-a3-Lcu" id="G4p-he-a3K"/>
                                     <outlet property="priceLabel" destination="N5G-DI-tkI" id="vfE-V1-sHD"/>
+                                    <outlet property="ratingLabel" destination="KOc-8U-GhY" id="9cr-ti-Euv"/>
                                     <outlet property="restaurantImage" destination="X8G-DZ-XUy" id="NwX-nj-GGW"/>
                                     <segue destination="nQ5-Ok-gUB" kind="push" id="j8U-Zi-uWv"/>
                                 </connections>
@@ -1530,7 +1533,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqA-qZ-ly0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597.10144927536237" y="1042.6339285714284"/>
+            <point key="canvasLocation" x="1423" y="-31"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="jxg-Rf-pFE">
@@ -1616,7 +1619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j00-fY-foc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321.7391304347827" y="-764.0625"/>
+            <point key="canvasLocation" x="1387" y="-935"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rCE-lZ-MUP">
@@ -1678,7 +1681,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MzH-sZ-gR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313.04347826086956" y="1042.6339285714284"/>
+            <point key="canvasLocation" x="-313" y="1368"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
