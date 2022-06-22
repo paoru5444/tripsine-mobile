@@ -41,9 +41,10 @@ struct RestaurantData: Codable {
     let photo: PhotoData?
     let isOpen: Bool = true
     let price: String?
+    let rating: String?
 
     enum CodingKeys: String, CodingKey {
-        case name, photo, price
+        case name, photo, price, rating
         case address = "location_string"
         case isOpen = "is_closed"
     }

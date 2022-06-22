@@ -21,12 +21,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
     var filterSection = [FilterSection]()
     var restaurantSection: [RestaurantData] = []
-
-    func updateHomeFromMaps(_ address: LocationResultData) {
-        currentAddressLabel.setTitle(address.location_string, for: .normal)
-        restaurantViewModel.makeRequest(address.location_id)
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +32,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         restaurantViewModel.delegate = self
     }
 
+    func updateHomeFromMaps(_ address: LocationResultData) {
+        currentAddressLabel.setTitle(address.location_string, for: .normal)
+        restaurantViewModel.makeRequest(address.location_id)
+        
+    }
+    
     private func renderView() {
         filterButton.layer.cornerRadius = 10
         renderImageTextField()
@@ -65,8 +65,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     }
     
     private func makeRequestForHome() {
-        categoryViewModel.makeRequest()
-        restaurantViewModel.makeRequest("")
+        categoryViewModel.makeRequest(location: searchRestaurantTextField.text ?? String())
+        restaurantViewModel.makeRequest(searchRestaurantTextField.text)
     }
 
 }
@@ -107,8 +107,5 @@ extension HomeViewController: HomeRestaurantViewModelDelegate {
             self.restaurantSection = restaurants
             self.restaurantsCollectionView.reloadData()
         }
-        print(restaurantSection)
-        
     }
-    
 }

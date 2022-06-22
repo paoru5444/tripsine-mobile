@@ -35,7 +35,6 @@ class HomeRestaurantViewModel {
                 }
             }
         }
-        
     }
     
     func updateRestautantView(_ data: [RestaurantData]) {

@@ -39,8 +39,6 @@ class DetailsViewController: UIViewController {
         statusLabel.layer.cornerRadius = 8
         statusLabel.layer.borderWidth = 1
         statusLabel.layer.borderColor = UIColor.systemGreen.cgColor
-        
-        
     }
 }
 

@@ -21,10 +21,8 @@ class HomeRestaurantService: CommonService {
         
         let dataTask = session.dataTask(with: request) { data, _, _ in
             guard let data = data else { return }
-            
             let response = try? JSONDecoder().decode(HomeCategoryModel.self, from: data)
             if let response = response {
-                
                 completion(response.data)
             }
         }

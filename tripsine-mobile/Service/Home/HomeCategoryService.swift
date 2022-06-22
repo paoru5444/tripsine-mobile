@@ -9,18 +9,20 @@ import Foundation
 
 class HomeCategoryService: CommonService {
     
-    func requestCategoryService(completion: @escaping ([FilterSection]) -> ()) {
-
+    func requestCategoryService(_ locationId: String?, completion: @escaping ([FilterSection]) -> ()) {
+        queryItems.append(URLQueryItem(name: "location_id", value: locationId ?? ""))
+        
         guard let url = component?.url else { return }
         var request = URLRequest(url: url)
-
         request.allHTTPHeaderFields = headers
+        component?.queryItems = queryItems
         
         let dataTask = session.dataTask(with: request) { data, _, _ in
             guard let data = data else { return }
-            let resume = try? JSONDecoder().decode(HomeCategoryModel.self, from: data)
-            guard let resume = resume else { return }
-            completion(resume.filters.filterSection)
+            let response = try? JSONDecoder().decode(HomeCategoryModel.self, from: data)
+            if let response = response {
+                completion(response.filters.filterSection)
+            } 
         }
         dataTask.resume()
     }
