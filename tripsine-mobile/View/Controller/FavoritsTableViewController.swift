@@ -12,7 +12,7 @@ class FavoritsTableViewController: UITableViewController {
     let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
     var restaurantSection: [RestaurantData] = []
     let mapViewController = MapViewController()
-    let mapsViewModel = MapsViewModel()
+    let mapsViewModel = MapService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class FavoritsTableViewController: UITableViewController {
     }()
 
     func updateHomeFromMaps(_ address: LocationResultData) {
-        restaurantViewModel.makeRequestWith(locationId: address.location_id)
+        restaurantViewModel.makeRequestWithLocationId(locationId: address.location_id)
     }
     
     // MARK: - UI Setup
@@ -91,7 +91,7 @@ extension FavoritsTableViewController: HomeRestaurantViewModelDelegate {
 extension FavoritsTableViewController: MapViewControllerDataSource {
     func getInitialLocation(address: String) {
         mapsViewModel.fetchLocationIdBy(address: address) { resultData in
-            self.restaurantViewModel.makeRequestWith(locationId: resultData.location_id)
+            self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
         }
     }
 }

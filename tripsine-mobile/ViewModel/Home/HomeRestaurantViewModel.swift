@@ -13,24 +13,26 @@ protocol HomeRestaurantViewModelDelegate {
 
 class HomeRestaurantViewModel {
     
-    private var service: HomeRestaurantService
+    private var restaurantService: HomeRestaurantService
+    private var mapService: MapService
     private var restaurantModel = [RestaurantData]()
     var delegate: HomeRestaurantViewModelDelegate?
     
-    init(service: HomeRestaurantService = .init()) {
-        self.service = service
+    
+    init(service: HomeRestaurantService = .init(), mapService: MapService = .init()) {
+        self.restaurantService = service
+        self.mapService = mapService
     }
     
-    func makeRequestWith(locationId: String) {
-        service.requestRestaurantService(locationId) { data in
+    func makeRequestWithLocationId(locationId: String) {
+        restaurantService.fetchRestaurantService(locationId) { data in
             self.delegate?.updateRestaurant(data)
         }
     }
     
     func makeRequest() {
-        let mapsViewModel = MapsViewModel()
-        mapsViewModel.fetchLocationIdBy(address: "São Paulo") { address in
-            self.service.requestRestaurantService(address.location_id) { data in
+        mapService.fetchLocationIdBy(address: "São Paulo") { address in
+            self.restaurantService.fetchRestaurantService(address.location_id) { data in
                 self.delegate?.updateRestaurant(data)
             }
         }

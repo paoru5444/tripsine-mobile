@@ -9,10 +9,8 @@ import Foundation
 
 class HomeCategoryService: CommonService {
     
-    func requestCategoryService(_ locationId: String?, completion: @escaping ([FilterSection]) -> Void) {
+    func fetchCategoryService(_ locationId: String?, completion: @escaping ([FilterSection]) -> Void) {
         queryItems.append(URLQueryItem(name: "location_id", value: locationId ?? ""))
-        component?.queryItems = queryItems
-        
         component?.queryItems = queryItems
         
         guard let url = component?.url else { return }
