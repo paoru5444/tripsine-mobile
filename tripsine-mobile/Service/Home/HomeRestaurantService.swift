@@ -9,7 +9,7 @@ import Foundation
 
 class HomeRestaurantService: CommonService {
     
-    func requestRestaurantService(_ locationId: String?, completion: @escaping ([RestaurantData]) -> Void) {
+    func fetchRestaurantService(_ locationId: String?, completion: @escaping ([RestaurantData]) -> Void) {
         queryItems.append(URLQueryItem(name: "location_id", value: locationId ?? ""))
         component?.queryItems = queryItems
         

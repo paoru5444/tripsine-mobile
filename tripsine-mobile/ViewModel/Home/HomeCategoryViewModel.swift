@@ -13,18 +13,19 @@ protocol HomeCategoryViewModelDelegate {
 
 class HomeCategoryViewModel {
     
-    private var service: HomeCategoryService
+    private var restaurantService: HomeCategoryService
+    private var mapService: MapService
     private var categoryModel = [FilterSection]()
     var delegate: HomeCategoryViewModelDelegate?
     
-    init(service: HomeCategoryService = .init()) {
-        self.service = service
+    init(service: HomeCategoryService = .init(), mapService: MapService = .init()) {
+        self.restaurantService = service
+        self.mapService = mapService
     }
     
     func makeRequest() {
-        let mapsViewModel = MapsViewModel()
-        mapsViewModel.fetchLocationIdBy(address: "São Paulo") { address in
-            self.service.requestCategoryService(address.location_id) { filterSection in
+        mapService.fetchLocationIdBy(address: "São Paulo") { address in
+            self.restaurantService.fetchCategoryService(address.location_id) { filterSection in
                 self.delegate?.updateCategory(filterSection)
             }
         }

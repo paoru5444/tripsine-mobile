@@ -26,13 +26,11 @@ class CustomUITabBarController: UITabBarController {
                 homeTabBar.setTitleTextAttributes([NSAttributedString.Key.font: fontDefinition], for: .normal)
             }
             
-            
             // mark: Profile setup
             if let profileTabBar = itemsTabBar?.items?[1] {
                 profileTabBar.setTitleTextAttributes([NSAttributedString.Key.font: fontDefinition], for: .selected)
                 profileTabBar.setTitleTextAttributes([NSAttributedString.Key.font: fontDefinition], for: .normal)
             }
-            
             
             // mark: Favorites setup
             if let favoritesTabBar = itemsTabBar?.items?[2] {
