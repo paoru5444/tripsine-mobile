@@ -1,4 +1,4 @@
-# Tripsine
+![logo-tripsine-png-01 1.pdf](https://github.com/paoru5444/tripsine-mobile/files/8978917/logo-tripsine-png-01.1.pdf)
 Aonde mesmo perdido você não morre de fome =)
 
 
