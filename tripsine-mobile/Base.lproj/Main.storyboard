@@ -1078,7 +1078,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismissPage:" destination="uCW-Xx-QG5" eventType="touchUpInside" id="jxd-xd-baC"/>
                                     <action selector="registerProfileButton:" destination="uCW-Xx-QG5" eventType="touchUpInside" id="wLR-5x-yoh"/>
                                 </connections>
                             </button>
