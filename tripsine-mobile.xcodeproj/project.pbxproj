@@ -50,6 +50,7 @@
 		3AF68BF42853CCD100AB6945 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF68BF32853CCD100AB6945 /* RegisterViewController.swift */; };
 		55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EB228514E7C0069370F /* AboutViewController.swift */; };
 		55D44EBB285150590069370F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EBA285150590069370F /* ProfileViewController.swift */; };
+		B139E290286CD4FC0066705B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139E28F286CD4FC0066705B /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		3AF68BF32853CCD100AB6945 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		55D44EB228514E7C0069370F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		55D44EBA285150590069370F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B139E28F286CD4FC0066705B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				3AC4128B285B784E00EA4A5D /* MapsViewModel.swift */,
 				3AC4128D285BA24300EA4A5D /* LocationModel.swift */,
+				B139E28F286CD4FC0066705B /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */,
 				3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */,
 				55D44EBB285150590069370F /* ProfileViewController.swift in Sources */,
+				B139E290286CD4FC0066705B /* RegisterViewModel.swift in Sources */,
 				3AF68BED2853A5E200AB6945 /* MapViewController.swift in Sources */,
 				3AF68BEE2853A5E200AB6945 /* FavoritsTableViewController.swift in Sources */,
 				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
