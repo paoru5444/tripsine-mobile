@@ -10,7 +10,7 @@ import UIKit
 class RegisterViewController: UIViewController {
     
     private let viewModel = RegisterViewModel()
-    private let pickerController = UIImagePickerController()
+    private let imagePicker = UIImagePickerController()
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -21,13 +21,12 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pickerController.delegate = self
+        imagePicker.delegate = self
     }
     
     @IBAction func addProfilePhotoButton(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        pickerController.allowsEditing = true
-        pickerController.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
         
         present(imagePicker, animated: true)
     }
