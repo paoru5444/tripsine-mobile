@@ -9,7 +9,8 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-    let viewModel = RegisterViewModel()
+    private let viewModel = RegisterViewModel()
+    private let pickerController = UIImagePickerController()
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -20,6 +21,12 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerController.delegate = self
+    }
+    
+    @IBAction func addProfilePhotoButton(_ sender: Any) {
+        pickerController.allowsEditing = true
+        pickerController.sourceType = .photoLibrary
     }
     
     @IBAction func registerProfileButton(_ sender: Any) {
@@ -44,5 +51,20 @@ class RegisterViewController: UIViewController {
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alertController.addAction(okAction)
         present(alertController, animated: true)
+    }
+}
+
+extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[.mediaType] as? UIImage {
+            profileImage.image = image
+        }
+        
+        dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
     }
 }
