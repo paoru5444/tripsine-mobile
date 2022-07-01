@@ -25,8 +25,11 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func addProfilePhotoButton(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
         pickerController.allowsEditing = true
         pickerController.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true)
     }
     
     @IBAction func registerProfileButton(_ sender: Any) {

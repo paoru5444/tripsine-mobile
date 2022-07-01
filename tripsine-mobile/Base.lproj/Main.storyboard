@@ -1126,7 +1126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnu-ok-cVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1513" y="781"/>
+            <point key="canvasLocation" x="-1513.0434782608697" y="780.80357142857144"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="Fga-kw-pvp">

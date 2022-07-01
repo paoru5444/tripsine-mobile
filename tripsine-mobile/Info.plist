@@ -22,6 +22,10 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
+					<key>NSCameraUsageDescription</key>
+					<string>&quot;Tripsine&quot; gostaria de acessar sua camera</string>
+					<key>NSPhotoLibraryUsageDescription</key>
+					<string>&quot;Tripsine&quot; gostaria de ter acesso a sua galeria</string>
 					<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 					<string>Deseja usar localização atual para buscar restaurantes próximos a você?</string>
 					<key>NSLocationAlwaysUsageDescription</key>
