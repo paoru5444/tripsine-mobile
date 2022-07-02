@@ -42,15 +42,15 @@
                                 <rect key="frame" x="0.0" y="98" width="414" height="715"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="genericImage" translatesAutoresizingMaskIntoConstraints="NO" id="3nK-Ds-KF1">
-                                        <rect key="frame" x="0.0" y="41" width="414" height="282"/>
+                                        <rect key="frame" x="0.0" y="41" width="414" height="168"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="282" id="iZE-QU-xv0"/>
+                                            <constraint firstAttribute="height" constant="168" id="iZE-QU-xv0"/>
                                         </constraints>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G1A-2Q-VE7">
-                                        <rect key="frame" x="16" y="339" width="382" height="48.5"/>
+                                        <rect key="frame" x="16" y="225" width="382" height="48.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Club A Steakhouse" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2I-rC-nN6">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
@@ -74,20 +74,20 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-Jv-koS">
-                                        <rect key="frame" x="16" y="434.5" width="382" height="134.5"/>
+                                        <rect key="frame" x="16" y="320.5" width="382" height="134.5"/>
                                         <string key="text">Home of the famous and award winning Nona MariaPie, Bleecker Street Pizza serves consistently deliciouspizza with the best dough, sauce, and ingredients inOld West Village! Feel free to create your ideal pizzaand add as many toppings as you'd like.</string>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abre as: 12h - Fecha as: 00h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw4-mW-v3t">
-                                        <rect key="frame" x="67.5" y="403.5" width="221" height="15"/>
+                                        <rect key="frame" x="67.5" y="289.5" width="221" height="15"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="OPEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7F3-hf-1Rs">
-                                        <rect key="frame" x="16" y="403.5" width="41.5" height="15"/>
+                                        <rect key="frame" x="16" y="289.5" width="41.5" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="jCd-Uk-6oY"/>
                                         </constraints>
@@ -102,7 +102,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opz-sL-Csy">
-                                        <rect key="frame" x="16" y="749" width="382" height="45"/>
+                                        <rect key="frame" x="16" y="635" width="382" height="45"/>
                                         <color key="backgroundColor" red="0.74901962280000001" green="0.1764705926" blue="0.13333332540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="deU-S2-jaS"/>
@@ -122,7 +122,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lc-pr-Rd7" userLabel="urlStackView">
-                                        <rect key="frame" x="16" y="685" width="382" height="32"/>
+                                        <rect key="frame" x="16" y="571" width="382" height="32"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D0B-2a-jd4">
                                                 <rect key="frame" x="0.0" y="0.5" width="32" height="31"/>
@@ -142,7 +142,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbv-oT-syh" userLabel="emailStackView">
-                                        <rect key="frame" x="16" y="637" width="382" height="32"/>
+                                        <rect key="frame" x="16" y="523" width="382" height="32"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.badge" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6ea-of-kO9">
                                                 <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
@@ -161,7 +161,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkn-sV-4dp" userLabel="ratingAndPriceStackView">
-                                        <rect key="frame" x="16" y="585" width="382" height="36"/>
+                                        <rect key="frame" x="16" y="471" width="382" height="36"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUk-2w-VXV">
                                                 <rect key="frame" x="0.0" y="0.0" width="305.5" height="36"/>

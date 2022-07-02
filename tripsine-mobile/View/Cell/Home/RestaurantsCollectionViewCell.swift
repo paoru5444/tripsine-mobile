@@ -61,7 +61,7 @@ class RestaurantsCollectionViewCell: UICollectionViewCell {
     }
     
     private func updateRating(data: RestaurantData) -> String {
-        guard let rating = data.rating else { return String()}
+        guard let rating = data.rating else { return String() }
         return rating
     }
     

@@ -16,11 +16,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
     @IBOutlet weak var currentAddressLabel: UIButton!
     
+    private let loadingView = LoadingView()
     let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
     let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
     let mapViewController = MapViewController()
     let mapsViewModel = MapService()
-    
     var filterSection = [FilterSection]()
     var restaurantSection: [RestaurantData] = []
     
@@ -33,19 +33,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         categoryViewModel.delegate = self
         restaurantViewModel.delegate = self
         mapViewController.delegate = self
-        self.setupUI()
         
-        loadingIndicator.isAnimating = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
-            self.loadingIndicator.isAnimating = false
+        loadingView.loadingIndicator.isAnimating = true
+        loadingView.setupUI()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            self.loadingView.loadingIndicator.isAnimating = false
         }
     }
-
-    let loadingIndicator: ProgressView = {
-        let progress = ProgressView(colors: [.red, .systemGreen, .systemBlue], lineWidth: 5)
-        progress.translatesAutoresizingMaskIntoConstraints = false
-        return progress
-    }()
     
     func updateHomeFromMaps(_ address: LocationResultData) {
         currentAddressLabel.setTitle(address.location_string, for: .normal)
@@ -54,19 +49,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     private func renderView() {
         filterButton.layer.cornerRadius = 10
-        renderImageTextField()
         renderSearchTextField()
-    }
-    
-    private func renderImageTextField() {
-        let imageView = UIImageView(frame: CGRect(x: 20,
-                                                  y: 30,
-                                                  width: 20,
-                                                  height: 20))
-        let image = UIImage(named: "search icon")
-        imageView.image = image
-        searchRestaurantTextField.leftView = imageView
-        searchRestaurantTextField.leftViewMode = .always
     }
     
     private func renderSearchTextField() {
@@ -82,27 +65,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         categoryViewModel.makeRequest()
         mapViewController.getAddressByCoordenates()
     }
-    
-    // MARK: - UI Setup
-    private func setupUI() {
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
-        }
-        
-        self.view.backgroundColor = .white
-        self.view.addSubview(loadingIndicator)
-        
-        NSLayoutConstraint.activate([
-            loadingIndicator.centerXAnchor
-                .constraint(equalTo: self.view.centerXAnchor),
-            loadingIndicator.centerYAnchor
-                .constraint(equalTo: self.view.centerYAnchor),
-            loadingIndicator.widthAnchor
-                .constraint(equalToConstant: 50),
-            loadingIndicator.heightAnchor
-                .constraint(equalTo: self.loadingIndicator.widthAnchor)
-        ])
-    }
+
 }
 
 extension HomeViewController: MapViewControllerDataSource {

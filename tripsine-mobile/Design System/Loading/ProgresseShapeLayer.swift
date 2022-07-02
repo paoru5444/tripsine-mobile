@@ -12,7 +12,6 @@ class ProgressShapeLayer: CAShapeLayer {
     
     public init(strokeColor: UIColor, lineWidth: CGFloat) {
         super.init()
-        
         self.strokeColor = strokeColor.cgColor
         self.lineWidth = lineWidth
         self.fillColor = UIColor.clear.cgColor

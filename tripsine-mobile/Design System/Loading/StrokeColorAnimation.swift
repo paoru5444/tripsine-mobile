@@ -14,9 +14,7 @@ class StrokeColorAnimation: CAKeyframeAnimation {
     }
     
     init(colors: [CGColor], duration: Double) {
-        
         super.init()
-        
         self.keyPath = "strokeColor"
         self.values = colors
         self.duration = duration
