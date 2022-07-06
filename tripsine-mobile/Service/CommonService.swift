@@ -10,7 +10,7 @@ import Foundation
 class CommonService {
     
     let headers = [
-        "X-RapidAPI-Key": "9fd4fcfd26msh60b602655b093dap11fcc5jsnee05ddd96216",
+        "X-RapidAPI-Key": "a2a0422ef0mshfe6cdf30b55e260p10a5b0jsn3d0371bf6f5e",
         "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
     ]
 

@@ -19,7 +19,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var confirmLocationButton: UIButton!
     @IBOutlet weak var searchLocationButton: UIButton!
     
-    let mapsViewModel: MapsViewModel = .init()
+    let mapsViewModel: MapService = .init()
     var delegate: MapViewControllerDataSource?
     let locationManager = CLLocationManager()
     var selectedLocation: LocationResultData?

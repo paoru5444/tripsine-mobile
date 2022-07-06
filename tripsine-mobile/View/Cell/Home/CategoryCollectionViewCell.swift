@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum CategoryImage: String {
+private enum CategoryImage: String {
     case cuisineType = "cuisineType"
     case dietaryRestriction = "dietaryRestriction"
     case meals = "meals"

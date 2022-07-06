@@ -44,7 +44,6 @@ class ProfileViewController: UIViewController {
     
     private func setupProfileImage() {
         let viewRadius: CGFloat = profileRedCircleView.bounds.size.width / 2.0
-        
         let imageRadius: CGFloat = profilePicImage.bounds.size.width / 2.0
 
         profileRedCircleView.layer.masksToBounds = true
