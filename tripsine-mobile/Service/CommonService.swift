@@ -15,6 +15,9 @@ class CommonService {
     ]
 
     var component = URLComponents(string: "https://travel-advisor.p.rapidapi.com/restaurants/list?")
+    
+    var searchComponent = URLComponents(string: "https://travel-advisor.p.rapidapi.com/locations/search")
+    
     let session = URLSession.shared
     
     var queryItems = [
@@ -27,4 +30,10 @@ class CommonService {
         URLQueryItem(name: "lang", value: "pt_BR")
     ]
     
+    var searchQueryItems = [
+        URLQueryItem(name: "limit" , value: "30"),
+        URLQueryItem(name: "offset" , value: "0"),
+        URLQueryItem(name: "units" , value: "km"),
+        URLQueryItem(name: "location_id" , value: "1"),
+    ]
 }

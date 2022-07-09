@@ -23,10 +23,10 @@ class MapService: CommonService {
     var delegate: MapsViewModelDelegate?
     
     func fetchLocationIdBy(address: String, completion: @escaping (LocationResultData) -> Void) {
-//        queryItems.append(URLQueryItem(name: "location_id", value: locationId ?? ""))
-        component?.queryItems = queryItems
+        searchQueryItems.append(URLQueryItem(name: "query", value:  address))
+        searchComponent?.queryItems = searchQueryItems
         
-        guard let url = component?.url else { return }
+        guard let url = searchComponent?.url else { return }
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = headers
         
