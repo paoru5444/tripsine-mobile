@@ -23,6 +23,8 @@ class MapViewController: UIViewController {
     var delegate: MapViewControllerDataSource?
     let locationManager = CLLocationManager()
     var selectedLocation: LocationResultData?
+    
+    let locationCoreDataService = LocationCoreDataService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +49,7 @@ class MapViewController: UIViewController {
     }
     
     func getAddressByCoordenates() {
+        
         var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
         let ceo: CLGeocoder = CLGeocoder()
         center.latitude = locationManager.location?.coordinate.latitude ?? 0
@@ -76,6 +79,10 @@ class MapViewController: UIViewController {
         let actionDefault = UIAlertAction(title: "Claro!!", style: .default) { _ in
             self.mapsViewModel.fetchLocationIdBy(address: address) { address in
                 DispatchQueue.main.async {
+                    self.locationCoreDataService.setLocationData(
+                        location_id: address.location_id,
+                        location_string: address.location_string
+                    )
                     guard let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeViewController else { return }
                         
                         secondViewController.modalPresentationStyle = .fullScreen
@@ -135,7 +142,16 @@ class MapViewController: UIViewController {
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        let initialLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
+        
+        let initialLocation = CLLocation(
+            latitude: locValue.latitude,
+            longitude: locValue.longitude
+        )
+        
+        locationCoreDataService.setCoordinateData(
+            latitude: locValue.latitude,
+            longitude: locValue.longitude
+        )
 
         UIMapKit.centerToLocation(initialLocation)
         showArtwork(lat: locValue.latitude, lng: locValue.longitude)
