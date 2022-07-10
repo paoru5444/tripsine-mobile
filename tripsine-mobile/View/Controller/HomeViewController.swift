@@ -7,39 +7,33 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var addressButton: UIButton!
-    @IBOutlet weak var searchRestaurantTextField: UITextField!
+//    @IBOutlet weak var searchRestaurantTextField: UITextField!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
     @IBOutlet weak var currentAddressLabel: UIButton!
     
     private let loadingView = LoadingView()
-    let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
-    let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
-    let mapViewController = MapViewController()
-    let mapsViewModel = MapService()
-    var filterSection = [FilterSection]()
-    var restaurantSection: [RestaurantData] = []
+    private let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
+    private let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
+    private let mapViewController = MapViewController()
+    private let mapsViewModel = MapService()
+    private var filterSection = [FilterSection]()
+    private var restaurantSection: [RestaurantData] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
-        restaurantsCollectionView.dataSource = self
         renderView()
         makeRequestForHome()
+        collectionView.dataSource = self
+        restaurantsCollectionView.dataSource = self
         categoryViewModel.delegate = self
         restaurantViewModel.delegate = self
         mapViewController.delegate = self
-        
-        loadingView.loadingIndicator.isAnimating = true
-        loadingView.setupUI()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-            self.loadingView.loadingIndicator.isAnimating = false
-        }
     }
     
     func updateHomeFromMaps(_ address: LocationResultData) {
@@ -49,16 +43,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     private func renderView() {
         filterButton.layer.cornerRadius = 10
-        renderSearchTextField()
+        renderLoadingView()
     }
     
-    private func renderSearchTextField() {
-        searchRestaurantTextField.layer.cornerRadius = 8
-        searchRestaurantTextField.backgroundColor = .white
-        searchRestaurantTextField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
-        searchRestaurantTextField.layer.shadowOpacity = 1
-        searchRestaurantTextField.layer.shadowRadius = 4
-        searchRestaurantTextField.layer.shadowOffset = CGSize(width: 0, height: 4)
+    private func renderLoadingView() {
+        loadingView.loadingIndicator.isAnimating = true
+        loadingView.setupUI(viewController: self)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
+            self.loadingView.loadingIndicator.isAnimating = false
+        }
     }
     
     private func makeRequestForHome() {
@@ -68,16 +62,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
 
 }
 
-extension HomeViewController: MapViewControllerDataSource {
-    func getInitialLocation(address: String) {
-        currentAddressLabel.setTitle(address, for: .normal)
-        mapsViewModel.fetchLocationIdBy(address: address) { resultData in
-            self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
-        }
-    }
-}
-
-extension HomeViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.restaurantsCollectionView {
             return restaurantSection.count
@@ -97,6 +82,15 @@ extension HomeViewController: UICollectionViewDataSource {
         }
     }
     
+}
+
+extension HomeViewController: MapViewControllerDataSource {
+    func getInitialLocation(address: String) {
+        currentAddressLabel.setTitle(address, for: .normal)
+        mapsViewModel.fetchLocationIdBy(address: address) { resultData in
+            self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
+        }
+    }
 }
 
 extension HomeViewController: HomeCategoryViewModelDelegate {

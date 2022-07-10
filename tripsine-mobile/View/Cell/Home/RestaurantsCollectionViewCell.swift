@@ -11,7 +11,6 @@ class RestaurantsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var containerView: UIView!
-//    @IBOutlet weak var openLabel: UILabel!
     @IBOutlet weak var restaurantTittleLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -23,8 +22,7 @@ class RestaurantsCollectionViewCell: UICollectionViewCell {
         restaurantTittleLabel.text = restaurantData.name
         descriptionLabel.text = restaurantData.address
         priceLabel.text = restaurantData.price
-//        openLabel.text = "\(shouldUpdateStatus(data: restaurantData))"
-        rateLabel.text = "/ \(updateRating(data: restaurantData))"
+        rateLabel.text = "\(updateRating(data: restaurantData))"
         
         
         if let url = URL(string: restaurantData.photo?.image?.original?.url ?? "") {
@@ -38,11 +36,7 @@ class RestaurantsCollectionViewCell: UICollectionViewCell {
         image.clipsToBounds = true
         image.layer.masksToBounds = true
         image.layer.cornerRadius = 8
-        
-//        openLabel.layer.cornerRadius = 8
-//        openLabel.layer.borderWidth = 1
-//        openLabel.layer.borderColor = UIColor(red: 0.298, green: 0.686, blue: 0.314, alpha: 1).cgColor
-        
+ 
         containerView.layer.cornerRadius = 8
         containerView.backgroundColor = .white
         containerView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor

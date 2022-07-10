@@ -17,23 +17,20 @@ class LoadingView: UIView {
     
     
     // MARK: - UI Setup
-   func setupUI() {
+    func setupUI(viewController: UIViewController) {
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = .light
         }
         
-        self.backgroundColor = .white
-        self.addSubview(loadingIndicator)
+        viewController.view.backgroundColor = .white
+        viewController.view.addSubview(loadingIndicator)
         
         NSLayoutConstraint.activate([
-            loadingIndicator.centerXAnchor
-                .constraint(equalTo: self.centerXAnchor),
-            loadingIndicator.centerYAnchor
-                .constraint(equalTo: self.centerYAnchor),
+            loadingIndicator.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: viewController.view.centerYAnchor),
             loadingIndicator.widthAnchor
                 .constraint(equalToConstant: 50),
-            loadingIndicator.heightAnchor
-                .constraint(equalTo: self.loadingIndicator.widthAnchor)
+            loadingIndicator.heightAnchor.constraint(equalTo: loadingIndicator.widthAnchor)
         ])
     }
 }

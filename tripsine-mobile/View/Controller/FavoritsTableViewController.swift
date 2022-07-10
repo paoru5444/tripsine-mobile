@@ -10,9 +10,9 @@ import UIKit
 class FavoritsTableViewController: UITableViewController {
     
     let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
-    var restaurantSection: [RestaurantData] = []
     let mapViewController = MapViewController()
     let mapsViewModel = MapService()
+    var restaurantSection: [RestaurantData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

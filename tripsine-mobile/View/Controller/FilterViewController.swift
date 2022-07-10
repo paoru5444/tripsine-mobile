@@ -9,42 +9,83 @@ import UIKit
 
 class FilterViewController: UIViewController {
 
-    @IBOutlet weak var ratingButton: UIButton!
-    @IBOutlet weak var mealsButton: UIButton!
-    @IBOutlet weak var categoryButton: UIButton!
-    @IBOutlet weak var isOpenButton: UIButton!
-    @IBOutlet weak var priceButton: UIButton!
+    @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var mealLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var isOpenLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    private let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
+    private let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
+    private let mapViewController = MapViewController()
+    private let mapsViewModel = MapService()
+    private var filterSection = [FilterSection]()
+    private var restaurantSection: [RestaurantData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addCornerRadius()
+        makeRequestForHome()
+        renderView()
+        categoryViewModel.delegate = self
+        restaurantViewModel.delegate = self
+        mapViewController.delegate = self
     }
     
     @IBAction func didSendData(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    
-    private func addCornerRadius() {
-        ratingButton.layer.cornerRadius = 10
-        mealsButton.layer.cornerRadius = 10
-        categoryButton.layer.cornerRadius = 10
-        isOpenButton.layer.cornerRadius = 10
-        priceButton.layer.cornerRadius = 10
-        filterButton.layer.cornerRadius = 10
-        
-        ratingButton.layer.borderWidth = 1
-        mealsButton.layer.borderWidth = 1
-        categoryButton.layer.borderWidth = 1
-        isOpenButton.layer.borderWidth = 1
-        priceButton.layer.borderWidth = 1
+    func updateHomeFromMaps(_ address: LocationResultData) {
+        restaurantViewModel.makeRequestWithLocationId(locationId: address.location_id)
     }
+    
+    private func makeRequestForHome() {
+        categoryViewModel.makeRequest()
+        mapViewController.getAddressByCoordenates()
+    }
+    
+    private func renderView() {
+        categoryLabel.layer.borderWidth = 1
+        ratingLabel.layer.borderWidth = 1
+        mealLabel.layer.borderWidth = 1
+        isOpenLabel.layer.borderWidth = 1
+        priceLabel.layer.borderWidth = 1
+        
+        filterButton.layer.cornerRadius = 10
+        categoryLabel.layer.cornerRadius = 2
+        ratingLabel.layer.cornerRadius = 2
+        mealLabel.layer.cornerRadius = 2
+        isOpenLabel.layer.cornerRadius = 2
+        priceLabel.layer.cornerRadius = 2
+    }
+    
+}
 
-    private func isClicked() {
-        if ratingButton.isSelected {
-            ratingButton.backgroundColor = .red
+extension FilterViewController: MapViewControllerDataSource {
+    func getInitialLocation(address: String) {
+        mapsViewModel.fetchLocationIdBy(address: address) { resultData in
+            self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
         }
     }
+}
 
+extension FilterViewController: HomeCategoryViewModelDelegate {
+    func updateCategory(_ filter: [FilterSection]) {
+        DispatchQueue.main.async {
+            self.filterSection = filter
+            self.categoryLabel.text = filter.first?.section
+        }
+    }
+}
+
+extension FilterViewController: HomeRestaurantViewModelDelegate {
+    func updateRestaurant(_ restaurants: [RestaurantData]) {
+        DispatchQueue.main.async {
+            self.restaurantSection = restaurants
+            self.ratingLabel.text = restaurants.first?.rating
+            self.isOpenLabel.text = "\(String(describing: restaurants.first?.isOpen))"
+            self.priceLabel.text = restaurants.first?.price
+        }
+    }
 }

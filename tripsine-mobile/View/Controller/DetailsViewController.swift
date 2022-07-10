@@ -68,8 +68,6 @@ class DetailsViewController: UIViewController {
         
         titleLabel.text = data.first?.name
         addressLabel.text = data.first?.address
-//        statusLabel.text = "\(shouldUpdateStatus(data: data))"
-////        funcionalityStatusLabel: UILabel!
         descriptionLabel.text = data.first?.description
         ratingLabel.text = "/ \(rating)"
         priceLabel.text = data.first?.price
