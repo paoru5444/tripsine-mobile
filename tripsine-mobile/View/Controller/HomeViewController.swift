@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var addressButton: UIButton!
-//    @IBOutlet weak var searchRestaurantTextField: UITextField!
+    @IBOutlet weak var searchRestaurantTextField: UITextField!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
@@ -23,7 +23,6 @@ class HomeViewController: UIViewController {
     private let mapsViewModel = MapService()
     private var filterSection = [FilterSection]()
     private var restaurantSection: [RestaurantData] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

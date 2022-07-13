@@ -28,7 +28,7 @@ class FavoritsTableViewCell: UITableViewCell {
         priceLabel.text = data.first?.price
         nameRestaurantLabel.text = data.first?.name
         nameLocalLabel.text = data.first?.address
-        ratingLabel.text = "/\(rating)"
+        ratingLabel.text = "\(rating)"
         
         if let url = URL(string: data.first?.photo?.image?.original?.url ?? "") {
             if let imageData = try? Data(contentsOf: url) {

@@ -23,7 +23,7 @@ class MapViewController: UIViewController {
     var delegate: MapViewControllerDataSource?
     let locationManager = CLLocationManager()
     var selectedLocation: LocationResultData?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -65,6 +65,7 @@ class MapViewController: UIViewController {
     
     
     @IBAction func confirmLocationButton(_ sender: Any) {
+        let mapTabBarController = CustomUITabBarController()
         guard let address = searchLocationTextField.text else { return }
         
         let getAddressAlert = UIAlertController(
