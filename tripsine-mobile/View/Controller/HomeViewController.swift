@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     let mapsViewModel = MapService()
     var filterSection = [FilterSection]()
     var restaurantSection: [RestaurantData] = []
+    let locationCoreData = LocationCoreDataService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,10 +71,20 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
 
 extension HomeViewController: MapViewControllerDataSource {
     func getInitialLocation(address: String) {
-        currentAddressLabel.setTitle(address, for: .normal)
-        mapsViewModel.fetchLocationIdBy(address: address) { resultData in
-            self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
+        if let location_string = locationCoreData.getLocationData().last?.location_string {
+            currentAddressLabel.setTitle(location_string, for: .normal)
+            mapsViewModel.fetchLocationIdBy(address: location_string) { resultData in
+                self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
+            }
+        } else {
+            currentAddressLabel.setTitle(address, for: .normal)
+            mapsViewModel.fetchLocationIdBy(address: address) { resultData in
+                self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
+            }
         }
+        
+        
+        
     }
 }
 
