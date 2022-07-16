@@ -17,6 +17,7 @@ class HomeRestaurantViewModel {
     private var mapService: MapService
     private var restaurantModel = [RestaurantData]()
     var delegate: HomeRestaurantViewModelDelegate?
+    let restaurantCoreData = RestaurantCoreDataService()
     
     
     init(service: HomeRestaurantService = .init(), mapService: MapService = .init()) {
@@ -24,8 +25,14 @@ class HomeRestaurantViewModel {
         self.mapService = mapService
     }
     
-    func makeRequestWithLocationId(locationId: String) {
+    func makeRequestWithLocationId(locationId: String, hasRestaurantsStored: Bool = false) {
+        if hasRestaurantsStored {
+//            let data =
+//            delegate?.updateRestaurant(data)
+        }
+        
         restaurantService.fetchRestaurantService(locationId) { data in
+            self.restaurantCoreData.setRestaurantData(restaurants: data)
             self.delegate?.updateRestaurant(data)
         }
     }
