@@ -22,7 +22,7 @@ class MapService: CommonService {
     
     var delegate: MapsViewModelDelegate?
     
-    func fetchLocationIdBy(address: String, completion: @escaping (LocationResultData) -> Void) {
+    func fetchLocationIdBy(address: String?, completion: @escaping (LocationResultData) -> Void) {
         searchQueryItems.append(URLQueryItem(name: "query", value:  address))
         searchComponent?.queryItems = searchQueryItems
         

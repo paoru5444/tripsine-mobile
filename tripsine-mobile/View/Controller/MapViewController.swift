@@ -9,7 +9,7 @@ import MapKit
 import UIKit
 
 protocol MapViewControllerDataSource {
-    func getInitialLocation(address: String)
+    func getInitialLocation(address: String?)
 }
 
 class MapViewController: UIViewController {
@@ -23,6 +23,7 @@ class MapViewController: UIViewController {
     var delegate: MapViewControllerDataSource?
     let locationManager = CLLocationManager()
     var selectedLocation: LocationResultData?
+    var selectedCoordinate: CLLocation?
     
     let locationCoreDataService = LocationCoreDataService()
 
@@ -60,10 +61,26 @@ class MapViewController: UIViewController {
         ceo.reverseGeocodeLocation(loc) { placemarks, _ in
             let pm = placemarks! as [CLPlacemark]
             
-            let city = pm[0].locality ?? "São Paulo"
+            let city = pm[0].locality
             self.delegate?.getInitialLocation(address: city)
         }
 
+    }
+    
+    func getSelectedPlace() -> [CLPlacemark]? {
+        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+        let ceo: CLGeocoder = CLGeocoder()
+        center.latitude = selectedCoordinate?.coordinate.latitude ?? 0
+        center.longitude = selectedCoordinate?.coordinate.longitude ?? 0
+        
+        let loc: CLLocation = CLLocation(latitude: center.latitude, longitude: center.longitude)
+        var place: [CLPlacemark]?
+        
+        ceo.reverseGeocodeLocation(loc) { placemarks, _ in
+            place = placemarks! as [CLPlacemark]
+        }
+        
+        return place
     }
     
     
@@ -178,6 +195,7 @@ extension MapViewController: MapsViewModelDelegate {
         self.UIMapKit.centerToLocation(initialLocation)
         self.showArtwork(lat: location.latitude, lng: location.longitude)
         confirmLocationButton.isEnabled = true
+        selectedCoordinate = initialLocation
     }
     
     func fetchLocationSuccess(location: LocationResultData) {

@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import MapKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var addressButton: UIButton!
     @IBOutlet weak var searchRestaurantTextField: UITextField!
@@ -24,9 +25,21 @@ class HomeViewController: UIViewController {
     var filterSection = [FilterSection]()
     var restaurantSection: [RestaurantData] = []
     let locationCoreData = LocationCoreDataService()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        
         renderView()
         makeRequestForHome()
         collectionView.dataSource = self
@@ -34,6 +47,17 @@ class HomeViewController: UIViewController {
         categoryViewModel.delegate = self
         restaurantViewModel.delegate = self
         mapViewController.delegate = self
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        if status == .authorizedAlways {
+            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
+                if CLLocationManager.isRangingAvailable() {
+                    // do stuff
+                }
+            }
+        }
     }
     
     func updateHomeFromMaps(_ address: LocationResultData) {
@@ -63,12 +87,29 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: MapViewControllerDataSource {
-    func getInitialLocation(address: String) {
+    func getInitialLocation(address: String?) {
         if let location_string = locationCoreData.getLocationData().last?.location_string {
             currentAddressLabel.setTitle(location_string, for: .normal)
-            mapsViewModel.fetchLocationIdBy(address: location_string) { resultData in
-                self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
+            
+            let latitude = locationManager.location?.coordinate.latitude ?? 0
+            let longitude = locationManager.location?.coordinate.longitude ?? 0
+            let location = locationCoreData.getLocationData().last
+            
+            if (location?.latitude == latitude && location?.longitude == longitude) {
+                currentAddressLabel.setTitle(location_string, for: .normal)
+                mapsViewModel.fetchLocationIdBy(address: location_string) { resultData in
+                    self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
+                }
+            } else {
+                let selectedPlace = mapViewController.getSelectedPlace()
+                if let place = selectedPlace {
+                    currentAddressLabel.setTitle(place[0].locality, for: .normal)
+                    mapsViewModel.fetchLocationIdBy(address: place[0].locality ?? "") { resultData in
+                        self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
+                    }
+                }
             }
+           
         } else {
             currentAddressLabel.setTitle(address, for: .normal)
             mapsViewModel.fetchLocationIdBy(address: address) { resultData in
@@ -98,15 +139,6 @@ extension HomeViewController: UICollectionViewDataSource {
         }
     }
     
-}
-
-extension HomeViewController: MapViewControllerDataSource {
-    func getInitialLocation(address: String) {
-        currentAddressLabel.setTitle(address, for: .normal)
-        mapsViewModel.fetchLocationIdBy(address: address) { resultData in
-            self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
-        }
-    }
 }
 
 extension HomeViewController: HomeCategoryViewModelDelegate {

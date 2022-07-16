@@ -103,7 +103,7 @@ extension DetailsViewController: HomeRestaurantViewModelDelegate {
 }
 
 extension DetailsViewController: MapViewControllerDataSource {
-    func getInitialLocation(address: String) {
+    func getInitialLocation(address: String?) {
         mapsViewModel.fetchLocationIdBy(address: address) { resultData in
             self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
         }
