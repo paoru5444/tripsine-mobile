@@ -99,6 +99,8 @@
 		00978084285E75B600A09A21 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
 		00E0A1132865F7DF0025DCE6 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		00E8F9C1286FCC9B000C9EB8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		31C7C6E77A6C2860040763B7 /* Pods-tripsine-mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tripsine-mobileTests.debug.xcconfig"; path = "Target Support Files/Pods-tripsine-mobileTests/Pods-tripsine-mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38D1483E5DD3F7F722FD4D25 /* Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig"; path = "Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests/Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3A0698EE2879C16E00B840E3 /* Location.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Location.xcdatamodel; sourceTree = "<group>"; };
 		3A0698F32879CB8B00B840E3 /* LocationCoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoreDataService.swift; sourceTree = "<group>"; };
 		3A0EEC90286013C70066FA13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,10 @@
 		3AF68BF32853CCD100AB6945 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		55D44EB228514E7C0069370F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		55D44EBA285150590069370F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C1A9810E21D1F2089B26B923 /* Pods-tripsine-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tripsine-mobile.debug.xcconfig"; path = "Target Support Files/Pods-tripsine-mobile/Pods-tripsine-mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		D6F7430CFC82D9D1F310A8AA /* Pods-tripsine-mobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tripsine-mobileTests.release.xcconfig"; path = "Target Support Files/Pods-tripsine-mobileTests/Pods-tripsine-mobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		DEEB7ED827D98BA386F158DF /* Pods-tripsine-mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tripsine-mobile.release.xcconfig"; path = "Target Support Files/Pods-tripsine-mobile/Pods-tripsine-mobile.release.xcconfig"; sourceTree = "<group>"; };
+		F1D5D5889DB8F30620DA3BBA /* Pods-tripsine-mobile-tripsine-mobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tripsine-mobile-tripsine-mobileUITests.debug.xcconfig"; path = "Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests/Pods-tripsine-mobile-tripsine-mobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +299,19 @@
 			path = Favorits;
 			sourceTree = "<group>";
 		};
+		28E5117DDD018B5B5643ECB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1A9810E21D1F2089B26B923 /* Pods-tripsine-mobile.debug.xcconfig */,
+				DEEB7ED827D98BA386F158DF /* Pods-tripsine-mobile.release.xcconfig */,
+				F1D5D5889DB8F30620DA3BBA /* Pods-tripsine-mobile-tripsine-mobileUITests.debug.xcconfig */,
+				38D1483E5DD3F7F722FD4D25 /* Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig */,
+				31C7C6E77A6C2860040763B7 /* Pods-tripsine-mobileTests.debug.xcconfig */,
+				D6F7430CFC82D9D1F310A8AA /* Pods-tripsine-mobileTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3A0698EC2879C15500B840E3 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +370,8 @@
 				3ACFC4182843E01200AE4504 /* tripsine-mobileUITests */,
 				3ACFC3F62843E00D00AE4504 /* Products */,
 				3A79C517285FD6F500AB69F9 /* Recovered References */,
+				28E5117DDD018B5B5643ECB9 /* Pods */,
+				ECFA1BE7FB3F5BC136E5AFA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -407,6 +428,13 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		ECFA1BE7FB3F5BC136E5AFA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -414,15 +442,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ACFC41F2843E01200AE4504 /* Build configuration list for PBXNativeTarget "tripsine-mobile" */;
 			buildPhases = (
+				A16AD7D66204E0A8ED58C6FB /* [CP] Check Pods Manifest.lock */,
 				3ACFC3F12843E00D00AE4504 /* Sources */,
 				3ACFC3F22843E00D00AE4504 /* Frameworks */,
 				3ACFC3F32843E00D00AE4504 /* Resources */,
+				AA4DA280013695E16BE424E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "tripsine-mobile";
+			packageProductDependencies = (
+			);
 			productName = "tripsine-mobile";
 			productReference = 3ACFC3F52843E00D00AE4504 /* tripsine-mobile.app */;
 			productType = "com.apple.product-type.application";
@@ -431,6 +463,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ACFC4222843E01200AE4504 /* Build configuration list for PBXNativeTarget "tripsine-mobileTests" */;
 			buildPhases = (
+				99DF6A450E1BA7C8144AF27D /* [CP] Check Pods Manifest.lock */,
 				3ACFC4072843E01200AE4504 /* Sources */,
 				3ACFC4082843E01200AE4504 /* Frameworks */,
 				3ACFC4092843E01200AE4504 /* Resources */,
@@ -449,9 +482,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ACFC4252843E01200AE4504 /* Build configuration list for PBXNativeTarget "tripsine-mobileUITests" */;
 			buildPhases = (
+				B29354139444F330BB0372F5 /* [CP] Check Pods Manifest.lock */,
 				3ACFC4112843E01200AE4504 /* Sources */,
 				3ACFC4122843E01200AE4504 /* Frameworks */,
 				3ACFC4132843E01200AE4504 /* Resources */,
+				35A7DF0BC100E825DA3A94A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -495,6 +530,8 @@
 				Base,
 			);
 			mainGroup = 3ACFC3EC2843E00D00AE4504;
+			packageReferences = (
+			);
 			productRefGroup = 3ACFC3F62843E00D00AE4504 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -552,6 +589,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35A7DF0BC100E825DA3A94A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests/Pods-tripsine-mobile-tripsine-mobileUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests/Pods-tripsine-mobile-tripsine-mobileUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests/Pods-tripsine-mobile-tripsine-mobileUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99DF6A450E1BA7C8144AF27D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tripsine-mobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A16AD7D66204E0A8ED58C6FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tripsine-mobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA4DA280013695E16BE424E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tripsine-mobile/Pods-tripsine-mobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tripsine-mobile/Pods-tripsine-mobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tripsine-mobile/Pods-tripsine-mobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B29354139444F330BB0372F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tripsine-mobile-tripsine-mobileUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3ACFC3F12843E00D00AE4504 /* Sources */ = {
@@ -760,6 +900,7 @@
 		};
 		3ACFC4202843E01200AE4504 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1A9810E21D1F2089B26B923 /* Pods-tripsine-mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -794,6 +935,7 @@
 		};
 		3ACFC4212843E01200AE4504 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEEB7ED827D98BA386F158DF /* Pods-tripsine-mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -828,6 +970,7 @@
 		};
 		3ACFC4232843E01200AE4504 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31C7C6E77A6C2860040763B7 /* Pods-tripsine-mobileTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -848,6 +991,7 @@
 		};
 		3ACFC4242843E01200AE4504 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6F7430CFC82D9D1F310A8AA /* Pods-tripsine-mobileTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -868,6 +1012,7 @@
 		};
 		3ACFC4262843E01200AE4504 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D5D5889DB8F30620DA3BBA /* Pods-tripsine-mobile-tripsine-mobileUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -886,6 +1031,7 @@
 		};
 		3ACFC4272843E01200AE4504 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38D1483E5DD3F7F722FD4D25 /* Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

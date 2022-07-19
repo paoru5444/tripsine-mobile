@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIView_Shimmer
 
 private enum CategoryImage: String {
     case cuisineType = "cuisineType"
@@ -25,7 +26,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     func setupCell(index: Int, filterSection: [FilterSection]) {
         renderView()
-        
+       
         if index >= 1 {
             containerInsetView.backgroundColor = .white
             iconCategorieImage.image = UIImage(named: renderImageSection(section: filterSection[index].section))
@@ -74,4 +75,10 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         }
     }
     
+}
+
+extension CategoryCollectionViewCell: ShimmeringViewProtocol {
+    var shimmeringAnimatedItems: [UIView] {
+            [containerInsetView, iconCategorieImage, itemCategoryLabel]
+    }
 }

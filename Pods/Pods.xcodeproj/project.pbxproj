@@ -1,0 +1,986 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E9BE795D34BFAF492DAC0C83C82EAF6 /* UIView+Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C75AA1050D53B37F0DFDC4B5D3BAA9 /* UIView+Shimmer.swift */; };
+		12D0D53711DE275C33B16BC9580A437F /* UIView-Shimmer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB260AB308689A07A36F8FBDAEE37290 /* UIView-Shimmer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20678C27E5EFB52FC02895643DC4C8ED /* UIView-Shimmer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B9FA3E06CFA2ABF7D2E8CDB48383B7 /* UIView-Shimmer-dummy.m */; };
+		39BB0C7860879C3938EBC1A25F4B1A9C /* Pods-tripsine-mobile-tripsine-mobileUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE73980C0C2CAEF05FBFA3DC1CD8784E /* Pods-tripsine-mobile-tripsine-mobileUITests-dummy.m */; };
+		3D33E2EA9956248AE4397A2E0494BEA7 /* UIView+Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA631C9DD217B261CD08097C6FF689A /* UIView+Template.swift */; };
+		3FB860F32EA87BA2188B47FCFA85B86E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		4723BA21A592FB9A9A38AD74A2A14A5D /* Pods-tripsine-mobileTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BADAA4889F7ACF6D8C7140AE5AFCDA9 /* Pods-tripsine-mobileTests-dummy.m */; };
+		676497DBBF9302E573ECBDCF60542482 /* ShimmeringViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FEDEE9DEE93E76262371487C4574B2 /* ShimmeringViewProtocol.swift */; };
+		74177E0F5E5690BE492D1E6B95EF8DC6 /* Pods-tripsine-mobile-tripsine-mobileUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 955ED9DFC0F7295E21A222B408F7B696 /* Pods-tripsine-mobile-tripsine-mobileUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7433CF9E0D5B25324559A8B043B2BC87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE92083D38DF66D9780981D30736D7E /* Constants.swift */; };
+		74F36A957FF9403860A3E596F6D0F945 /* Pods-tripsine-mobileTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D2DFFFDF9FA6B1F17F952DEA1C1540 /* Pods-tripsine-mobileTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FCDC90CEF79126A42BDB98D449438F7 /* Pods-tripsine-mobile-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 882B41372C34B67E1185839224DD007E /* Pods-tripsine-mobile-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AF0E8E05373B67EB3FF49C7A0C58406 /* UIView_Shimmer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A673046CE2223187BDC6B0B9D0B0D51 /* UIView_Shimmer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90C4681942C7B74B4BB6794F544DF6E2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D10AB9D980EBDCAF6DF8680EDEAFA /* UIView+Extensions.swift */; };
+		9127E9946C5D7389ED491EAEC22D9A96 /* Pods-tripsine-mobile-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C41C041D2E166A6C04AA18ADD67681D /* Pods-tripsine-mobile-dummy.m */; };
+		9F0288510E02EBE98DC9CFCEBA83288B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B03B42D51D2541636A985D79F132DDA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		BB1F2590247E1D014CAF7E9520667262 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71D49FC9D42BC480BEB32E4848CCF746 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A27B2CC756B877BE29030AE88795A973;
+			remoteInfo = "UIView-Shimmer";
+		};
+		7F5EB5D9313683656B113D0615E2162D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A27B2CC756B877BE29030AE88795A973;
+			remoteInfo = "UIView-Shimmer";
+		};
+		E0F07977464C698DFD73F9BFDAFFB0CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29C2FE82BDEC488C2C22EBEBEED8767E;
+			remoteInfo = "Pods-tripsine-mobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E0473538FCC17AA024443E55D7B119 /* Pods-tripsine-mobile-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tripsine-mobile-acknowledgements.plist"; sourceTree = "<group>"; };
+		0BADAA4889F7ACF6D8C7140AE5AFCDA9 /* Pods-tripsine-mobileTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-tripsine-mobileTests-dummy.m"; sourceTree = "<group>"; };
+		204D4AF84F59CCD5661F4238F5B1EA0B /* Pods-tripsine-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tripsine-mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		23C75AA1050D53B37F0DFDC4B5D3BAA9 /* UIView+Shimmer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Shimmer.swift"; path = "Sources/UIView-Shimmer/UIView+Extensions/UIView+Shimmer.swift"; sourceTree = "<group>"; };
+		32EF2EE14B572674E3C77D01F3A217D2 /* Pods-tripsine-mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tripsine-mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		375C6714DA8B08C7C9E4C7578C26CA68 /* Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3AE92083D38DF66D9780981D30736D7E /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Sources/UIView-Shimmer/Models/Constants.swift"; sourceTree = "<group>"; };
+		3BA631C9DD217B261CD08097C6FF689A /* UIView+Template.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Template.swift"; path = "Sources/UIView-Shimmer/UIView+Extensions/UIView+Template.swift"; sourceTree = "<group>"; };
+		439C9307F90F76DFC32403CD1FF1C2FF /* Pods-tripsine-mobile-tripsine-mobileUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-tripsine-mobile-tripsine-mobileUITests-frameworks.sh"; sourceTree = "<group>"; };
+		4632DF5CBEAD53A2CCF721DD76F44855 /* Pods-tripsine-mobileTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-tripsine-mobileTests"; path = Pods_tripsine_mobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F8857D5C290DEFFE1A010F82FEE66B4 /* Pods-tripsine-mobile-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-tripsine-mobile-frameworks.sh"; sourceTree = "<group>"; };
+		57D2DFFFDF9FA6B1F17F952DEA1C1540 /* Pods-tripsine-mobileTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-tripsine-mobileTests-umbrella.h"; sourceTree = "<group>"; };
+		5ACE834DF683E8277CBD51663200360A /* UIView-Shimmer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIView-Shimmer.release.xcconfig"; sourceTree = "<group>"; };
+		5C41C041D2E166A6C04AA18ADD67681D /* Pods-tripsine-mobile-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-tripsine-mobile-dummy.m"; sourceTree = "<group>"; };
+		5F74EAC2FB00ED0FF3A0B6A7304A1591 /* Pods-tripsine-mobile-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-tripsine-mobile-acknowledgements.markdown"; sourceTree = "<group>"; };
+		61FEDEE9DEE93E76262371487C4574B2 /* ShimmeringViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShimmeringViewProtocol.swift; path = "Sources/UIView-Shimmer/Models/ShimmeringViewProtocol.swift"; sourceTree = "<group>"; };
+		66BE1F92FD2AA26773A6E3DB1A0A5472 /* Pods-tripsine-mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tripsine-mobile.release.xcconfig"; sourceTree = "<group>"; };
+		67BE6013F8989A170C990457C3C48C92 /* Pods-tripsine-mobile */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-tripsine-mobile"; path = Pods_tripsine_mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7090320C768B50894D388AC581B4CAC1 /* Pods-tripsine-mobileTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tripsine-mobileTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7BEBE4121B6E9045918906F6664D61A2 /* Pods-tripsine-mobile-tripsine-mobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tripsine-mobile-tripsine-mobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DB51FD5B2E07E4062D812FE474D296B /* UIView-Shimmer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIView-Shimmer.debug.xcconfig"; sourceTree = "<group>"; };
+		8460ED3DD63E677FB97F33F19C0BA7D1 /* Pods-tripsine-mobile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-tripsine-mobile.modulemap"; sourceTree = "<group>"; };
+		848AF9F83DB27725FFFD66EB35C32D73 /* Pods-tripsine-mobile-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tripsine-mobile-Info.plist"; sourceTree = "<group>"; };
+		882B41372C34B67E1185839224DD007E /* Pods-tripsine-mobile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-tripsine-mobile-umbrella.h"; sourceTree = "<group>"; };
+		951B5FDA13472999C71FE019D03F03AE /* UIView-Shimmer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UIView-Shimmer-Info.plist"; sourceTree = "<group>"; };
+		953C562110D60461E197BAE250C43EEB /* UIView-Shimmer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView-Shimmer-prefix.pch"; sourceTree = "<group>"; };
+		955ED9DFC0F7295E21A222B408F7B696 /* Pods-tripsine-mobile-tripsine-mobileUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-tripsine-mobile-tripsine-mobileUITests-umbrella.h"; sourceTree = "<group>"; };
+		9A673046CE2223187BDC6B0B9D0B0D51 /* UIView_Shimmer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIView_Shimmer.h; path = "Sources/UIView-Shimmer/UIView_Shimmer.h"; sourceTree = "<group>"; };
+		9BFA6E3F4B10148186FF30E47F093BEA /* Pods-tripsine-mobile-tripsine-mobileUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tripsine-mobile-tripsine-mobileUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A29F63EDC2BA672C45318ED44C15FF16 /* Pods-tripsine-mobileTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-tripsine-mobileTests.modulemap"; sourceTree = "<group>"; };
+		AE26A650ACECE2347290BF4A9042CC0B /* Pods-tripsine-mobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tripsine-mobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		BB35CED361AA0D2192B1E361DF0A9AA5 /* Pods-tripsine-mobile-tripsine-mobileUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-tripsine-mobile-tripsine-mobileUITests.modulemap"; sourceTree = "<group>"; };
+		C095372F60C8E208DE4C0ACD79EDE2C4 /* Pods-tripsine-mobileTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tripsine-mobileTests-Info.plist"; sourceTree = "<group>"; };
+		C2DC781C073A1DD81829DE833899B1E6 /* Pods-tripsine-mobile-tripsine-mobileUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tripsine-mobile-tripsine-mobileUITests-Info.plist"; sourceTree = "<group>"; };
+		C916C94425DE0C4998EF7F52057A7B40 /* Pods-tripsine-mobile-tripsine-mobileUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-tripsine-mobile-tripsine-mobileUITests"; path = Pods_tripsine_mobile_tripsine_mobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC152A266C1A97E08880B17CF5738DD0 /* UIView-Shimmer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "UIView-Shimmer.modulemap"; sourceTree = "<group>"; };
+		D26F46BA3F70FFBBB2611B86C8C2E00E /* UIView-Shimmer */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "UIView-Shimmer"; path = UIView_Shimmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D424A0A58CB42D2C37F5D7BB5DCC6B66 /* Pods-tripsine-mobileTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-tripsine-mobileTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D504C738012AE6CFFF0FB71A18C367FD /* Pods-tripsine-mobile-tripsine-mobileUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-tripsine-mobile-tripsine-mobileUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DD7D10AB9D980EBDCAF6DF8680EDEAFA /* UIView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Sources/UIView-Shimmer/UIView+Extensions/UIView+Extensions.swift"; sourceTree = "<group>"; };
+		E4B9FA3E06CFA2ABF7D2E8CDB48383B7 /* UIView-Shimmer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView-Shimmer-dummy.m"; sourceTree = "<group>"; };
+		EB260AB308689A07A36F8FBDAEE37290 /* UIView-Shimmer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView-Shimmer-umbrella.h"; sourceTree = "<group>"; };
+		EE73980C0C2CAEF05FBFA3DC1CD8784E /* Pods-tripsine-mobile-tripsine-mobileUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-tripsine-mobile-tripsine-mobileUITests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39CB992693297149FE1E6B63EA677AC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03B42D51D2541636A985D79F132DDA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6ED40532803E6EC6129DEFE0561D047 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB1F2590247E1D014CAF7E9520667262 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE2B3887F008053E43C914FAA3399502 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB860F32EA87BA2188B47FCFA85B86E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3B63D8FDBEB00C7DD34ACB34D19A594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F0288510E02EBE98DC9CFCEBA83288B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E262632FE7C89D776A0E10669F83BE7 /* Pods-tripsine-mobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				A29F63EDC2BA672C45318ED44C15FF16 /* Pods-tripsine-mobileTests.modulemap */,
+				D424A0A58CB42D2C37F5D7BB5DCC6B66 /* Pods-tripsine-mobileTests-acknowledgements.markdown */,
+				7090320C768B50894D388AC581B4CAC1 /* Pods-tripsine-mobileTests-acknowledgements.plist */,
+				0BADAA4889F7ACF6D8C7140AE5AFCDA9 /* Pods-tripsine-mobileTests-dummy.m */,
+				C095372F60C8E208DE4C0ACD79EDE2C4 /* Pods-tripsine-mobileTests-Info.plist */,
+				57D2DFFFDF9FA6B1F17F952DEA1C1540 /* Pods-tripsine-mobileTests-umbrella.h */,
+				32EF2EE14B572674E3C77D01F3A217D2 /* Pods-tripsine-mobileTests.debug.xcconfig */,
+				AE26A650ACECE2347290BF4A9042CC0B /* Pods-tripsine-mobileTests.release.xcconfig */,
+			);
+			name = "Pods-tripsine-mobileTests";
+			path = "Target Support Files/Pods-tripsine-mobileTests";
+			sourceTree = "<group>";
+		};
+		12C4518FCC2CEDE382C34DC63D5E327F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				367431E1452D30D7A8FF97B0D7E75622 /* Pods-tripsine-mobile */,
+				9E95DBC65F0AB8E8CA701645A3BC3D82 /* Pods-tripsine-mobile-tripsine-mobileUITests */,
+				0E262632FE7C89D776A0E10669F83BE7 /* Pods-tripsine-mobileTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		367431E1452D30D7A8FF97B0D7E75622 /* Pods-tripsine-mobile */ = {
+			isa = PBXGroup;
+			children = (
+				8460ED3DD63E677FB97F33F19C0BA7D1 /* Pods-tripsine-mobile.modulemap */,
+				5F74EAC2FB00ED0FF3A0B6A7304A1591 /* Pods-tripsine-mobile-acknowledgements.markdown */,
+				00E0473538FCC17AA024443E55D7B119 /* Pods-tripsine-mobile-acknowledgements.plist */,
+				5C41C041D2E166A6C04AA18ADD67681D /* Pods-tripsine-mobile-dummy.m */,
+				4F8857D5C290DEFFE1A010F82FEE66B4 /* Pods-tripsine-mobile-frameworks.sh */,
+				848AF9F83DB27725FFFD66EB35C32D73 /* Pods-tripsine-mobile-Info.plist */,
+				882B41372C34B67E1185839224DD007E /* Pods-tripsine-mobile-umbrella.h */,
+				204D4AF84F59CCD5661F4238F5B1EA0B /* Pods-tripsine-mobile.debug.xcconfig */,
+				66BE1F92FD2AA26773A6E3DB1A0A5472 /* Pods-tripsine-mobile.release.xcconfig */,
+			);
+			name = "Pods-tripsine-mobile";
+			path = "Target Support Files/Pods-tripsine-mobile";
+			sourceTree = "<group>";
+		};
+		36BFADFA937EE83FBA0B285F3F4ECD26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E16A686F4E9A6AD170D4869ECEAC7C3C /* UIView-Shimmer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		697297C76D5A76FCE994A614D56CC327 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC152A266C1A97E08880B17CF5738DD0 /* UIView-Shimmer.modulemap */,
+				E4B9FA3E06CFA2ABF7D2E8CDB48383B7 /* UIView-Shimmer-dummy.m */,
+				951B5FDA13472999C71FE019D03F03AE /* UIView-Shimmer-Info.plist */,
+				953C562110D60461E197BAE250C43EEB /* UIView-Shimmer-prefix.pch */,
+				EB260AB308689A07A36F8FBDAEE37290 /* UIView-Shimmer-umbrella.h */,
+				7DB51FD5B2E07E4062D812FE474D296B /* UIView-Shimmer.debug.xcconfig */,
+				5ACE834DF683E8277CBD51663200360A /* UIView-Shimmer.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIView-Shimmer";
+			sourceTree = "<group>";
+		};
+		9E95DBC65F0AB8E8CA701645A3BC3D82 /* Pods-tripsine-mobile-tripsine-mobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB35CED361AA0D2192B1E361DF0A9AA5 /* Pods-tripsine-mobile-tripsine-mobileUITests.modulemap */,
+				D504C738012AE6CFFF0FB71A18C367FD /* Pods-tripsine-mobile-tripsine-mobileUITests-acknowledgements.markdown */,
+				9BFA6E3F4B10148186FF30E47F093BEA /* Pods-tripsine-mobile-tripsine-mobileUITests-acknowledgements.plist */,
+				EE73980C0C2CAEF05FBFA3DC1CD8784E /* Pods-tripsine-mobile-tripsine-mobileUITests-dummy.m */,
+				439C9307F90F76DFC32403CD1FF1C2FF /* Pods-tripsine-mobile-tripsine-mobileUITests-frameworks.sh */,
+				C2DC781C073A1DD81829DE833899B1E6 /* Pods-tripsine-mobile-tripsine-mobileUITests-Info.plist */,
+				955ED9DFC0F7295E21A222B408F7B696 /* Pods-tripsine-mobile-tripsine-mobileUITests-umbrella.h */,
+				7BEBE4121B6E9045918906F6664D61A2 /* Pods-tripsine-mobile-tripsine-mobileUITests.debug.xcconfig */,
+				375C6714DA8B08C7C9E4C7578C26CA68 /* Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig */,
+			);
+			name = "Pods-tripsine-mobile-tripsine-mobileUITests";
+			path = "Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				36BFADFA937EE83FBA0B285F3F4ECD26 /* Pods */,
+				F971D6F2E6445FD1FC8AD813704B4D1F /* Products */,
+				12C4518FCC2CEDE382C34DC63D5E327F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E16A686F4E9A6AD170D4869ECEAC7C3C /* UIView-Shimmer */ = {
+			isa = PBXGroup;
+			children = (
+				3AE92083D38DF66D9780981D30736D7E /* Constants.swift */,
+				61FEDEE9DEE93E76262371487C4574B2 /* ShimmeringViewProtocol.swift */,
+				DD7D10AB9D980EBDCAF6DF8680EDEAFA /* UIView+Extensions.swift */,
+				23C75AA1050D53B37F0DFDC4B5D3BAA9 /* UIView+Shimmer.swift */,
+				3BA631C9DD217B261CD08097C6FF689A /* UIView+Template.swift */,
+				9A673046CE2223187BDC6B0B9D0B0D51 /* UIView_Shimmer.h */,
+				697297C76D5A76FCE994A614D56CC327 /* Support Files */,
+			);
+			name = "UIView-Shimmer";
+			path = "UIView-Shimmer";
+			sourceTree = "<group>";
+		};
+		F971D6F2E6445FD1FC8AD813704B4D1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67BE6013F8989A170C990457C3C48C92 /* Pods-tripsine-mobile */,
+				C916C94425DE0C4998EF7F52057A7B40 /* Pods-tripsine-mobile-tripsine-mobileUITests */,
+				4632DF5CBEAD53A2CCF721DD76F44855 /* Pods-tripsine-mobileTests */,
+				D26F46BA3F70FFBBB2611B86C8C2E00E /* UIView-Shimmer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		243F20664C03A9A31714A7D9D80D9763 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FCDC90CEF79126A42BDB98D449438F7 /* Pods-tripsine-mobile-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C53A74EC8F65B9972E14C85DF38A2F24 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F36A957FF9403860A3E596F6D0F945 /* Pods-tripsine-mobileTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECDD41DDF5A59D7E7AB76FAA5FF3749F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74177E0F5E5690BE492D1E6B95EF8DC6 /* Pods-tripsine-mobile-tripsine-mobileUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F810A0AF1E571409A9CE86317CBE1451 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12D0D53711DE275C33B16BC9580A437F /* UIView-Shimmer-umbrella.h in Headers */,
+				8AF0E8E05373B67EB3FF49C7A0C58406 /* UIView_Shimmer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29C2FE82BDEC488C2C22EBEBEED8767E /* Pods-tripsine-mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B2F40A060EBA1AC7086E1BD07A4DAF6 /* Build configuration list for PBXNativeTarget "Pods-tripsine-mobile" */;
+			buildPhases = (
+				243F20664C03A9A31714A7D9D80D9763 /* Headers */,
+				0C458EC47390F29ACB0C50DDC27EF484 /* Sources */,
+				B6ED40532803E6EC6129DEFE0561D047 /* Frameworks */,
+				62D35F8CA378C726ABF04320D65875B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6174E7812119073473DB33703A45FAC /* PBXTargetDependency */,
+			);
+			name = "Pods-tripsine-mobile";
+			productName = Pods_tripsine_mobile;
+			productReference = 67BE6013F8989A170C990457C3C48C92 /* Pods-tripsine-mobile */;
+			productType = "com.apple.product-type.framework";
+		};
+		91AB2CA24011B7F9BB726D97E819FDA7 /* Pods-tripsine-mobile-tripsine-mobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E9B4CEF8945EDF92515B4CD9F17A6A4 /* Build configuration list for PBXNativeTarget "Pods-tripsine-mobile-tripsine-mobileUITests" */;
+			buildPhases = (
+				ECDD41DDF5A59D7E7AB76FAA5FF3749F /* Headers */,
+				F097EA8AB52C115A97E36D007D1E2E40 /* Sources */,
+				DE2B3887F008053E43C914FAA3399502 /* Frameworks */,
+				C049C38420531EC506E39BC00AD6FC62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E9CF849760342DBD9E9505C2675CB6D /* PBXTargetDependency */,
+			);
+			name = "Pods-tripsine-mobile-tripsine-mobileUITests";
+			productName = Pods_tripsine_mobile_tripsine_mobileUITests;
+			productReference = C916C94425DE0C4998EF7F52057A7B40 /* Pods-tripsine-mobile-tripsine-mobileUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		A27B2CC756B877BE29030AE88795A973 /* UIView-Shimmer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38CA83C9AD9D2105DEE8DF03A3FBB182 /* Build configuration list for PBXNativeTarget "UIView-Shimmer" */;
+			buildPhases = (
+				F810A0AF1E571409A9CE86317CBE1451 /* Headers */,
+				EC0C8679596C3B8F9D91AA17CE8C897E /* Sources */,
+				39CB992693297149FE1E6B63EA677AC3 /* Frameworks */,
+				5F6E248049E9B0B2FA8EB3087AC2ECF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIView-Shimmer";
+			productName = UIView_Shimmer;
+			productReference = D26F46BA3F70FFBBB2611B86C8C2E00E /* UIView-Shimmer */;
+			productType = "com.apple.product-type.framework";
+		};
+		AC267EBD7112D8144356491073954737 /* Pods-tripsine-mobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97C618AB14DADCACD022F4320C93FCA1 /* Build configuration list for PBXNativeTarget "Pods-tripsine-mobileTests" */;
+			buildPhases = (
+				C53A74EC8F65B9972E14C85DF38A2F24 /* Headers */,
+				205B56750A145E21EAB8D1BD73EB038D /* Sources */,
+				F3B63D8FDBEB00C7DD34ACB34D19A594 /* Frameworks */,
+				85B4FA06C4CE3A33CF27F40598B93CF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				642D876F90C72E1E85AFEF32C4C84EF7 /* PBXTargetDependency */,
+			);
+			name = "Pods-tripsine-mobileTests";
+			productName = Pods_tripsine_mobileTests;
+			productReference = 4632DF5CBEAD53A2CCF721DD76F44855 /* Pods-tripsine-mobileTests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F971D6F2E6445FD1FC8AD813704B4D1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29C2FE82BDEC488C2C22EBEBEED8767E /* Pods-tripsine-mobile */,
+				91AB2CA24011B7F9BB726D97E819FDA7 /* Pods-tripsine-mobile-tripsine-mobileUITests */,
+				AC267EBD7112D8144356491073954737 /* Pods-tripsine-mobileTests */,
+				A27B2CC756B877BE29030AE88795A973 /* UIView-Shimmer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F6E248049E9B0B2FA8EB3087AC2ECF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62D35F8CA378C726ABF04320D65875B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85B4FA06C4CE3A33CF27F40598B93CF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C049C38420531EC506E39BC00AD6FC62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C458EC47390F29ACB0C50DDC27EF484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9127E9946C5D7389ED491EAEC22D9A96 /* Pods-tripsine-mobile-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205B56750A145E21EAB8D1BD73EB038D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4723BA21A592FB9A9A38AD74A2A14A5D /* Pods-tripsine-mobileTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC0C8679596C3B8F9D91AA17CE8C897E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7433CF9E0D5B25324559A8B043B2BC87 /* Constants.swift in Sources */,
+				676497DBBF9302E573ECBDCF60542482 /* ShimmeringViewProtocol.swift in Sources */,
+				90C4681942C7B74B4BB6794F544DF6E2 /* UIView+Extensions.swift in Sources */,
+				0E9BE795D34BFAF492DAC0C83C82EAF6 /* UIView+Shimmer.swift in Sources */,
+				3D33E2EA9956248AE4397A2E0494BEA7 /* UIView+Template.swift in Sources */,
+				20678C27E5EFB52FC02895643DC4C8ED /* UIView-Shimmer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F097EA8AB52C115A97E36D007D1E2E40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39BB0C7860879C3938EBC1A25F4B1A9C /* Pods-tripsine-mobile-tripsine-mobileUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		642D876F90C72E1E85AFEF32C4C84EF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-tripsine-mobile";
+			target = 29C2FE82BDEC488C2C22EBEBEED8767E /* Pods-tripsine-mobile */;
+			targetProxy = E0F07977464C698DFD73F9BFDAFFB0CA /* PBXContainerItemProxy */;
+		};
+		6E9CF849760342DBD9E9505C2675CB6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIView-Shimmer";
+			target = A27B2CC756B877BE29030AE88795A973 /* UIView-Shimmer */;
+			targetProxy = 71D49FC9D42BC480BEB32E4848CCF746 /* PBXContainerItemProxy */;
+		};
+		C6174E7812119073473DB33703A45FAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIView-Shimmer";
+			target = A27B2CC756B877BE29030AE88795A973 /* UIView-Shimmer */;
+			targetProxy = 7F5EB5D9313683656B113D0615E2162D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1867B5A06F8D51A8FDCC762291362329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE26A650ACECE2347290BF4A9042CC0B /* Pods-tripsine-mobileTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tripsine-mobileTests/Pods-tripsine-mobileTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tripsine-mobileTests/Pods-tripsine-mobileTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1CFDF57B445AF6FB1EB72B93E244A23E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BEBE4121B6E9045918906F6664D61A2 /* Pods-tripsine-mobile-tripsine-mobileUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests/Pods-tripsine-mobile-tripsine-mobileUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests/Pods-tripsine-mobile-tripsine-mobileUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		35D2892A056685C6637AD20CC9A87448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66BE1F92FD2AA26773A6E3DB1A0A5472 /* Pods-tripsine-mobile.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tripsine-mobile/Pods-tripsine-mobile-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tripsine-mobile/Pods-tripsine-mobile.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		50202FB60A4D5548BA24C8E4C644D12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 204D4AF84F59CCD5661F4238F5B1EA0B /* Pods-tripsine-mobile.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tripsine-mobile/Pods-tripsine-mobile-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tripsine-mobile/Pods-tripsine-mobile.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5EB07A2AB828D840B5FFF3B6B74C1C52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32EF2EE14B572674E3C77D01F3A217D2 /* Pods-tripsine-mobileTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tripsine-mobileTests/Pods-tripsine-mobileTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tripsine-mobileTests/Pods-tripsine-mobileTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		AC78484620837CEFDFB921EDEA65A81C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DB51FD5B2E07E4062D812FE474D296B /* UIView-Shimmer.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIView-Shimmer/UIView-Shimmer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIView-Shimmer/UIView-Shimmer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIView-Shimmer/UIView-Shimmer.modulemap";
+				PRODUCT_MODULE_NAME = UIView_Shimmer;
+				PRODUCT_NAME = UIView_Shimmer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C69BB73070D3E4CB7B758DEA04667595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ACE834DF683E8277CBD51663200360A /* UIView-Shimmer.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIView-Shimmer/UIView-Shimmer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIView-Shimmer/UIView-Shimmer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIView-Shimmer/UIView-Shimmer.modulemap";
+				PRODUCT_MODULE_NAME = UIView_Shimmer;
+				PRODUCT_NAME = UIView_Shimmer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E9BDB64763378383AFBF289C3B84DFB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 375C6714DA8B08C7C9E4C7578C26CA68 /* Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests/Pods-tripsine-mobile-tripsine-mobileUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests/Pods-tripsine-mobile-tripsine-mobileUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B2F40A060EBA1AC7086E1BD07A4DAF6 /* Build configuration list for PBXNativeTarget "Pods-tripsine-mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50202FB60A4D5548BA24C8E4C644D12C /* Debug */,
+				35D2892A056685C6637AD20CC9A87448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38CA83C9AD9D2105DEE8DF03A3FBB182 /* Build configuration list for PBXNativeTarget "UIView-Shimmer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC78484620837CEFDFB921EDEA65A81C /* Debug */,
+				C69BB73070D3E4CB7B758DEA04667595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E9B4CEF8945EDF92515B4CD9F17A6A4 /* Build configuration list for PBXNativeTarget "Pods-tripsine-mobile-tripsine-mobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CFDF57B445AF6FB1EB72B93E244A23E /* Debug */,
+				E9BDB64763378383AFBF289C3B84DFB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97C618AB14DADCACD022F4320C93FCA1 /* Build configuration list for PBXNativeTarget "Pods-tripsine-mobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EB07A2AB828D840B5FFF3B6B74C1C52 /* Debug */,
+				1867B5A06F8D51A8FDCC762291362329 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

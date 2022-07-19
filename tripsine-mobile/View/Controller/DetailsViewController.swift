@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIView_Shimmer
 
 class DetailsViewController: UIViewController {
     
@@ -32,11 +33,6 @@ class DetailsViewController: UIViewController {
         makeRequestForMapView()
         restaurantViewModel.delegate = self
         mapViewController.delegate = self
-
-//        loadingIndicator.isAnimating = true
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
-//            self.loadingIndicator.isAnimating = false
-//        }
     }
 
     @IBAction func didReservedButton(_ sender: Any) {
