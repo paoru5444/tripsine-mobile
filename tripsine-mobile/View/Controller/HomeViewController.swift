@@ -103,15 +103,6 @@ extension HomeViewController: UICollectionViewDataSource {
     
 }
 
-extension HomeViewController: MapViewControllerDataSource {
-    func getInitialLocation(address: String) {
-        currentAddressLabel.setTitle(address, for: .normal)
-        mapsViewModel.fetchLocationIdBy(address: address) { resultData in
-            self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
-        }
-    }
-}
-
 extension HomeViewController: HomeCategoryViewModelDelegate {
     func updateCategory(_ filter: [FilterSection]) {
         DispatchQueue.main.async {
