@@ -1138,31 +1138,6 @@
                                     <constraint firstAttribute="height" constant="160" id="dlz-lB-6cl"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKP-5c-R1l" customClass="GIDSignInButton">
-                                <rect key="frame" x="20" y="676" width="374" height="45"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="E31-CQ-pPS">
-                                        <rect key="frame" x="20" y="10" width="32" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="881-Ie-Rwg">
-                                        <rect key="frame" x="103" y="2" width="168" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.99990254639999998" green="1" blue="0.99988251920000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
-                                        <state key="normal" title="Login com Google">
-                                            <color key="titleColor" red="0.039215687659999998" green="0.039215687659999998" blue="0.0039215688589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="B1K-0h-ySF"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="loginGoogleButtonAction:" destination="en6-4Y-TRa" eventType="touchUpInside" id="2vB-yH-EHP"/>
-                                </connections>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAX-iF-7JV">
                                 <rect key="frame" x="24" y="628" width="366" height="32"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
@@ -1192,6 +1167,17 @@
                                     <constraint firstAttribute="height" constant="45" id="Gg8-7E-J6O"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-HM-cz5" customClass="GIDSignInButton">
+                                <rect key="frame" x="20" y="683" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="JLP-Pn-VwQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="vnD-GY-QGM"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="performGoogleLoginAction:" destination="en6-4Y-TRa" eventType="touchUpInside" id="b3K-72-C7Z"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cAG-Xb-JAo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1204,26 +1190,25 @@
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DPr-HC-kmD" secondAttribute="trailing" symbolic="YES" id="5MZ-dH-GAN"/>
                             <constraint firstItem="5FS-pd-dJt" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="-1" id="69w-Ht-zYA"/>
                             <constraint firstItem="iAX-iF-7JV" firstAttribute="top" secondItem="cSo-Mp-1G6" secondAttribute="bottom" constant="23" id="CJT-xA-1xE"/>
-                            <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="RKP-5c-R1l" secondAttribute="trailing" constant="20" id="DMp-uO-yfj"/>
+                            <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="Kg1-HM-cz5" secondAttribute="trailing" constant="20" id="Gd3-gZ-Lvf"/>
                             <constraint firstItem="i7j-fQ-s9T" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="24" id="HB9-UC-IMI"/>
                             <constraint firstItem="cSo-Mp-1G6" firstAttribute="top" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="16" id="KXE-rZ-N7f"/>
-                            <constraint firstItem="RKP-5c-R1l" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="LnI-OG-kkL"/>
                             <constraint firstItem="XUV-Ua-vuc" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="MLz-GX-W3y"/>
                             <constraint firstItem="5FS-pd-dJt" firstAttribute="trailing" secondItem="cAG-Xb-JAo" secondAttribute="trailing" id="Ndw-Z3-1Yq"/>
-                            <constraint firstItem="dia-0J-xv8" firstAttribute="top" secondItem="RKP-5c-R1l" secondAttribute="bottom" constant="16" id="PFl-f2-dLd"/>
                             <constraint firstItem="DPr-HC-kmD" firstAttribute="top" secondItem="852-25-JJe" secondAttribute="bottom" constant="72" id="Q4S-lb-CWg"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="852-25-JJe" secondAttribute="trailing" constant="68" id="RJT-Cm-12v"/>
+                            <constraint firstItem="dia-0J-xv8" firstAttribute="top" secondItem="Kg1-HM-cz5" secondAttribute="bottom" constant="14" id="UMI-gs-Clv"/>
                             <constraint firstItem="DPr-HC-kmD" firstAttribute="top" secondItem="5FS-pd-dJt" secondAttribute="bottom" constant="32" id="VpF-sG-Flk"/>
                             <constraint firstItem="eAd-83-7y5" firstAttribute="top" secondItem="DPr-HC-kmD" secondAttribute="bottom" constant="18" id="Wd8-iy-Hoh"/>
                             <constraint firstItem="cSo-Mp-1G6" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="60" id="aSv-E0-Z1V"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="pw2-fL-z5t" secondAttribute="trailing" constant="24" id="aZL-OS-iFv"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="eAd-83-7y5" secondAttribute="trailing" constant="24" id="bFo-6r-3oS"/>
-                            <constraint firstItem="RKP-5c-R1l" firstAttribute="top" secondItem="iAX-iF-7JV" secondAttribute="bottom" constant="16" id="bKR-v2-yj8"/>
                             <constraint firstItem="KJ6-qb-ojp" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="24" id="bi6-xI-0tR"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="iAX-iF-7JV" secondAttribute="trailing" constant="24" id="cvS-ST-baL"/>
                             <constraint firstItem="pw2-fL-z5t" firstAttribute="top" secondItem="XUV-Ua-vuc" secondAttribute="bottom" constant="8" id="dcD-Pf-d7p"/>
                             <constraint firstItem="DPr-HC-kmD" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="24" id="lQF-ex-XvU"/>
                             <constraint firstItem="eAd-83-7y5" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="24" id="lWI-Cj-UCU"/>
+                            <constraint firstItem="Kg1-HM-cz5" firstAttribute="top" secondItem="iAX-iF-7JV" secondAttribute="bottom" constant="23" id="mrR-BK-HGA"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="i7j-fQ-s9T" secondAttribute="trailing" constant="24" id="npl-0s-Atl"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="cSo-Mp-1G6" secondAttribute="trailing" constant="60" id="o8K-x7-GWd"/>
                             <constraint firstItem="cAG-Xb-JAo" firstAttribute="trailing" secondItem="dia-0J-xv8" secondAttribute="trailing" constant="20" id="oBB-fd-Cwo"/>
@@ -1233,19 +1218,20 @@
                             <constraint firstItem="5FS-pd-dJt" firstAttribute="top" secondItem="NtP-qM-hWd" secondAttribute="top" id="rh5-Yz-XOz"/>
                             <constraint firstItem="i7j-fQ-s9T" firstAttribute="top" secondItem="eAd-83-7y5" secondAttribute="bottom" constant="16" id="s4B-Hg-oX1"/>
                             <constraint firstItem="KJ6-qb-ojp" firstAttribute="top" secondItem="pw2-fL-z5t" secondAttribute="bottom" constant="8" id="tIo-Wk-6pB"/>
+                            <constraint firstItem="Kg1-HM-cz5" firstAttribute="leading" secondItem="cAG-Xb-JAo" secondAttribute="leading" constant="20" id="yKO-eY-j77"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8F2-iQ-We4"/>
                     <connections>
                         <outlet property="facebookUIButton" destination="dia-0J-xv8" id="WJu-Bs-RgS"/>
-                        <outlet property="googleUIButton" destination="RKP-5c-R1l" id="pwb-pK-cCp"/>
+                        <outlet property="googleUIButton" destination="Kg1-HM-cz5" id="fPH-4e-IuD"/>
                         <outlet property="loginUIButton" destination="XUV-Ua-vuc" id="AlH-XM-h6X"/>
                         <outlet property="registerUIButton" destination="pw2-fL-z5t" id="rcT-GZ-Svu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiY-87-7X2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1454" y="271"/>
+            <point key="canvasLocation" x="-1455.072463768116" y="270.53571428571428"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="HQC-Rp-5zL">
@@ -1869,7 +1855,6 @@
         <image name="facebook" width="360" height="360"/>
         <image name="filter icon" width="24" height="24"/>
         <image name="genericImage" width="560" height="560"/>
-        <image name="google" width="225" height="225"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>

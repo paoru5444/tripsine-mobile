@@ -46,13 +46,9 @@ class LoginViewController: UIViewController {
         facebookUIButton.layer.cornerRadius = 10
     }
     
-    @IBAction func loginGoogleButtonAction(_ sender: Any) {
+    @IBAction func performGoogleLoginAction(_ sender: Any) {
         getGoogleSetting()
     }
-    @IBAction func googleLoginAction(_ sender: Any) {
-        
-    }
-    
     func getGoogleSetting() {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
         // Create Google Sign In configuration object.
