@@ -9,6 +9,7 @@ target 'tripsine-mobile' do
   pod 'FirebaseAnalytics'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
+  pod 'GoogleSignIn'
 
   target 'tripsine-mobileTests' do
     inherit! :search_paths

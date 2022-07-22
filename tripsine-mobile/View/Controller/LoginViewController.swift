@@ -6,19 +6,38 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
+import GoogleSignIn
+
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginUIButton: UIButton!
     @IBOutlet weak var registerUIButton: UIButton!
-    @IBOutlet weak var googleUIButton: UIView!
+    @IBOutlet weak var googleUIButton: GIDSignInButton!
     @IBOutlet weak var facebookUIButton: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupLoginButton()
+        let user = Auth.auth().currentUser
+        
+        if user != nil {
+            user?.getIDTokenForcingRefresh(true)
+            redirectToHomeScreen()
+        }
     }
+    
+    func redirectToHomeScreen() {
+        DispatchQueue.main.async {
+            guard let customUITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBar") as? CustomUITabBarController else { return }
+                
+            customUITabBarController.modalPresentationStyle = .fullScreen
+            self.present(customUITabBarController, animated: true)
+        }
+    }
+    
     func setupLoginButton() {
         // mark: Login Button
         loginUIButton.layer.masksToBounds = true
@@ -40,5 +59,47 @@ class LoginViewController: UIViewController {
         // mark: Facebook Button
         facebookUIButton.layer.masksToBounds = true
         facebookUIButton.layer.cornerRadius = 10
+    }
+    
+    @IBAction func performGoogleLoginAction(_ sender: Any) {
+        getGoogleSetting()
+    }
+    func getGoogleSetting() {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: "830015598014-l2kk5jjl2ko9ovv8ol38t1fsoorrcq92.apps.googleusercontent.com")
+
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
+
+          if let error = error {
+            // ...
+            return
+          }
+
+          guard
+            let authentication = user?.authentication,
+            let idToken = authentication.idToken
+          else {
+            return
+          }
+
+          let credential = GoogleAuthProvider.credential(
+                withIDToken: idToken,
+                accessToken: authentication.accessToken
+              )
+            firebaseAuth(credential)
+        }
+    }
+    
+    func firebaseAuth(_ credencial: AuthCredential) {
+        Auth.auth().signIn(with: credencial) { authResult, error in
+                  if let error = error {
+                      print(error)
+                  }
+                  // ...
+            self.redirectToHomeScreen()
+            return
+        }
     }
 }
