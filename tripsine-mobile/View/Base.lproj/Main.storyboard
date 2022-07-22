@@ -29,17 +29,17 @@
             <objects>
                 <viewController id="nQ5-Ok-gUB" customClass="DetailsViewController" customModule="tripsine_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Re-11-cn9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEz-Zv-3bX">
-                                <rect key="frame" x="0.0" y="88" width="414" height="0.0"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <items>
                                     <navigationItem title="Detalhes" id="TdW-Aw-od0"/>
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1b-E5-8qN">
-                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="710"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="genericImage" translatesAutoresizingMaskIntoConstraints="NO" id="3nK-Ds-KF1">
                                         <rect key="frame" x="0.0" y="41" width="414" height="168"/>
@@ -1854,7 +1854,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="GbF-m0-5NH"/>
         <segue reference="td5-CT-Nr9"/>
-        <segue reference="j8U-Zi-uWv"/>
+        <segue reference="4DS-cx-6NP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Daenerys" width="512" height="512"/>
