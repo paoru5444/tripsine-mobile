@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import UIView_Shimmer
+
 
 class FavoritsTableViewController: UITableViewController {
     
@@ -37,7 +39,7 @@ extension FavoritsTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return restaurantSection.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

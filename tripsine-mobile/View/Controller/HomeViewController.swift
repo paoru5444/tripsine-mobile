@@ -79,7 +79,6 @@ class HomeViewController: UIViewController {
                 destinationVC.iconImage = UIImage(data: imageData) ?? UIImage()
             }
         }
-        
     }
 
     private func shouldUpdateStatus(data: [RestaurantData]) -> String {
@@ -114,7 +113,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return restaurantCell
         }
     }
-    
 }
 
 extension HomeViewController: MapViewControllerDataSource {
