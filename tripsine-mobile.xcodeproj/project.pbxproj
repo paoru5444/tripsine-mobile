@@ -57,6 +57,7 @@
 		3ACFC4102843E01200AE4504 /* tripsine_mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC40F2843E01200AE4504 /* tripsine_mobileTests.swift */; };
 		3ACFC41A2843E01200AE4504 /* tripsine_mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC4192843E01200AE4504 /* tripsine_mobileUITests.swift */; };
 		3ACFC41C2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFC41B2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift */; };
+		3AD408E02888C41300D8E533 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD408DF2888C41300D8E533 /* GoogleService-Info.plist */; };
 		3AEB27FD284D3D6500A9FF93 /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB27FC284D3D6500A9FF93 /* restaurants.json */; };
 		3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A8E1284D74BD00604E2F /* Artwork.swift */; };
 		3AF68BED2853A5E200AB6945 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF68BEB2853A5E200AB6945 /* MapViewController.swift */; };
@@ -142,6 +143,7 @@
 		3ACFC4152843E01200AE4504 /* tripsine-mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tripsine-mobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACFC4192843E01200AE4504 /* tripsine_mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsine_mobileUITests.swift; sourceTree = "<group>"; };
 		3ACFC41B2843E01200AE4504 /* tripsine_mobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsine_mobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3AD408DF2888C41300D8E533 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AEB27FC284D3D6500A9FF93 /* restaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
 		3AF2A8E1284D74BD00604E2F /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		3AF68BEB2853A5E200AB6945 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
