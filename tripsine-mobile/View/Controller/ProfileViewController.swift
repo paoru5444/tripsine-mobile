@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
@@ -24,17 +25,6 @@ class ProfileViewController: UIViewController {
     }
     
     private func renderView() {
-        logoutSquareIconImage.layer.shadowColor = UIColor.black.cgColor
-        logoutSquareIconImage.layer.shadowOffset = CGSize(width: 5, height: 5)
-        logoutSquareIconImage.layer.shadowRadius = 5
-        logoutSquareIconImage.layer.shadowOpacity = 0.1
-        
-        aboutSquareIconImage.layer.shadowColor = UIColor.black.cgColor
-        aboutSquareIconImage.layer.shadowOffset = CGSize(width: 5, height: 5)
-        aboutSquareIconImage.layer.shadowRadius = 5
-        aboutSquareIconImage.layer.shadowOpacity = 0.1
-        
-        
         editProfileButton.layer.shadowColor = UIColor.black.cgColor
         editProfileButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         editProfileButton.layer.shadowRadius = 5
@@ -56,24 +46,44 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func showAlertView(_ sender: Any) {
-      showSimpleAlert()
+       showSimpleAlert()
+    }
+    
+    
+    @IBAction func logoutAction(_ sender: Any) {
+        showSimpleAlert()
+        
     }
     
     private func showSimpleAlert() {
-        let alert = UIAlertController(title: "Sign out?",
-                                      message: "Tem certeza que deseja sair do app?",
-                                      preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: "Sign out?",
+            message: "Tem certeza que deseja sair do app?",
+            preferredStyle: .alert
+        )
         
-        alert.addAction(UIAlertAction(title: "Cancelar",
-                                      style: .default,
-                                      handler: { _ in
-        }))
-        alert.addAction(UIAlertAction(title: "Sair",
-                                      style: .destructive,
-                                      handler: { _ in
-            self.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
+        let actionCancel = UIAlertAction(title: "Cancelar", style: .default)
+        let actionLogOut = UIAlertAction(title: "Sair", style: .destructive) { _ in
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+                
+                DispatchQueue.main.async {
+                    guard let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login") as? LoginViewController else { return }
+                        
+                    loginViewController.modalPresentationStyle = .fullScreen
+                    self.present(loginViewController, animated: true)
+                }
+                
+            } catch let signOutError as NSError {
+              print("Error signing out: %@", signOutError)
+            }
+        }
+        
+        alert.addAction(actionCancel)
+        alert.addAction(actionLogOut)
+        
+        present(alert, animated: true, completion: nil)
     }
     
 }

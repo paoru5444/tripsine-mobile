@@ -21,6 +21,21 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoginButton()
+        let user = Auth.auth().currentUser
+        
+        if user != nil {
+            user?.getIDTokenForcingRefresh(true)
+            redirectToHomeScreen()
+        }
+    }
+    
+    func redirectToHomeScreen() {
+        DispatchQueue.main.async {
+            guard let customUITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBar") as? CustomUITabBarController else { return }
+                
+            customUITabBarController.modalPresentationStyle = .fullScreen
+            self.present(customUITabBarController, animated: true)
+        }
     }
     
     func setupLoginButton() {
@@ -83,8 +98,8 @@ class LoginViewController: UIViewController {
                       print(error)
                   }
                   // ...
-                
-                  return
-              }
+            self.redirectToHomeScreen()
+            return
+        }
     }
 }

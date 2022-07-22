@@ -25,6 +25,7 @@
 		0A69E55589D910CFF7DBDCED /* Pods_tripsine_mobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B21019C33B3539B712FE0E4 /* Pods_tripsine_mobileTests.framework */; };
 		3A0698EF2879C16E00B840E3 /* Location.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A0698ED2879C16E00B840E3 /* Location.xcdatamodeld */; };
 		3A0698F42879CB8B00B840E3 /* LocationCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0698F32879CB8B00B840E3 /* LocationCoreDataService.swift */; };
+		3A088398288A21F000C7EFDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A088397288A21F000C7EFDF /* GoogleService-Info.plist */; };
 		3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EEC90286013C70066FA13 /* LoginViewController.swift */; };
 		3A79C51A285FD86300AB69F9 /* HomeCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */; };
 		3AC4128E285BA24300EA4A5D /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC4128D285BA24300EA4A5D /* LocationModel.swift */; };
@@ -105,6 +106,7 @@
 		1755D41974738FA09963535B /* Pods_tripsine_mobile_tripsine_mobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tripsine_mobile_tripsine_mobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0698EE2879C16E00B840E3 /* Location.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Location.xcdatamodel; sourceTree = "<group>"; };
 		3A0698F32879CB8B00B840E3 /* LocationCoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoreDataService.swift; sourceTree = "<group>"; };
+		3A088397288A21F000C7EFDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A0EEC90286013C70066FA13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryModel.swift; sourceTree = "<group>"; };
 		3A99706A285262F0000965E9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 		3ACFC3F72843E00D00AE4504 /* tripsine-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				3A088397288A21F000C7EFDF /* GoogleService-Info.plist */,
 				3A0698EC2879C15500B840E3 /* Entities */,
 				3ACFC4012843E01100AE4504 /* Assets.xcassets */,
 				3ACFC4062843E01100AE4504 /* Info.plist */,
@@ -444,7 +447,6 @@
 				D5D687A40C04954D04526D8C /* Pods-tripsine-mobileTests.debug.xcconfig */,
 				E121CC47239B51F66BF77B1D /* Pods-tripsine-mobileTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -574,6 +576,7 @@
 				3AC412BA285F550C00EA4A5D /* fonts in Resources */,
 				3AC412DD285F568B00EA4A5D /* Poppins-SemiBold.ttf in Resources */,
 				3ACFC4052843E01100AE4504 /* LaunchScreen.storyboard in Resources */,
+				3A088398288A21F000C7EFDF /* GoogleService-Info.plist in Resources */,
 				3AC412D6285F568B00EA4A5D /* Poppins-ExtraBold.ttf in Resources */,
 				3AC412DE285F568B00EA4A5D /* Poppins-Italic.ttf in Resources */,
 				3ACFC4022843E01100AE4504 /* Assets.xcassets in Resources */,
