@@ -5,21 +5,23 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>fb447743077204897</string>
 				<string>com.googleusercontent.apps.830015598014-l2kk5jjl2ko9ovv8ol38t1fsoorrcq92</string>
 			</array>
 		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>tripsine.tripsine-mobile</string>
-			</array>
-		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>447743077204897</string>
+	<key>FacebookClientToken</key>
+	<string>7804c1864407117719de47f04fafc202</string>
+	<key>FacebookDisplayName</key>
+	<string>LoginFirebase</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
 	</array>
 	<key>UIAppFonts</key>
 	<array>

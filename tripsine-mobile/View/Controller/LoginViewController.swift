@@ -9,23 +9,35 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
-
+import FacebookLogin
+import FacebookCore
 
 class LoginViewController: UIViewController {
-    
     @IBOutlet weak var loginUIButton: UIButton!
     @IBOutlet weak var registerUIButton: UIButton!
     @IBOutlet weak var googleUIButton: GIDSignInButton!
-    @IBOutlet weak var facebookUIButton: UIView!
+
+    @IBOutlet weak var facebookLoginView: UIView!
+    
+    let loginButton = FBLoginButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoginButton()
+        loginButton.delegate = self
         let user = Auth.auth().currentUser
         
         if user != nil {
             user?.getIDTokenForcingRefresh(true)
             redirectToHomeScreen()
+            return
+        }
+        
+        if let token = AccessToken.current,
+            !token.isExpired {
+            redirectToHomeScreen()
+            return
+            // User is logged in, do work such as go to next view controller.
         }
     }
     
@@ -56,9 +68,8 @@ class LoginViewController: UIViewController {
         googleUIButton.layer.shadowOffset = CGSize(width: 0, height: 4)
         googleUIButton.layer.cornerRadius = 10
         
-        // mark: Facebook Button
-        facebookUIButton.layer.masksToBounds = true
-        facebookUIButton.layer.cornerRadius = 10
+        loginButton.center = facebookLoginView.center
+        view.addSubview(loginButton)
     }
     
     @IBAction func performGoogleLoginAction(_ sender: Any) {
@@ -102,4 +113,12 @@ class LoginViewController: UIViewController {
             return
         }
     }
+}
+
+extension LoginViewController: LoginButtonDelegate {
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        redirectToHomeScreen()
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {}
 }
