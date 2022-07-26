@@ -10,6 +10,7 @@ target 'tripsine-mobile' do
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
   pod 'UIView-Shimmer', '~> 1.0'
+  pod 'GoogleSignIn'
 
   target 'tripsine-mobileTests' do
     inherit! :search_paths
