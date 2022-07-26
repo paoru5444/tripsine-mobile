@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIView_Shimmer
 
 class FavoritsTableViewCell: UITableViewCell {
 
@@ -22,30 +23,24 @@ class FavoritsTableViewCell: UITableViewCell {
         renderView()
     }
     
-    func setupCustomCell(data: [RestaurantData]) {
-        guard let rating = data.first?.rating else { return }
-        
-        priceLabel.text = data.first?.price
-        nameRestaurantLabel.text = data.first?.name
-        nameLocalLabel.text = data.first?.address
-        ratingLabel.text = "\(rating)"
-        
-        if let url = URL(string: data.first?.photo?.image?.original?.url ?? "") {
+    func setupCustomCell(indexCell: Int, data: RestaurantData) {
+        priceLabel.text = data.price
+        nameRestaurantLabel.text = data.name
+        nameLocalLabel.text = data.address
+        ratingLabel.text = "\(updateRating(data: data))"
+       
+        if let url = URL(string: data.photo?.image?.original?.url ?? "") {
             if let imageData = try? Data(contentsOf: url) {
                 restaurantImage.image = UIImage(data: imageData)
             }
         }
     }
     
-    private func shouldUpdateStatus(data: [RestaurantData]) -> String {
-        guard let isOpen = data.first?.isOpen else { return String() }
-        if isOpen {
-            return "OPEN"
-        } else {
-            return "CLOSED"
-        }
+    private func updateRating(data: RestaurantData) -> String {
+        guard let rating = data.rating else { return String() }
+        return rating
     }
-    
+
     private func renderView() {
         priceLabel.layer.masksToBounds = true
         priceLabel.layer.cornerRadius = 8

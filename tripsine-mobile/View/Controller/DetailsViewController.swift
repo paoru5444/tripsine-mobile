@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIView_Shimmer
 
 class DetailsViewController: UIViewController {
     
@@ -22,21 +23,25 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var reservButton: UIButton!
     
     let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
-    var restaurantSection: [RestaurantData] = []
     let mapViewController = MapViewController()
     let mapsViewModel = MapService()
+    
+    var iconImage: UIImage = UIImage()
+    var nameText: String = ""
+    var addressText: String = ""
+    var statusText: String = ""
+    var funcionalityText: String = ""
+    var descriprionText: String = ""
+    var ratingText: String = ""
+    var priceText: String = ""
+    var emailText: String = ""
+    var urlText: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         makeRequestForMapView()
-        restaurantViewModel.delegate = self
         mapViewController.delegate = self
-
-//        loadingIndicator.isAnimating = true
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
-//            self.loadingIndicator.isAnimating = false
-//        }
     }
 
     @IBAction func didReservedButton(_ sender: Any) {
@@ -57,30 +62,21 @@ class DetailsViewController: UIViewController {
         priceLabel.layer.cornerRadius = 8
         
         reservButton.layer.cornerRadius = 10
+        
+        setupData()
     }
     
-    private func setupData(index: Int, data: [RestaurantData]) {
-        guard let rating = data[index].rating,
-              let title = data[index].name,
-        let address = data[index].address,
-        let descriptionn = data[index].description,
-        let price = data[index].price,
-        let email = data[index].email,
-        let url = data[index].website else { return }
-        
-        titleLabel.text = title
-        addressLabel.text = address
-        descriptionLabel.text = descriptionn
-        ratingLabel.text = "\(rating)"
-        priceLabel.text = price
-        emailLabel.text = email
-        urlLabel.text = url
-        
-        if let url = URL(string: data.first?.photo?.image?.original?.url ?? "") {
-            if let imageData = try? Data(contentsOf: url) {
-                imageView.image = UIImage(data: imageData)
-            }
-        }
+    private func setupData() {
+        imageView.image = iconImage
+        titleLabel.text = nameText
+        addressLabel.text = addressText
+        statusLabel.text = statusText
+        funcionalityStatusLabel.text = funcionalityText
+        descriptionLabel.text = descriprionText
+        ratingLabel.text = ratingText
+        priceLabel.text = priceText
+        emailLabel.text = emailText
+        urlLabel.text = urlText
     }
     
     private func shouldUpdateStatus(data: RestaurantData) -> String {
@@ -89,15 +85,6 @@ class DetailsViewController: UIViewController {
             return "OPEN"
         } else {
             return "CLOSED"
-        }
-    }
-}
-
-extension DetailsViewController: HomeRestaurantViewModelDelegate {
-    func updateRestaurant(_ restaurants: [RestaurantData]) {
-        DispatchQueue.main.async {
-            self.restaurantSection = restaurants
-            self.setupData(index: 0, data: self.restaurantSection)
         }
     }
 }
