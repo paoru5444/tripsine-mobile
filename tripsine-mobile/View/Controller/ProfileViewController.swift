@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FacebookLogin
 
 class ProfileViewController: UIViewController {
     
@@ -67,6 +68,9 @@ class ProfileViewController: UIViewController {
             let firebaseAuth = Auth.auth()
             do {
                 try firebaseAuth.signOut()
+
+                let loginManager = LoginManager()
+                loginManager.logOut()
                 
                 DispatchQueue.main.async {
                     guard let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login") as? LoginViewController else { return }
