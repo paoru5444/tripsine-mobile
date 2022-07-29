@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIView_Shimmer
 
 private enum CategoryImage: String {
     case cuisineType = "cuisineType"
@@ -74,4 +75,10 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         }
     }
     
+}
+
+extension CategoryCollectionViewCell: ShimmeringViewProtocol {
+    var shimmeringAnimatedItems: [UIView] {
+            [containerInsetView, iconCategorieImage, itemCategoryLabel]
+    } 
 }

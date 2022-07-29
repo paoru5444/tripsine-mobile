@@ -9,6 +9,7 @@ target 'tripsine-mobile' do
   pod 'FirebaseAnalytics'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
+  pod 'UIView-Shimmer', '~> 1.0'
   pod 'GoogleSignIn'
   pod 'FacebookLogin'
 

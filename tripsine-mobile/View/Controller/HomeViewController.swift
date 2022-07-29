@@ -59,7 +59,40 @@ class HomeViewController: UIViewController {
         categoryViewModel.makeRequest()
         mapViewController.getAddressByCoordenates()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DetailsViewController
+        
+        let funcionality = shouldUpdateStatus(data: restaurantSection)
+       
+        destinationVC.nameText = restaurantSection.first?.name ?? String()
+        destinationVC.addressText = restaurantSection.first?.address ?? String()
+        destinationVC.statusText = funcionality
+        destinationVC.funcionalityText = "08:00 - 22:00"
+        destinationVC.descriprionText = restaurantSection.first?.description ?? String()
+        destinationVC.ratingText = restaurantSection.first?.rating ?? String()
+        destinationVC.priceText = restaurantSection.first?.price ?? String()
+        destinationVC.emailText = restaurantSection.first?.email ?? String()
+        destinationVC.urlText = restaurantSection.first?.website ?? String()
+        
+        if let url = URL(string: restaurantSection.first?.photo?.image?.original?.url ?? "") {
+            if let imageData = try? Data(contentsOf: url) {
+                destinationVC.iconImage = UIImage(data: imageData) ?? UIImage()
+            }
+        }
+    }
 
+    private func shouldUpdateStatus(data: [RestaurantData]) -> String {
+        for data in data {
+            let isOpen = data.isOpen
+            if isOpen {
+                return "OPEN"
+            } else {
+                return "CLOSED"
+            }
+        }
+        return String()
+    }
 }
 
 extension HomeViewController: MapViewControllerDataSource {
@@ -75,9 +108,6 @@ extension HomeViewController: MapViewControllerDataSource {
                 self.restaurantViewModel.makeRequestWithLocationId(locationId: resultData.location_id)
             }
         }
-        
-        
-        
     }
 }
 
@@ -100,7 +130,6 @@ extension HomeViewController: UICollectionViewDataSource {
             return restaurantCell
         }
     }
-    
 }
 
 extension HomeViewController: HomeCategoryViewModelDelegate {

@@ -69,4 +69,5 @@ class RestaurantsCollectionViewCell: UICollectionViewCell {
         }
         isActive = !isActive
     }
+    
 }
