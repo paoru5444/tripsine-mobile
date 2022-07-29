@@ -15,16 +15,15 @@ import FacebookCore
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginUIButton: UIButton!
     @IBOutlet weak var registerUIButton: UIButton!
-    @IBOutlet weak var googleUIButton: GIDSignInButton!
-
-    @IBOutlet weak var facebookLoginView: UIView!
     
-    let loginButton = FBLoginButton()
+    
+    @IBOutlet weak var facebookAuthOutlet: UIButton!
+    @IBOutlet weak var googleAuthOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoginButton()
-        loginButton.delegate = self
+
         let user = Auth.auth().currentUser
         
         if user != nil {
@@ -56,31 +55,28 @@ class LoginViewController: UIViewController {
         loginUIButton.layer.cornerRadius = 10
         
         // mark: Register Button
-        registerUIButton.layer.masksToBounds = true
-        registerUIButton.layer.cornerRadius = 10
-        registerUIButton.layer.borderColor = UIColor(red: 0.816, green: 0.067, blue: 0.063, alpha: 1).cgColor
-        registerUIButton.layer.borderWidth = 1
+        applyShadownIn(button: registerUIButton)
         
         // mark: Google Button
-        googleUIButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
-        googleUIButton.layer.shadowOpacity = 1
-        googleUIButton.layer.shadowRadius = 4
-        googleUIButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        googleUIButton.layer.cornerRadius = 10
+        applyShadownIn(button: googleAuthOutlet)
         
-        loginButton.center = facebookLoginView.center
-        view.addSubview(loginButton)
+        
+        // mark: Facebook Button
+        facebookAuthOutlet.layer.masksToBounds = true
+        facebookAuthOutlet.layer.cornerRadius = 10
     }
     
-    @IBAction func performGoogleLoginAction(_ sender: Any) {
-        getGoogleSetting()
+    func applyShadownIn(button: UIButton) {
+        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
+        button.layer.shadowOpacity = 1
+        button.layer.shadowRadius = 4
+        button.layer.shadowOffset = CGSize(width: 0, height: 4)
+        button.layer.cornerRadius = 10
     }
-    func getGoogleSetting() {
-        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-        // Create Google Sign In configuration object.
+    
+    @IBAction func googleAuthAction(_ sender: Any) {
         let config = GIDConfiguration(clientID: "830015598014-l2kk5jjl2ko9ovv8ol38t1fsoorrcq92.apps.googleusercontent.com")
-
-        // Start the sign in flow!
+        
         GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
 
           if let error = error {
@@ -96,29 +92,33 @@ class LoginViewController: UIViewController {
           }
 
           let credential = GoogleAuthProvider.credential(
-                withIDToken: idToken,
-                accessToken: authentication.accessToken
-              )
-            firebaseAuth(credential)
+            withIDToken: idToken,
+            accessToken: authentication.accessToken
+          )
+            
+            Auth.auth().signIn(with: credential) { authResult, error in
+                      if let error = error {
+                          print(error)
+                      }
+                      // ...
+                self.redirectToHomeScreen()
+                return
+            }
         }
     }
     
-    func firebaseAuth(_ credencial: AuthCredential) {
-        Auth.auth().signIn(with: credencial) { authResult, error in
-                  if let error = error {
-                      print(error)
-                  }
-                  // ...
-            self.redirectToHomeScreen()
-            return
-        }
+    @IBAction func facebookAuthAction(_ sender: Any) {
+        print("login facebook")
+        let loginManager = LoginManager()
+                loginManager.logIn(permissions: ["public_profile"], from: self) { result, error in
+                    if let error = error {
+                        print("Encountered Erorr: \(error)")
+                    } else if let result = result, result.isCancelled {
+                        print("Cancelled")
+                    } else {
+                        print("Logged In")
+                        self.redirectToHomeScreen()
+                    }
+                }
     }
-}
-
-extension LoginViewController: LoginButtonDelegate {
-    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        redirectToHomeScreen()
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {}
 }
