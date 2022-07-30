@@ -10,9 +10,10 @@ import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
 
-
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var emailTextFild: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginUIButton: UIButton!
     @IBOutlet weak var registerUIButton: UIButton!
     @IBOutlet weak var googleUIButton: GIDSignInButton!
@@ -71,35 +72,55 @@ class LoginViewController: UIViewController {
 
         // Start the sign in flow!
         GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
-
-          if let error = error {
-            // ...
-            return
-          }
-
-          guard
-            let authentication = user?.authentication,
-            let idToken = authentication.idToken
-          else {
-            return
-          }
-
-          let credential = GoogleAuthProvider.credential(
+            
+            if let error = error {
+                // ...
+                return
+            }
+            
+            guard
+                let authentication = user?.authentication,
+                let idToken = authentication.idToken
+            else {
+                return
+            }
+            
+            let credential = GoogleAuthProvider.credential(
                 withIDToken: idToken,
                 accessToken: authentication.accessToken
-              )
+            )
             firebaseAuth(credential)
+        }
+    }
+    
+    @IBAction func logInButtonAction(_ sender: Any) {
+        guard let emailText = emailTextFild.text,
+              let passwordText = passwordTextField.text else { return }
+        
+        isValidEmail(emailText)
+        
+        Auth.auth().signIn(withEmail: emailText, password: passwordText) { dataResult, error in
+            
+            print(dataResult)
+            print(error)
         }
     }
     
     func firebaseAuth(_ credencial: AuthCredential) {
         Auth.auth().signIn(with: credencial) { authResult, error in
-                  if let error = error {
-                      print(error)
-                  }
-                  // ...
+            if let error = error {
+                print(error)
+            }
+            // ...
             self.redirectToHomeScreen()
             return
         }
     }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
+    }
+    
 }
