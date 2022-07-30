@@ -27,6 +27,8 @@
 		3A0698F42879CB8B00B840E3 /* LocationCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0698F32879CB8B00B840E3 /* LocationCoreDataService.swift */; };
 		3A088398288A21F000C7EFDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A088397288A21F000C7EFDF /* GoogleService-Info.plist */; };
 		3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EEC90286013C70066FA13 /* LoginViewController.swift */; };
+		3A2807782894B1EB00784E7D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2807772894B1EB00784E7D /* UserModel.swift */; };
+		3A28077A2894C30400784E7D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2807792894C30400784E7D /* UserViewModel.swift */; };
 		3A79C51A285FD86300AB69F9 /* HomeCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */; };
 		3AC4128E285BA24300EA4A5D /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC4128D285BA24300EA4A5D /* LocationModel.swift */; };
 		3AC41292285E919B00EA4A5D /* CustomUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC41291285E919B00EA4A5D /* CustomUITabBarController.swift */; };
@@ -66,11 +68,11 @@
 		3AF68BF42853CCD100AB6945 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF68BF32853CCD100AB6945 /* RegisterViewController.swift */; };
 		55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EB228514E7C0069370F /* AboutViewController.swift */; };
 		55D44EBB285150590069370F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EBA285150590069370F /* ProfileViewController.swift */; };
-		7C5DF82FF068F5B6AFC10F1F /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		7C5DF82FF068F5B6AFC10F1F /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		ACBF24C2536F2740D7D0BD19 /* Pods_tripsine_mobile_tripsine_mobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0BA09B30B7E4BEA2664B36 /* Pods_tripsine_mobile_tripsine_mobileUITests.framework */; };
 		BE74E8F6BA1A9003380CA838 /* Pods_tripsine_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C8A028A20A770F05194FF9 /* Pods_tripsine_mobile.framework */; };
 		C1E091C253BA15A4E5C6F799 /* Pods_tripsine_mobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA9C2957BE5CFC9218F99CE /* Pods_tripsine_mobileTests.framework */; };
-		D4E5944B4FD4AD39F10C92D7 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		D4E5944B4FD4AD39F10C92D7 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		3A0698F32879CB8B00B840E3 /* LocationCoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoreDataService.swift; sourceTree = "<group>"; };
 		3A088397288A21F000C7EFDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A0EEC90286013C70066FA13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3A2807772894B1EB00784E7D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		3A2807792894C30400784E7D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryModel.swift; sourceTree = "<group>"; };
 		3A8A7CD2288DD94C00D8746A /* tripsine-mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "tripsine-mobile.entitlements"; sourceTree = "<group>"; };
 		3A99706A285262F0000965E9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
@@ -171,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C5DF82FF068F5B6AFC10F1F /* BuildFile in Frameworks */,
+				7C5DF82FF068F5B6AFC10F1F /* (null) in Frameworks */,
 				BE74E8F6BA1A9003380CA838 /* Pods_tripsine_mobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,7 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E5944B4FD4AD39F10C92D7 /* BuildFile in Frameworks */,
+				D4E5944B4FD4AD39F10C92D7 /* (null) in Frameworks */,
 				ACBF24C2536F2740D7D0BD19 /* Pods_tripsine_mobile_tripsine_mobileUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				002261F2286150E800F4F430 /* Home */,
+				3A2807792894C30400784E7D /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 		3A79C517285FD6F500AB69F9 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
+				3B21019C33B3539B712FE0E4 /* Pods_tripsine_mobileTests.framework */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 			children = (
 				3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */,
 				3AC4128D285BA24300EA4A5D /* LocationModel.swift */,
+				3A2807772894B1EB00784E7D /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -720,6 +727,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF68BF42853CCD100AB6945 /* RegisterViewController.swift in Sources */,
+				3A28077A2894C30400784E7D /* UserViewModel.swift in Sources */,
 				002261F42861511300F4F430 /* HomeRestaurantViewModel.swift in Sources */,
 				3AF68BF22853AC0A00AB6945 /* RestaurantsCollectionViewCell.swift in Sources */,
 				0026BB07286370C900346E99 /* ProgressiveView.swift in Sources */,
@@ -745,6 +753,7 @@
 				0026BB0D28637CF500346E99 /* StrokeColorAnimation.swift in Sources */,
 				3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */,
 				0095C776285953E8006DE580 /* DetailsViewController.swift in Sources */,
+				3A2807782894B1EB00784E7D /* UserModel.swift in Sources */,
 				3AC4128E285BA24300EA4A5D /* LocationModel.swift in Sources */,
 				00E8F9C2286FCC9B000C9EB8 /* LoadingView.swift in Sources */,
 				3A79C51A285FD86300AB69F9 /* HomeCategoryModel.swift in Sources */,
