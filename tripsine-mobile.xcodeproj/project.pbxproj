@@ -20,7 +20,6 @@
 		006FB9FF2864DDB900628F39 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006FB9FE2864DDB900628F39 /* MapService.swift */; };
 		0095C776285953E8006DE580 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0095C775285953E8006DE580 /* DetailsViewController.swift */; };
 		00978085285E75B700A09A21 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00978084285E75B600A09A21 /* CommonService.swift */; };
-		00E0A1142865F7E00025DCE6 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E0A1132865F7DF0025DCE6 /* FilterViewController.swift */; };
 		00E8F9C2286FCC9B000C9EB8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E8F9C1286FCC9B000C9EB8 /* LoadingView.swift */; };
 		0A69E55589D910CFF7DBDCED /* Pods_tripsine_mobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B21019C33B3539B712FE0E4 /* Pods_tripsine_mobileTests.framework */; };
 		3A0698EF2879C16E00B840E3 /* Location.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A0698ED2879C16E00B840E3 /* Location.xcdatamodeld */; };
@@ -66,11 +65,11 @@
 		3AF68BF42853CCD100AB6945 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF68BF32853CCD100AB6945 /* RegisterViewController.swift */; };
 		55D44EB328514E7C0069370F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EB228514E7C0069370F /* AboutViewController.swift */; };
 		55D44EBB285150590069370F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D44EBA285150590069370F /* ProfileViewController.swift */; };
-		7C5DF82FF068F5B6AFC10F1F /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		7C5DF82FF068F5B6AFC10F1F /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		ACBF24C2536F2740D7D0BD19 /* Pods_tripsine_mobile_tripsine_mobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0BA09B30B7E4BEA2664B36 /* Pods_tripsine_mobile_tripsine_mobileUITests.framework */; };
 		BE74E8F6BA1A9003380CA838 /* Pods_tripsine_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C8A028A20A770F05194FF9 /* Pods_tripsine_mobile.framework */; };
 		C1E091C253BA15A4E5C6F799 /* Pods_tripsine_mobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA9C2957BE5CFC9218F99CE /* Pods_tripsine_mobileTests.framework */; };
-		D4E5944B4FD4AD39F10C92D7 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		D4E5944B4FD4AD39F10C92D7 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +103,6 @@
 		006FB9FE2864DDB900628F39 /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
 		0095C775285953E8006DE580 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		00978084285E75B600A09A21 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
-		00E0A1132865F7DF0025DCE6 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		00E8F9C1286FCC9B000C9EB8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		31C7C6E77A6C2860040763B7 /* Pods-tripsine-mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tripsine-mobileTests.debug.xcconfig"; path = "Target Support Files/Pods-tripsine-mobileTests/Pods-tripsine-mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		38D1483E5DD3F7F722FD4D25 /* Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig"; path = "Target Support Files/Pods-tripsine-mobile-tripsine-mobileUITests/Pods-tripsine-mobile-tripsine-mobileUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,7 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C5DF82FF068F5B6AFC10F1F /* BuildFile in Frameworks */,
+				7C5DF82FF068F5B6AFC10F1F /* (null) in Frameworks */,
 				BE74E8F6BA1A9003380CA838 /* Pods_tripsine_mobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,7 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E5944B4FD4AD39F10C92D7 /* BuildFile in Frameworks */,
+				D4E5944B4FD4AD39F10C92D7 /* (null) in Frameworks */,
 				ACBF24C2536F2740D7D0BD19 /* Pods_tripsine_mobile_tripsine_mobileUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +239,6 @@
 				000B04C82852CC8D001A35ED /* HomeViewController.swift */,
 				3AC41291285E919B00EA4A5D /* CustomUITabBarController.swift */,
 				3A0EEC90286013C70066FA13 /* LoginViewController.swift */,
-				00E0A1132865F7DF0025DCE6 /* FilterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,6 +339,7 @@
 		3A79C517285FD6F500AB69F9 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
+				3B21019C33B3539B712FE0E4 /* Pods_tripsine_mobileTests.framework */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -734,7 +732,6 @@
 				3AF2A8E2284D74BD00604E2F /* Artwork.swift in Sources */,
 				55D44EBB285150590069370F /* ProfileViewController.swift in Sources */,
 				3AF68BED2853A5E200AB6945 /* MapViewController.swift in Sources */,
-				00E0A1142865F7E00025DCE6 /* FilterViewController.swift in Sources */,
 				3AF68BEE2853A5E200AB6945 /* FavoritsTableViewController.swift in Sources */,
 				3A0698EF2879C16E00B840E3 /* Location.xcdatamodeld in Sources */,
 				3ACFC3F92843E00D00AE4504 /* AppDelegate.swift in Sources */,
