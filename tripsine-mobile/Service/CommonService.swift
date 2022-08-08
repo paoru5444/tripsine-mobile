@@ -9,15 +9,13 @@ import Foundation
 
 class CommonService {
     
+    var component = URLComponents(string: "https://travel-advisor.p.rapidapi.com/restaurants/list?")
+    var searchComponent = URLComponents(string: "https://travel-advisor.p.rapidapi.com/locations/search")
+    
     let headers = [
         "X-RapidAPI-Key": "9fd4fcfd26msh60b602655b093dap11fcc5jsnee05ddd96216",
         "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
     ]
-
-    var component = URLComponents(string: "https://travel-advisor.p.rapidapi.com/restaurants/list?")
-    
-    var searchComponent = URLComponents(string: "https://travel-advisor.p.rapidapi.com/locations/search")
-    
     let session = URLSession.shared
     
     var queryItems = [

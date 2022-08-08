@@ -13,10 +13,8 @@ import FacebookLogin
 import FacebookCore
 
 class LoginViewController: UIViewController {
+    
     @IBOutlet weak var loginUIButton: UIButton!
-    @IBOutlet weak var registerUIButton: UIButton!
-    
-    
     @IBOutlet weak var facebookAuthOutlet: UIButton!
     @IBOutlet weak var googleAuthOutlet: UIButton!
     
@@ -50,18 +48,14 @@ class LoginViewController: UIViewController {
     }
     
     func setupLoginButton() {
-        // mark: Login Button
+        //MARK: Login Button
         loginUIButton.layer.masksToBounds = true
         loginUIButton.layer.cornerRadius = 10
         
-        // mark: Register Button
-        applyShadownIn(button: registerUIButton)
-        
-        // mark: Google Button
+        //MARK: Google Button
         applyShadownIn(button: googleAuthOutlet)
         
-        
-        // mark: Facebook Button
+        //MARK: Facebook Button
         facebookAuthOutlet.layer.masksToBounds = true
         facebookAuthOutlet.layer.cornerRadius = 10
     }

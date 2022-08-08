@@ -8,8 +8,7 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-
-    @IBOutlet weak var profileImage: UIImageView!
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var telephoneTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -18,6 +17,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTextField()
     }
     
     @IBAction func dismissPage(_ sender: Any) {
@@ -32,8 +32,6 @@ class RegisterViewController: UIViewController {
         telephoneTextField.keyboardType = .numberPad
         telephoneTextField.autocorrectionType = .no
         telephoneTextField.autocorrectionType = .no
-        
-        
     }
     
 }

@@ -8,27 +8,24 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
     @IBOutlet weak var currentAddressButton: UIButton!
     @IBOutlet weak var searchRestaurantTextField: UITextField!
     @IBOutlet weak var filterButton: UIButton!
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
     
     private let mapViewController = MapViewController()
     private let loadingView = LoadingView()
     private let mapsViewModel = MapService()
-    private var filterSection = [FilterSection]()
     private var restaurantSection: [RestaurantData] = []
-    private let categoryViewModel: HomeCategoryViewModel = HomeCategoryViewModel()
-    private let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
     private var filterRestaurants: [RestaurantData] = []
+    private let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
+
     let locationCoreData = LocationCoreDataService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
         restaurantsCollectionView.dataSource = self
-        categoryViewModel.delegate = self
         restaurantViewModel.delegate = self
         mapViewController.delegate = self
         
@@ -38,11 +35,12 @@ class HomeViewController: UIViewController {
     
     @IBAction func filterTextActionButton(_ sender: UIButton) {
         guard let filterText = searchRestaurantTextField.text,
-                !filterText.isEmpty else {
-                    filterRestaurants = restaurantSection
-                    restaurantsCollectionView.reloadData()
-                    return
-                }
+                !filterText.isEmpty
+        else {
+            filterRestaurants = restaurantSection
+            restaurantsCollectionView.reloadData()
+            return
+        }
         let results = restaurantSection.filter { $0.name?.lowercased().contains(filterText.lowercased()) ?? false }
         filterRestaurants = results
         restaurantsCollectionView.reloadData()
@@ -65,8 +63,21 @@ class HomeViewController: UIViewController {
     }
     
     private func makeRequestForHome() {
-        categoryViewModel.makeRequest()
         mapViewController.getAddressByCoordenates()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailViewController = segue.destination as? DetailsViewController
+        else { return }
+        filterRestaurants = restaurantSection
+        
+        detailViewController.nameText = filterRestaurants.first?.name ?? String()
+        detailViewController.addressText = filterRestaurants.first?.address ?? String()
+        detailViewController.descriprionText = filterRestaurants.first?.description ?? String()
+        detailViewController.ratingText = filterRestaurants.first?.rating ?? String()
+        detailViewController.priceText = filterRestaurants.first?.price ?? String()
+        detailViewController.emailText = filterRestaurants.first?.email ?? String()
+        detailViewController.urlText = filterRestaurants.first?.website ?? String()
     }
 
 }
@@ -89,32 +100,14 @@ extension HomeViewController: MapViewControllerDataSource {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.restaurantsCollectionView {
-            return filterRestaurants.count
-        }
-        return filterSection.count
+        return filterRestaurants.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.collectionView {
-            let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryIdentifier", for: indexPath) as! CategoryCollectionViewCell
-            categoryCell.setupCell(index: indexPath.row, filterSection: filterSection)
-            return categoryCell
-        } else {
-            let restaurantCell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantsCollectionViewCell
-            restaurantCell.setupCell(index: indexPath.row, restaurantData: filterRestaurants[indexPath.row])
-            restaurantCell.contentMode = .scaleToFill
-            return restaurantCell
-        }
-    }
-}
-
-extension HomeViewController: HomeCategoryViewModelDelegate {
-    func updateCategory(_ filter: [FilterSection]) {
-        DispatchQueue.main.async {
-            self.filterSection = filter
-            self.collectionView.reloadData()
-        }
+        let restaurantCell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantsCollectionViewCell
+        restaurantCell.setupCell(index: indexPath.row, restaurantData: filterRestaurants[indexPath.row])
+        restaurantCell.contentMode = .scaleToFill
+        return restaurantCell
     }
 }
 

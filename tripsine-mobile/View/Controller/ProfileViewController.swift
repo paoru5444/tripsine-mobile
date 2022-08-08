@@ -13,16 +13,16 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profilePicImage: UIImageView!
     @IBOutlet weak var editProfileButton: UIButton!
-    @IBOutlet weak var aboutButton: UIButton!
-    @IBOutlet weak var aboutSquareIconImage: UIImageView!
-    @IBOutlet weak var logoutButton: UIButton!
-    @IBOutlet weak var logoutSquareIconImage: UIImageView!
     @IBOutlet weak var profileRedCircleView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupProfileImage()
         renderView()
+    }
+    @IBAction func logoutAction(_ sender: Any) {
+        showSimpleAlert()
+        
     }
     
     private func renderView() {
@@ -44,16 +44,6 @@ class ProfileViewController: UIViewController {
         
         profilePicImage.layer.masksToBounds = true
         profilePicImage.layer.cornerRadius = imageRadius
-    }
-    
-    @IBAction func showAlertView(_ sender: Any) {
-       showSimpleAlert()
-    }
-    
-    
-    @IBAction func logoutAction(_ sender: Any) {
-        showSimpleAlert()
-        
     }
     
     private func showSimpleAlert() {

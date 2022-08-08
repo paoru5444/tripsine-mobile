@@ -14,7 +14,6 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var funcionalityStatusLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -30,7 +29,6 @@ class DetailsViewController: UIViewController {
     var nameText: String = ""
     var addressText: String = ""
     var statusText: String = ""
-    var funcionalityText: String = ""
     var descriprionText: String = ""
     var ratingText: String = ""
     var priceText: String = ""
@@ -39,14 +37,16 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapViewController.delegate = self
+        
         setupView()
         makeRequestForMapView()
-        mapViewController.delegate = self
+        setupData()
     }
 
     @IBAction func didReservedButton(_ sender: Any) {
-        guard let number = URL(string: "+1 415-775-8500") else { return }
-        UIApplication.shared.open(number, options: [:], completionHandler: nil)
+        guard let number = URL(string: "tel://+1 415-775-8500") else { return }
+        UIApplication.shared.open(number)
     }
     
     func updateHomeFromMaps(_ address: LocationResultData) {
@@ -62,8 +62,6 @@ class DetailsViewController: UIViewController {
         priceLabel.layer.cornerRadius = 8
         
         reservButton.layer.cornerRadius = 10
-        
-        setupData()
     }
     
     private func setupData() {
@@ -71,7 +69,6 @@ class DetailsViewController: UIViewController {
         titleLabel.text = nameText
         addressLabel.text = addressText
         statusLabel.text = statusText
-        funcionalityStatusLabel.text = funcionalityText
         descriptionLabel.text = descriprionText
         ratingLabel.text = ratingText
         priceLabel.text = priceText

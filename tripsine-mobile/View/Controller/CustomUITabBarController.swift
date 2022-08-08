@@ -20,19 +20,19 @@ class CustomUITabBarController: UITabBarController {
         itemsTabBar.unselectedItemTintColor = .white
 
         if let fontDefinition = UIFont(name: "Poppins-SemiBold", size: 15) {
-            // mark: Home setup
+            //MARK: Home setup
             if let homeTabBar = itemsTabBar?.items?[0] {
                 homeTabBar.setTitleTextAttributes([NSAttributedString.Key.font: fontDefinition], for: .selected)
                 homeTabBar.setTitleTextAttributes([NSAttributedString.Key.font: fontDefinition], for: .normal)
             }
             
-            // mark: Profile setup
+            //MARK: Profile setup
             if let profileTabBar = itemsTabBar?.items?[1] {
                 profileTabBar.setTitleTextAttributes([NSAttributedString.Key.font: fontDefinition], for: .selected)
                 profileTabBar.setTitleTextAttributes([NSAttributedString.Key.font: fontDefinition], for: .normal)
             }
             
-            // mark: Favorites setup
+            //MARK: Favorites setup
             if let favoritesTabBar = itemsTabBar?.items?[2] {
                 favoritesTabBar.setTitleTextAttributes([NSAttributedString.Key.font: fontDefinition], for: .selected)
                 favoritesTabBar.setTitleTextAttributes([NSAttributedString.Key.font: fontDefinition], for: .normal)

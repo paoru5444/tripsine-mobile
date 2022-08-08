@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import UIView_Shimmer
 
 class FavoritsTableViewCell: UITableViewCell {
 
