@@ -23,6 +23,8 @@
 		3A0698F42879CB8B00B840E3 /* LocationCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0698F32879CB8B00B840E3 /* LocationCoreDataService.swift */; };
 		3A088398288A21F000C7EFDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A088397288A21F000C7EFDF /* GoogleService-Info.plist */; };
 		3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EEC90286013C70066FA13 /* LoginViewController.swift */; };
+		3A2807782894B1EB00784E7D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2807772894B1EB00784E7D /* UserModel.swift */; };
+		3A28077A2894C30400784E7D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2807792894C30400784E7D /* UserViewModel.swift */; };
 		3A79C51A285FD86300AB69F9 /* HomeCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */; };
 		3AC4128E285BA24300EA4A5D /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC4128D285BA24300EA4A5D /* LocationModel.swift */; };
 		3AC41292285E919B00EA4A5D /* CustomUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC41291285E919B00EA4A5D /* CustomUITabBarController.swift */; };
@@ -103,6 +105,8 @@
 		3A0698F32879CB8B00B840E3 /* LocationCoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoreDataService.swift; sourceTree = "<group>"; };
 		3A088397288A21F000C7EFDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A0EEC90286013C70066FA13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3A2807772894B1EB00784E7D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		3A2807792894C30400784E7D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryModel.swift; sourceTree = "<group>"; };
 		3A8A7CD2288DD94C00D8746A /* tripsine-mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "tripsine-mobile.entitlements"; sourceTree = "<group>"; };
 		3A99706A285262F0000965E9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				002261F2286150E800F4F430 /* Home */,
+				3A2807792894C30400784E7D /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 			children = (
 				3A79C519285FD86300AB69F9 /* HomeCategoryModel.swift */,
 				3AC4128D285BA24300EA4A5D /* LocationModel.swift */,
+				3A2807772894B1EB00784E7D /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -706,6 +712,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF68BF42853CCD100AB6945 /* RegisterViewController.swift in Sources */,
+				3A28077A2894C30400784E7D /* UserViewModel.swift in Sources */,
 				002261F42861511300F4F430 /* HomeRestaurantViewModel.swift in Sources */,
 				3AF68BF22853AC0A00AB6945 /* RestaurantsCollectionViewCell.swift in Sources */,
 				0026BB07286370C900346E99 /* ProgressiveView.swift in Sources */,
@@ -726,6 +733,7 @@
 				0026BB0D28637CF500346E99 /* StrokeColorAnimation.swift in Sources */,
 				3A0EEC91286013C70066FA13 /* LoginViewController.swift in Sources */,
 				0095C776285953E8006DE580 /* DetailsViewController.swift in Sources */,
+				3A2807782894B1EB00784E7D /* UserModel.swift in Sources */,
 				3AC4128E285BA24300EA4A5D /* LocationModel.swift in Sources */,
 				00E8F9C2286FCC9B000C9EB8 /* LoadingView.swift in Sources */,
 				3A79C51A285FD86300AB69F9 /* HomeCategoryModel.swift in Sources */,

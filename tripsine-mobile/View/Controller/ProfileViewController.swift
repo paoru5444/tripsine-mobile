@@ -8,17 +8,33 @@
 import UIKit
 import FirebaseAuth
 import FacebookLogin
-
+import FBSDKCoreKit
+    
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profilePicImage: UIImageView!
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var profileRedCircleView: UIView!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupProfileImage()
         renderView()
+        
+        let userViewModel = UserViewModel()
+        let user = userViewModel.getUser()
+        
+        if user != nil {
+            nameLabel.text = user?.name
+            emailLabel.text = user?.email
+        }
+        
+        if let profileImage = user?.image {
+            profilePicImage.image = UIImage(data: profileImage)
+        }
     }
     @IBAction func logoutAction(_ sender: Any) {
         showSimpleAlert()
@@ -79,5 +95,4 @@ class ProfileViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
-    
 }
