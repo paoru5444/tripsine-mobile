@@ -19,6 +19,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var urlLabel: UILabel!
     @IBOutlet weak var reservButton: UIButton!
+    @IBOutlet weak var addInfoTableView: UIButton!
     
     let restaurantViewModel: HomeRestaurantViewModel = HomeRestaurantViewModel()
     let mapViewController = MapViewController()
@@ -75,6 +76,11 @@ class DetailsViewController: UIViewController {
         emailLabel.text = emailText
         urlLabel.text = urlText
         imageView.image = iconImage
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tableViewController = segue.destination as? FavoritsTableViewController else { return }
+        
     }
 }
 

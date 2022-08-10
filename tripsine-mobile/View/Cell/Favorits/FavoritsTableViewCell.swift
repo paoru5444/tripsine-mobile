@@ -22,18 +22,18 @@ class FavoritsTableViewCell: UITableViewCell {
         renderView()
     }
     
-    func setupCustomCell(indexCell: Int, data: RestaurantData) {
-        priceLabel.text = data.price
-        nameRestaurantLabel.text = data.name
-        nameLocalLabel.text = data.address
-        ratingLabel.text = "\(updateRating(data: data))"
-       
-        if let url = URL(string: data.photo?.image?.original?.url ?? "") {
-            if let imageData = try? Data(contentsOf: url) {
-                restaurantImage.image = UIImage(data: imageData)
-            }
-        }
-    }
+//    func setupCustomCell(indexCell: Int, data: RestaurantData) {
+//        priceLabel.text = data.price
+//        nameRestaurantLabel.text = data.name
+//        nameLocalLabel.text = data.address
+//        ratingLabel.text = "\(updateRating(data: data))"
+//
+//        if let url = URL(string: data.photo?.image?.original?.url ?? "") {
+//            if let imageData = try? Data(contentsOf: url) {
+//                restaurantImage.image = UIImage(data: imageData)
+//            }
+//        }
+//    }
     
     private func updateRating(data: RestaurantData) -> String {
         guard let rating = data.rating else { return String() }

@@ -14,6 +14,11 @@ class FavoritsTableViewController: UITableViewController {
     private let mapsViewModel = MapService()
     private var restaurantSection: [RestaurantData] = []
 
+    var iconImage: UIImage = UIImage()
+    var nameText: String = ""
+    var addressText: String = ""
+    var ratingText: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -38,12 +43,14 @@ extension FavoritsTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantSection.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath) as? FavoritsTableViewCell
-        cell?.setupCustomCell(indexCell: indexPath.row, data: restaurantSection[indexPath.row])
+        cell?.nameLocalLabel.text = addressText
+        cell?.nameRestaurantLabel.text = nameText
+        cell?.ratingLabel.text = ratingText
         return cell ?? UITableViewCell()
     }
 }

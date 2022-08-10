@@ -204,6 +204,9 @@
                                         <state key="normal" title="Add" image="plus" catalog="system">
                                             <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="owR-8Z-fQL" kind="show" id="KG0-h9-rdV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -268,6 +271,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9Va-ri-Rtl"/>
                     <connections>
+                        <outlet property="addInfoTableView" destination="sGD-DZ-tbZ" id="tri-1x-KX8"/>
                         <outlet property="addressLabel" destination="Vd4-Yg-xld" id="Ub8-EU-wt7"/>
                         <outlet property="descriptionLabel" destination="zBY-Jv-koS" id="eTR-u1-ISa"/>
                         <outlet property="emailLabel" destination="8cr-em-P6F" id="iyS-R8-88j"/>
@@ -282,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6Z-mk-dHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2005.7971014492755" y="-74.330357142857139"/>
+            <point key="canvasLocation" x="2006" y="-59"/>
         </scene>
         <!--Profile-->
         <scene sceneID="pVM-gg-Zfl">
@@ -1222,7 +1226,7 @@
             <objects>
                 <tableViewController id="owR-8Z-fQL" customClass="FavoritsTableViewController" customModule="tripsine_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bVb-Ba-ZmI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97254908080000002" green="0.97254908080000002" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="separatorColor" red="0.97254908080000002" green="0.97254908080000002" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1338,7 +1342,6 @@
                                     <outlet property="priceLabel" destination="N5G-DI-tkI" id="vfE-V1-sHD"/>
                                     <outlet property="ratingLabel" destination="KOc-8U-GhY" id="9cr-ti-Euv"/>
                                     <outlet property="restaurantImage" destination="X8G-DZ-XUy" id="NwX-nj-GGW"/>
-                                    <segue destination="nQ5-Ok-gUB" kind="push" id="j8U-Zi-uWv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1352,7 +1355,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqA-qZ-ly0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="627"/>
+            <point key="canvasLocation" x="1235" y="358"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="jxg-Rf-pFE">
@@ -1505,8 +1508,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="GbF-m0-5NH"/>
+        <segue reference="KG0-h9-rdV"/>
         <segue reference="td5-CT-Nr9"/>
-        <segue reference="4DS-cx-6NP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Daenerys" width="512" height="512"/>
