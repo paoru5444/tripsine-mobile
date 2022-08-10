@@ -44,6 +44,7 @@
                                         <rect key="frame" x="0.0" y="41" width="414" height="168"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="JKG-yD-7v0"/>
                                             <constraint firstAttribute="height" constant="168" id="iZE-QU-xv0"/>
                                         </constraints>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
@@ -73,14 +74,14 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-Jv-koS">
-                                        <rect key="frame" x="16" y="320.5" width="382" height="134.5"/>
+                                        <rect key="frame" x="16" y="321.5" width="382" height="134.5"/>
                                         <string key="text">Home of the famous and award winning Nona MariaPie, Bleecker Street Pizza serves consistently deliciouspizza with the best dough, sauce, and ingredients inOld West Village! Feel free to create your ideal pizzaand add as many toppings as you'd like.</string>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="OPEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7F3-hf-1Rs">
-                                        <rect key="frame" x="16" y="289.5" width="41.5" height="15"/>
+                                        <rect key="frame" x="16" y="290.5" width="41.5" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="jCd-Uk-6oY"/>
                                         </constraints>
@@ -95,7 +96,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opz-sL-Csy">
-                                        <rect key="frame" x="16" y="635" width="382" height="45"/>
+                                        <rect key="frame" x="16" y="636" width="382" height="45"/>
                                         <color key="backgroundColor" red="0.74901962280000001" green="0.1764705926" blue="0.13333332540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="deU-S2-jaS"/>
@@ -115,7 +116,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lc-pr-Rd7" userLabel="urlStackView">
-                                        <rect key="frame" x="16" y="571" width="382" height="32"/>
+                                        <rect key="frame" x="16" y="572" width="382" height="32"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D0B-2a-jd4">
                                                 <rect key="frame" x="0.0" y="0.5" width="32" height="31"/>
@@ -135,7 +136,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbv-oT-syh" userLabel="emailStackView">
-                                        <rect key="frame" x="16" y="523" width="382" height="32"/>
+                                        <rect key="frame" x="16" y="524" width="382" height="32"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.badge" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6ea-of-kO9">
                                                 <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
@@ -154,7 +155,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkn-sV-4dp" userLabel="ratingAndPriceStackView">
-                                        <rect key="frame" x="16" y="471" width="382" height="36"/>
+                                        <rect key="frame" x="16" y="472" width="382" height="36"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUk-2w-VXV">
                                                 <rect key="frame" x="0.0" y="0.0" width="305.5" height="36"/>
@@ -192,17 +193,30 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGD-DZ-tbZ">
+                                        <rect key="frame" x="310" y="281.5" width="64" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="2qb-AH-YUb"/>
+                                            <constraint firstAttribute="height" constant="32" id="Uq2-aZ-LCJ"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add" image="plus" catalog="system">
+                                            <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Lmw-Mr-HfQ" firstAttribute="trailing" secondItem="3nK-Ds-KF1" secondAttribute="trailing" id="1lp-7w-shw"/>
                                     <constraint firstItem="9lc-pr-Rd7" firstAttribute="leading" secondItem="Lmw-Mr-HfQ" secondAttribute="leading" constant="16" id="3Pb-Q8-dTN"/>
                                     <constraint firstItem="Sbv-oT-syh" firstAttribute="top" secondItem="kkn-sV-4dp" secondAttribute="bottom" constant="16" id="5G0-Sp-CT0"/>
                                     <constraint firstItem="3nK-Ds-KF1" firstAttribute="leading" secondItem="V1b-E5-8qN" secondAttribute="leading" id="8Cj-CC-z2E"/>
+                                    <constraint firstItem="zBY-Jv-koS" firstAttribute="top" secondItem="sGD-DZ-tbZ" secondAttribute="bottom" constant="8" id="8Z1-x4-FcX"/>
                                     <constraint firstItem="zBY-Jv-koS" firstAttribute="top" secondItem="7F3-hf-1Rs" secondAttribute="bottom" constant="16" id="9bz-nI-Ndf"/>
                                     <constraint firstItem="7F3-hf-1Rs" firstAttribute="leading" secondItem="Lmw-Mr-HfQ" secondAttribute="leading" constant="16" id="9sR-ja-rs0"/>
                                     <constraint firstAttribute="bottom" secondItem="Opz-sL-Csy" secondAttribute="bottom" constant="32.5" id="BzS-cc-PRo"/>
+                                    <constraint firstItem="Lmw-Mr-HfQ" firstAttribute="trailing" secondItem="sGD-DZ-tbZ" secondAttribute="trailing" constant="40" id="Fib-Eo-GTQ"/>
                                     <constraint firstItem="Lmw-Mr-HfQ" firstAttribute="trailing" secondItem="kkn-sV-4dp" secondAttribute="trailing" constant="16" id="GoQ-aK-5AT"/>
-                                    <constraint firstItem="7F3-hf-1Rs" firstAttribute="top" secondItem="G1A-2Q-VE7" secondAttribute="bottom" constant="16" id="HZC-uG-kB6"/>
                                     <constraint firstItem="G1A-2Q-VE7" firstAttribute="top" secondItem="3nK-Ds-KF1" secondAttribute="bottom" constant="16" id="M0z-6i-I8r"/>
                                     <constraint firstItem="Lmw-Mr-HfQ" firstAttribute="trailing" secondItem="G1A-2Q-VE7" secondAttribute="trailing" constant="16" id="QK3-UU-FEv"/>
                                     <constraint firstItem="zBY-Jv-koS" firstAttribute="leading" secondItem="Lmw-Mr-HfQ" secondAttribute="leading" constant="16" id="W8q-oq-pWx"/>
@@ -216,6 +230,7 @@
                                     <constraint firstItem="Lmw-Mr-HfQ" firstAttribute="trailing" secondItem="Sbv-oT-syh" secondAttribute="trailing" constant="16" id="gOK-fL-AWC"/>
                                     <constraint firstItem="Lmw-Mr-HfQ" firstAttribute="trailing" secondItem="Opz-sL-Csy" secondAttribute="trailing" constant="16" id="iad-Cd-Pas"/>
                                     <constraint firstItem="Opz-sL-Csy" firstAttribute="top" secondItem="9lc-pr-Rd7" secondAttribute="bottom" constant="32" id="mR6-Rm-BOn"/>
+                                    <constraint firstItem="sGD-DZ-tbZ" firstAttribute="top" secondItem="G1A-2Q-VE7" secondAttribute="bottom" constant="8" id="nLz-yf-4TR"/>
                                     <constraint firstItem="3nK-Ds-KF1" firstAttribute="top" secondItem="Lmw-Mr-HfQ" secondAttribute="top" constant="41" id="r7L-Ov-vsj"/>
                                     <constraint firstItem="BgM-w1-tIh" firstAttribute="leading" secondItem="Lmw-Mr-HfQ" secondAttribute="leading" constant="16" id="rYe-i9-Z2y"/>
                                     <constraint firstItem="Lmw-Mr-HfQ" firstAttribute="trailing" secondItem="9lc-pr-Rd7" secondAttribute="trailing" constant="16" id="swg-iC-Gv9"/>
@@ -267,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6Z-mk-dHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2235" y="299"/>
+            <point key="canvasLocation" x="2005.7971014492755" y="-74.330357142857139"/>
         </scene>
         <!--Profile-->
         <scene sceneID="pVM-gg-Zfl">
@@ -439,11 +454,11 @@
                                 <exclude reference="aG9-B7-URE"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ewk-bx-brY"/>
-                                <exclude reference="kKh-NN-FZQ"/>
                                 <exclude reference="GB4-z3-6P9"/>
                                 <exclude reference="GCW-Tv-xFY"/>
                                 <exclude reference="k7v-C7-OY6"/>
+                                <exclude reference="ewk-bx-brY"/>
+                                <exclude reference="kKh-NN-FZQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -499,7 +514,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="search icon"/>
+                                <state key="normal" image="magnifyingglass" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="filterTextActionButton:" destination="okS-uN-Gs6" eventType="touchUpInside" id="ofg-4G-j10"/>
                                 </connections>
@@ -932,13 +949,6 @@
                                     <constraint firstAttribute="height" constant="150" id="Rdm-1C-1TH"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="9Bg-yM-XHI">
-                                <rect key="frame" x="147" y="150" width="120" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="UD1-nh-fNn"/>
-                                    <constraint firstAttribute="width" constant="120" id="cZv-xM-QFe"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uo9-4M-EV0">
                                 <rect key="frame" x="20" y="198" width="374" height="34"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
@@ -1016,7 +1026,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnu-ok-cVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1407" y="1391"/>
+            <point key="canvasLocation" x="-1496" y="1391"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="Fga-kw-pvp">
@@ -1342,7 +1352,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqA-qZ-ly0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434.7826086956522" y="626.78571428571422"/>
+            <point key="canvasLocation" x="1235" y="627"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="jxg-Rf-pFE">
@@ -1428,7 +1438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j00-fY-foc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1435" y="-826"/>
+            <point key="canvasLocation" x="1236" y="-508"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rCE-lZ-MUP">
@@ -1500,7 +1510,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Daenerys" width="512" height="512"/>
-        <image name="avatar" width="428" height="408"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="envelope.badge" catalog="system" width="128" height="102"/>
         <image name="facebook" width="16" height="16"/>
@@ -1520,9 +1529,9 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="power" catalog="system" width="128" height="124"/>
         <image name="restaurant-cover" width="520" height="388"/>
-        <image name="search icon" width="20" height="20"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

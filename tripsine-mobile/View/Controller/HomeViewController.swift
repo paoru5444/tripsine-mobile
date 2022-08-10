@@ -70,7 +70,7 @@ class HomeViewController: UIViewController {
         guard let detailViewController = segue.destination as? DetailsViewController
         else { return }
         filterRestaurants = restaurantSection
-        
+
         detailViewController.nameText = filterRestaurants.first?.name ?? String()
         detailViewController.addressText = filterRestaurants.first?.address ?? String()
         detailViewController.descriprionText = filterRestaurants.first?.description ?? String()
@@ -78,6 +78,13 @@ class HomeViewController: UIViewController {
         detailViewController.priceText = filterRestaurants.first?.price ?? String()
         detailViewController.emailText = filterRestaurants.first?.email ?? String()
         detailViewController.urlText = filterRestaurants.first?.website ?? String()
+        detailViewController.isOpen = "OPEN"
+
+        if let url = URL(string: filterRestaurants.first?.photo?.image?.original?.url ?? "") {
+            if let imageData = try? Data(contentsOf: url) {
+                detailViewController.iconImage = UIImage(data: imageData) ?? UIImage()
+            }
+        }
     }
 
 }

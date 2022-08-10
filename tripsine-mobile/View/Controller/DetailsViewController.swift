@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import UIView_Shimmer
 
 class DetailsViewController: UIViewController {
     
@@ -34,6 +33,7 @@ class DetailsViewController: UIViewController {
     var priceText: String = ""
     var emailText: String = ""
     var urlText: String = ""
+    var isOpen: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +60,7 @@ class DetailsViewController: UIViewController {
     private func setupView() {
         priceLabel.layer.masksToBounds = true
         priceLabel.layer.cornerRadius = 8
-        
+    
         reservButton.layer.cornerRadius = 10
     }
     
@@ -68,21 +68,13 @@ class DetailsViewController: UIViewController {
         imageView.image = iconImage
         titleLabel.text = nameText
         addressLabel.text = addressText
-        statusLabel.text = statusText
+        statusLabel.text = isOpen
         descriptionLabel.text = descriprionText
         ratingLabel.text = ratingText
         priceLabel.text = priceText
         emailLabel.text = emailText
         urlLabel.text = urlText
-    }
-    
-    private func shouldUpdateStatus(data: RestaurantData) -> String {
-        let isOpen = data.isOpen
-        if isOpen {
-            return "OPEN"
-        } else {
-            return "CLOSED"
-        }
+        imageView.image = iconImage
     }
 }
 

@@ -25,7 +25,6 @@ class RestaurantsCollectionViewCell: UICollectionViewCell {
         priceLabel.text = restaurantData.price
         rateLabel.text = "\(updateRating(data: restaurantData))"
         
-        
         if let url = URL(string: restaurantData.photo?.image?.original?.url ?? "") {
             if let imageData = try? Data(contentsOf: url) {
                 image.image = UIImage(data: imageData)
