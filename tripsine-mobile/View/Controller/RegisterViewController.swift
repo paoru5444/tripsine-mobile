@@ -10,24 +10,16 @@ import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTextField()
     }
     
     @IBAction func dismissPage(_ sender: Any) {
         dismiss(animated: true)
-    }
-    
-    private func setupTextField() {
-        nameTextField.keyboardType = .asciiCapable
-        nameTextField.autocorrectionType = .no
-        nameTextField.autocapitalizationType = .none
     }
     
     

@@ -80,7 +80,9 @@ class DetailsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tableViewController = segue.destination as? FavoritsTableViewController else { return }
-        
+        tableViewController.nameText = nameText
+        tableViewController.addressText = addressText
+        tableViewController.ratingText = ratingText
     }
 }
 

@@ -22,7 +22,7 @@ class FavoritsTableViewCell: UITableViewCell {
         renderView()
     }
     
-//    func setupCustomCell(indexCell: Int, data: RestaurantData) {
+    func setupCustomCell(indexCell: Int, data: RestaurantData) {
 //        priceLabel.text = data.price
 //        nameRestaurantLabel.text = data.name
 //        nameLocalLabel.text = data.address
@@ -33,7 +33,7 @@ class FavoritsTableViewCell: UITableViewCell {
 //                restaurantImage.image = UIImage(data: imageData)
 //            }
 //        }
-//    }
+    }
     
     private func updateRating(data: RestaurantData) -> String {
         guard let rating = data.rating else { return String() }
