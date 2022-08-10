@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTextField()
     }
     
     @IBAction func dismissPage(_ sender: Any) {

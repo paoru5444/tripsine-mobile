@@ -15,7 +15,6 @@ class RestaurantsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var rateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var favoriteButton: UIButton!
     private var isActive = false
     
     func setupCell(index: Int, restaurantData: RestaurantData) {
@@ -25,7 +24,6 @@ class RestaurantsCollectionViewCell: UICollectionViewCell {
         descriptionLabel.text = restaurantData.address
         priceLabel.text = restaurantData.price
         rateLabel.text = "\(updateRating(data: restaurantData))"
-        
         
         if let url = URL(string: restaurantData.photo?.image?.original?.url ?? "") {
             if let imageData = try? Data(contentsOf: url) {
@@ -59,15 +57,6 @@ class RestaurantsCollectionViewCell: UICollectionViewCell {
     private func updateRating(data: RestaurantData) -> String {
         guard let rating = data.rating else { return String() }
         return rating
-    }
-    
-    @IBAction func didChangeStatusButton(_ sender: Any) {
-        if isActive {
-            favoriteButton.setBackgroundImage(UIImage(named: "heart.full"), for: .normal)
-        } else {
-            favoriteButton.setBackgroundImage(UIImage(named: "heart"), for: .normal)
-        }
-        isActive = !isActive
     }
     
 }

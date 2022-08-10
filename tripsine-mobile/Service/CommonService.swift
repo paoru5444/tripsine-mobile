@@ -14,11 +14,6 @@ class CommonService {
         "X-RapidAPI-Key": "0fe7961e27msh9c2d13079bef312p1727dajsn1f92af72844d",
         "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
     ]
-
-    var component = URLComponents(string: "https://travel-advisor.p.rapidapi.com/restaurants/list?")
-    
-    var searchComponent = URLComponents(string: "https://travel-advisor.p.rapidapi.com/locations/search")
-    
     let session = URLSession.shared
     
     var queryItems = [
