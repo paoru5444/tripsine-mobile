@@ -44,8 +44,13 @@ class RegisterViewController: UIViewController {
             return
         }
         
+        if password != confirmPassword {
+            showPasswordMissMatchAlert()
+        }
+        
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if error != nil {
+                self.showWrongCredentialsAlert(message: error?.localizedDescription ?? "Preencha os dados novamente.")
                 return
             }
             self.redirectToLoginScreen()
@@ -74,10 +79,23 @@ class RegisterViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    private func showWrongCredentialsAlert() {
+    private func showWrongCredentialsAlert(message: String) {
         let alert = UIAlertController(
             title: "Erro no cadastro.",
-            message: "Preencha os dados novamente.",
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func showPasswordMissMatchAlert() {
+        let alert = UIAlertController(
+            title: "Senhas não combinam.",
+            message: "Digite senhas iguais para fazer o cadastro.",
             preferredStyle: .alert
         )
         
