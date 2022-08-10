@@ -17,7 +17,7 @@ class CustomUITabBarController: UITabBarController {
     }
 
     private func renderTabBar() {
-        itemsTabBar.unselectedItemTintColor = .white
+        itemsTabBar?.unselectedItemTintColor = .white
 
         if let fontDefinition = UIFont(name: "Poppins-SemiBold", size: 15) {
             //MARK: Home setup

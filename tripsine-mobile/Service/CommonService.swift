@@ -32,4 +32,8 @@ class CommonService {
         URLQueryItem(name: "units" , value: "km"),
         URLQueryItem(name: "location_id" , value: "1"),
     ]
+    
+    var component = URLComponents(string: "https://travel-advisor.p.rapidapi.com/restaurants/list?")
+        
+    var searchComponent = URLComponents(string: "https://travel-advisor.p.rapidapi.com/locations/search")
 }
