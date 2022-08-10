@@ -20,6 +20,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var facebookAuthOutlet: UIButton!
     @IBOutlet weak var googleAuthOutlet: UIButton!
     
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoginButton()
@@ -53,9 +57,6 @@ class LoginViewController: UIViewController {
         // mark: Login Button
         loginUIButton.layer.masksToBounds = true
         loginUIButton.layer.cornerRadius = 10
-        
-        // mark: Register Button
-        applyShadownIn(button: registerUIButton)
         
         // mark: Google Button
         applyShadownIn(button: googleAuthOutlet)
@@ -110,15 +111,47 @@ class LoginViewController: UIViewController {
     @IBAction func facebookAuthAction(_ sender: Any) {
         print("login facebook")
         let loginManager = LoginManager()
-                loginManager.logIn(permissions: ["public_profile"], from: self) { result, error in
-                    if let error = error {
-                        print("Encountered Erorr: \(error)")
-                    } else if let result = result, result.isCancelled {
-                        print("Cancelled")
-                    } else {
-                        print("Logged In")
-                        self.redirectToHomeScreen()
-                    }
+        loginManager.logIn(permissions: ["public_profile"], from: self) { result, error in
+            if let error = error {
+                print("Encountered Erorr: \(error)")
+            } else if let result = result, result.isCancelled {
+                print("Cancelled")
+            } else {
+                print("Logged In")
+                self.redirectToHomeScreen()
+            }
+        }
+    }
+    
+    
+    @IBAction func emailAuthAction(_ sender: Any) {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        if email != "" && password != "" {
+            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+                print("Logged In")
+                if error != nil {
+                    self?.showWrongCredentialsAlert()
+                    return
                 }
+                self?.redirectToHomeScreen()
+            }
+        } else {
+            showWrongCredentialsAlert()
+        }
+    }
+    
+    private func showWrongCredentialsAlert() {
+        let alert = UIAlertController(
+            title: "Email e/ou senha incorretos.",
+            message: "Preencha os dados novamente para fazer login.",
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
     }
 }
