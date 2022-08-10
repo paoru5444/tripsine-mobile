@@ -8,9 +8,10 @@
 import Foundation
 
 class CommonService {
-    
+    // key atual:   0fe7961e27msh9c2d13079bef312p1727dajsn1f92af72844d
+    // key reserva: 23668c2df4msh66de552977e7a8bp1fa194jsnfa8902564fb9
     let headers = [
-        "X-RapidAPI-Key": "d7319599e0msh0c3b7376be5c365p10b430jsn12eb2fe921c0",
+        "X-RapidAPI-Key": "0fe7961e27msh9c2d13079bef312p1727dajsn1f92af72844d",
         "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
     ]
 
